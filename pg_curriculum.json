@@ -1,0 +1,1457 @@
+{
+  "CYS": {
+    "code": "CYS",
+    "name": "Master of Science in Chemistry",
+    "seats": 68,
+    "semesters": {
+      "I": [
+        "CML511",
+        "CML512",
+        "CML513",
+        "CML514",
+        "CML515",
+        "CMP511",
+        "CMP512"
+      ],
+      "II": [
+        "CML521",
+        "CML522",
+        "CML523",
+        "CML524",
+        "CML525",
+        "CML526",
+        "CMP521",
+        "CMP522"
+      ],
+      "III": [
+        "CML631",
+        "PE-1",
+        "PE-2",
+        "PE-3",
+        "CMD631"
+      ],
+      "IV": [
+        "OE-1",
+        "OE-2",
+        "CMD641"
+      ]
+    }
+  },
+  "HCS": {
+    "code": "HCS",
+    "name": "Master of Science in Cognitive Science",
+    "seats": 25,
+    "semesters": {
+      "I": [
+        "HSL521",
+        "HSS521",
+        "HSL522",
+        "HSL541",
+        "HSL561",
+        "HSL721"
+      ],
+      "II": [
+        "HSL621",
+        "HSL622",
+        "HSL651",
+        "HSL661",
+        "PE-1",
+        "HSD623"
+      ],
+      "III": [
+        "HSL747",
+        "HSP522",
+        "HSP700",
+        "HSD621",
+        "OE-I",
+        "PE-2"
+      ],
+      "IV": [
+        "HSD622",
+        "HSP523",
+        "OE-II",
+        "PE-3"
+      ]
+    }
+  },
+  "HES": {
+    "code": "HES",
+    "name": "Master of Science in Economics",
+    "seats": 25,
+    "semesters": {
+      "I": [
+        "HSL511",
+        "HSL512",
+        "HSL513",
+        "HSL516",
+        "HSL514"
+      ],
+      "II": [
+        "HSL611",
+        "HSL612",
+        "HSL613",
+        "HSL614",
+        "HSP511",
+        "OE-1"
+      ],
+      "III": [
+        "HSL515",
+        "HSP612",
+        "HSP611",
+        "HSP520",
+        "PE-1",
+        "PE-2",
+        "PE-3",
+        "HSP620",
+        "OE-2"
+      ],
+      "IV": []
+    }
+  },
+  "MAS": {
+    "code": "MAS",
+    "name": "Master of Science in Mathematics",
+    "seats": 68,
+    "semesters": {
+      "I": [
+        "MTL501",
+        "MTL502",
+        "MTL503",
+        "MTL504",
+        "MTL505"
+      ],
+      "II": [
+        "MTL506",
+        "MTL507",
+        "MTL508",
+        "MTL509",
+        "MTL510"
+      ],
+      "III": [
+        "MTL601",
+        "MTL602",
+        "MTL603",
+        "DE-1",
+        "MAD701",
+        "DE-2",
+        "DE-3",
+        "DE-4"
+      ],
+      "IV": []
+    }
+  },
+  "PHS": {
+    "code": "PHS",
+    "name": "Master of Science in Physics",
+    "seats": 68,
+    "semesters": {
+      "I": [
+        "PYL551",
+        "PYL553",
+        "PYL555",
+        "PYL557",
+        "PYP561"
+      ],
+      "II": [
+        "PYL552",
+        "PYL556",
+        "PYL558",
+        "PYL560",
+        "PYP562",
+        "PYL563"
+      ],
+      "III": [
+        "PYD561",
+        "PYL567",
+        "PYL569",
+        "PYP563",
+        "PE-I",
+        "PE-2",
+        "OE-1"
+      ],
+      "IV": [
+        "PYD562",
+        "PE-3",
+        "PE-4",
+        "OE-2"
+      ]
+    }
+  },
+  "BLS": {
+    "code": "BLS",
+    "name": "Master of Science in Biological Sciences",
+    "seats": 11,
+    "semesters": {
+      "I": [
+        "SBL500",
+        "SBL510",
+        "SBL520",
+        "SBL530",
+        "SBL540"
+      ],
+      "II": [
+        "SBL600",
+        "SBL610",
+        "SBL620",
+        "SBL630",
+        "SBL640",
+        "SVL601"
+      ],
+      "III": [
+        "ELECTIVE I",
+        "ELECTIVE II",
+        "ELECTIVE III",
+        "ELECTIVE IV",
+        "SBD601",
+        "SBQ601"
+      ],
+      "IV": [
+        "SBD602"
+      ]
+    }
+  },
+  "DDS": {
+    "code": "DDS",
+    "name": "Master of Design in Industrial Design",
+    "seats": 25,
+    "semesters": {
+      "I": [
+        "DDL710",
+        "DDP721",
+        "DDP731",
+        "DDP741",
+        "DDL751",
+        "DDR761"
+      ],
+      "II": [
+        "DDP711",
+        "DDP722",
+        "DDL732",
+        "DDD792",
+        "PE-1",
+        "DSR801"
+      ],
+      "III": [
+        "DDD891",
+        "PE-2",
+        "PE-3"
+      ],
+      "IV": [
+        "DDD892"
+      ]
+    }
+  },
+  "HST": {
+    "code": "HST",
+    "name": "Master of Arts in Culture, Society, Thought",
+    "seats": 25,
+    "semesters": {
+      "I": [
+        "HSN500",
+        "HSL531",
+        "HSL551",
+        "HSL582",
+        "PE-1"
+      ],
+      "II": [
+        "HSL571",
+        "HSL584",
+        "HSL583",
+        "HSD690",
+        "PE-2",
+        "PE-3",
+        "HSN900"
+      ],
+      "III": [
+        "HSL572",
+        "HSL573",
+        "HSL581",
+        "HSL574",
+        "HSL575",
+        "HSL585",
+        "HSD691",
+        "PE-4",
+        "PE-5",
+        "OE-1"
+      ],
+      "IV": [
+        "HSL572",
+        "HSL573",
+        "HSL581",
+        "HSL574",
+        "HSL575",
+        "HSL585",
+        "HSD692",
+        "OE-2"
+      ]
+    }
+  },
+  "AMA": {
+    "code": "AMA",
+    "name": "Master of Technology in Engineering Analysis and Design",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "APL775",
+        "APL734",
+        "APL703",
+        "APL701",
+        "APL702",
+        "PE-1",
+        "PE-2",
+        "PE-3",
+        "OE-1"
+      ],
+      "II": [],
+      "III": [],
+      "IV": []
+    }
+  },
+  "BEM": {
+    "code": "BEM",
+    "name": "Master of Technology in Biomolecular and Bioprocess Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "BBL771",
+        "BBL772",
+        "BBL773",
+        "PE-1"
+      ],
+      "II": [
+        "BBL731",
+        "BBL774",
+        "BBL775",
+        "PE-2"
+      ],
+      "III": [
+        "BBD855",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "BBD856"
+      ]
+    }
+  },
+  "CHE": {
+    "code": "CHE",
+    "name": "Master of Technology in Chemical Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CLL701",
+        "CLL702",
+        "CLL703",
+        "PE-1",
+        "PE-2"
+      ],
+      "II": [
+        "CLL731",
+        "CLL733",
+        "CLD771",
+        "PE-3",
+        "CLP704"
+      ],
+      "III": [
+        "CLD781",
+        "PE-4",
+        "OE-1"
+      ],
+      "IV": [
+        "CLD782"
+      ]
+    }
+  },
+  "CEP": {
+    "code": "CEP",
+    "name": "Master of Technology in Transportation Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CVL741",
+        "CVL740",
+        "CVL742"
+      ],
+      "II": [
+        "PE-1",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "PE-4",
+        "CVD853"
+      ],
+      "IV": [
+        "CVD854"
+      ]
+    }
+  },
+  "CES": {
+    "code": "CES",
+    "name": "Master of Technology in Structural Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CVL756",
+        "CVL759",
+        "CVL757",
+        "CVL758",
+        "PE-1"
+      ],
+      "II": [
+        "CVP756",
+        "CVL762",
+        "CVL760",
+        "CVL761",
+        "PE-2"
+      ],
+      "III": [
+        "CVD757",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "CVD758"
+      ]
+    }
+  },
+  "CET": {
+    "code": "CET",
+    "name": "Master of Technology in Construction Engineering and Management",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CVL772",
+        "CVL773",
+        "CVL771",
+        "CVP772",
+        "PE-1"
+      ],
+      "II": [
+        "CVL775",
+        "CVL776",
+        "CVL774",
+        "CVP771",
+        "PE-2"
+      ],
+      "III": [
+        "CVD777",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "CVD778"
+      ]
+    }
+  },
+  "CEU": {
+    "code": "CEU",
+    "name": "Master of Technology in Rock Engineering and Underground Structures",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CVL710",
+        "CVL711",
+        "CVP710",
+        "PE-1"
+      ],
+      "II": [
+        "CVL712",
+        "CVL713",
+        "CVP810",
+        "CVD710",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "CVD810",
+        "PE-4"
+      ],
+      "IV": [
+        "CVD811"
+      ]
+    }
+  },
+  "CEV": {
+    "code": "CEV",
+    "name": "Master of Technology in Environmental Engineering and Management",
+    "seats": 19,
+    "semesters": {
+      "I": [
+        "CVL725",
+        "CVL722",
+        "CVL720",
+        "PE-1"
+      ],
+      "II": [
+        "CVL721",
+        "CVL724",
+        "CVL723",
+        "PE-2",
+        "OE-1",
+        "CVD726"
+      ],
+      "III": [
+        "CVD720",
+        "PE-3",
+        "OE-2"
+      ],
+      "IV": [
+        "CVD721"
+      ]
+    }
+  },
+  "CEW": {
+    "code": "CEW",
+    "name": "Master of Technology in Water Resources Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CVL730",
+        "CVL731",
+        "CVL732",
+        "CVL735",
+        "PE-1"
+      ],
+      "II": [
+        "CVL733",
+        "CVL734",
+        "CVP730",
+        "CVP731",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "CVD831",
+        "PE-4",
+        "PE-5"
+      ],
+      "IV": [
+        "CVD832"
+      ]
+    }
+  },
+  "EEA": {
+    "code": "EEA",
+    "name": "Master of Technology in Control and Automation",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELL700",
+        "ELL701",
+        "ELL702",
+        "ELP800"
+      ],
+      "II": [
+        "ELL703",
+        "ELL705",
+        "ELP801"
+      ],
+      "III": [
+        "ELD801"
+      ],
+      "IV": [
+        "ELD802",
+        "ELD801"
+      ]
+    }
+  },
+  "EEE": {
+    "code": "EEE",
+    "name": "Master of Technology in Communication Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELL712"
+      ],
+      "II": [
+        "ELL719",
+        "ELP725",
+        "PE-1",
+        "PE-2"
+      ],
+      "III": [
+        "ELD811",
+        "OE-1",
+        "OE-2"
+      ],
+      "IV": [
+        "ELD812",
+        "PE-3",
+        "PE-4",
+        "PE-5",
+        "PE-6"
+      ]
+    }
+  },
+  "EEN": {
+    "code": "EEN",
+    "name": "Master of Technology in Integrated Electronics and Circuits",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELL732",
+        "ELL735",
+        "ELL734",
+        "ELP831"
+      ],
+      "II": [
+        "ELP832",
+        "ELL730"
+      ],
+      "III": [],
+      "IV": [
+        "ELD832"
+      ]
+    }
+  },
+  "EEP": {
+    "code": "EEP",
+    "name": "Master of Technology in Power Electronics, Electrical Machines and Drives",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELL750",
+        "ELL751",
+        "ELP850",
+        "ELP851"
+      ],
+      "II": [
+        "ELL752",
+        "ELL850",
+        "ELP852",
+        "ELP853"
+      ],
+      "III": [
+        "ELD851"
+      ],
+      "IV": [
+        "ELD852",
+        "ELD851"
+      ]
+    }
+  },
+  "EES": {
+    "code": "EES",
+    "name": "Master of Technology in Power Systems",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELL771",
+        "ELL775",
+        "ELP870"
+      ],
+      "II": [
+        "ELL776",
+        "ELP871"
+      ],
+      "III": [
+        "ELD871"
+      ],
+      "IV": [
+        "ELD871"
+      ]
+    }
+  },
+  "MSM": {
+    "code": "MSM",
+    "name": "Master of Technology in Materials Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "MLL701",
+        "MLL702",
+        "MLL703",
+        "MLL704",
+        "MLV705"
+      ],
+      "II": [
+        "MLN710",
+        "MLL711",
+        "PE-1",
+        "PE-2",
+        "OE-1",
+        "PE-3",
+        "OE-2",
+        "PE-4"
+      ],
+      "III": [
+        "MLD801"
+      ],
+      "IV": [
+        "MLD802"
+      ]
+    }
+  },
+  "MSP": {
+    "code": "MSP",
+    "name": "Master of Technology in Polymer Science and Technology",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "MLL719",
+        "MLL721",
+        "MLL723",
+        "MLL724",
+        "MLP726"
+      ],
+      "II": [
+        "MLL720",
+        "MLL722",
+        "MLP728",
+        "MLL725",
+        "PE-1"
+      ],
+      "III": [
+        "PE-2",
+        "PE-3",
+        "PE-4",
+        "MLD811"
+      ],
+      "IV": [
+        "MLD812"
+      ]
+    }
+  },
+  "MEE": {
+    "code": "MEE",
+    "name": "Master of Technology in Industrial Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "MCL761",
+        "MCL765",
+        "MCL751",
+        "PE-1"
+      ],
+      "II": [
+        "MCL754",
+        "PE-2",
+        "PE-3",
+        "PE-4"
+      ],
+      "III": [
+        "MCD861"
+      ],
+      "IV": [
+        "MCD862"
+      ]
+    }
+  },
+  "MEM": {
+    "code": "MEM",
+    "name": "Master of Technology in Mechanical Design",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "APL701",
+        "MCL731",
+        "MCL735",
+        "MCL742"
+      ],
+      "II": [
+        "PE-1",
+        "PE-2",
+        "PE-3",
+        "PE-4"
+      ],
+      "III": [
+        "MCD831",
+        "PE-5",
+        "PE-6"
+      ],
+      "IV": [
+        "MCD832",
+        "APL701",
+        "MCD831",
+        "MCL731",
+        "MCL735",
+        "MCL742",
+        "MCL730",
+        "MCL733",
+        "MCL736",
+        "MCL741",
+        "MCL745",
+        "MCL748",
+        "MCL711",
+        "MCL712",
+        "MCL713",
+        "MCL714",
+        "MCL715",
+        "MCL716",
+        "MCL717",
+        "MCL718",
+        "MCL723",
+        "MCL728",
+        "MCL729",
+        "MCL737",
+        "MCL738",
+        "MCL740",
+        "MCL743",
+        "MCL747",
+        "MCL797",
+        "MCL798",
+        "MCL834",
+        "MCL837",
+        "MCL839",
+        "MCL840",
+        "MCL845",
+        "MCL848",
+        "MCL849",
+        "MCS830",
+        "MCV849"
+      ]
+    }
+  },
+  "MEP": {
+    "code": "MEP",
+    "name": "Master of Technology in Production Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "MCL781",
+        "MCL787",
+        "MCL769"
+      ],
+      "II": [
+        "MCL705",
+        "MCL784",
+        "MCL786",
+        "MCL782"
+      ],
+      "III": [
+        "MCD881",
+        "PE-1",
+        "PE-2"
+      ],
+      "IV": [
+        "MCD882",
+        "MCD881",
+        "MCL705",
+        "MCL769",
+        "MCL781",
+        "MCL782",
+        "MCL784",
+        "MCL786",
+        "MCL787",
+        "MCL718",
+        "MCL729",
+        "MCL749",
+        "MCL750",
+        "MCL751",
+        "MCL753",
+        "MCL754",
+        "MCL773",
+        "MCL776",
+        "MCL777",
+        "MCL778",
+        "MCL780",
+        "MCL783",
+        "MCL785",
+        "MCL788",
+        "MCL791",
+        "MCL792",
+        "MCL795",
+        "MCL796",
+        "MCP790"
+      ]
+    }
+  },
+  "MET": {
+    "code": "MET",
+    "name": "Master of Technology in Thermal Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "MCL701",
+        "MCL702",
+        "MCL703",
+        "MCL704"
+      ],
+      "II": [
+        "MCL705",
+        "PE-1",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "MED811",
+        "PE-4",
+        "OE-1"
+      ],
+      "IV": [
+        "MED812"
+      ]
+    }
+  },
+  "PHA": {
+    "code": "PHA",
+    "name": "Master of Technology in Applied Optics",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "PYL755",
+        "PYL751",
+        "PYL753",
+        "PYP761",
+        "PE-1"
+      ],
+      "II": [
+        "PYL752",
+        "PYL756",
+        "PYP762",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "OE-1",
+        "PYD851"
+      ],
+      "IV": [
+        "PYD852"
+      ]
+    }
+  },
+  "PHM": {
+    "code": "PHM",
+    "name": "Master of Technology in Solid State Materials",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "PYL701",
+        "PYL702",
+        "PYL703",
+        "PYP701",
+        "PE-1"
+      ],
+      "II": [
+        "PYL704",
+        "PYL705",
+        "PYP702",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "OE-1",
+        "PYD801"
+      ],
+      "IV": [
+        "PYD802"
+      ]
+    }
+  },
+  "TTE": {
+    "code": "TTE",
+    "name": "Master of Technology in Textile Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "TXL721",
+        "TXL722",
+        "TXL731",
+        "TXL732",
+        "PE-1"
+      ],
+      "II": [
+        "TXL775",
+        "TXL725",
+        "TXL783",
+        "TXP761",
+        "TXP725",
+        "PE-2"
+      ],
+      "III": [
+        "TXD801",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "TXD803"
+      ]
+    }
+  },
+  "TTC": {
+    "code": "TTC",
+    "name": "Master of Technology in Textile Chemical Processing",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "TXL712",
+        "TXL747",
+        "TXL749",
+        "TXL753",
+        "TXP749",
+        "TXP751",
+        "TXR752"
+      ],
+      "II": [
+        "TXL748",
+        "TXL754",
+        "TXL783",
+        "TXP748",
+        "PE-1",
+        "PE-2",
+        "TXT800"
+      ],
+      "III": [
+        "TXD805",
+        "TXS751",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "TXD806"
+      ]
+    }
+  },
+  "TTF": {
+    "code": "TTF",
+    "name": "Master of Technology in Fibre Science and Technology",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "TXL711",
+        "TXP711",
+        "TXL712",
+        "TXP712",
+        "TXL713",
+        "TXL749"
+      ],
+      "II": [
+        "TXL715",
+        "TXP716",
+        "TXL748",
+        "TXL714",
+        "PE-2",
+        "PE-1"
+      ],
+      "III": [
+        "TXD802",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "TXD804"
+      ]
+    }
+  },
+  "CRF": {
+    "code": "CRF",
+    "name": "Master of Technology in Radio Frequency Design and Technology",
+    "seats": 44,
+    "semesters": {
+      "I": [
+        "CRL711",
+        "CRL718",
+        "PE-1",
+        "CRL601",
+        "CRL611",
+        "CRL621"
+      ],
+      "II": [
+        "CRL724",
+        "CRL702",
+        "PE-2",
+        "CRD802"
+      ],
+      "III": [
+        "CRD811",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "CRD812",
+        "PE-5",
+        "CRD814",
+        "OE-1",
+        "CRD811"
+      ]
+    }
+  },
+  "AST": {
+    "code": "AST",
+    "name": "Master of Technology in Atmospheric-Oceanic Science and Technology",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ASL730",
+        "ASP731",
+        "ASL732",
+        "ASL733",
+        "ASL734",
+        "ASL735"
+      ],
+      "II": [
+        "ASL736",
+        "ASL737",
+        "ASL738",
+        "ASP820",
+        "PE-1"
+      ],
+      "III": [
+        "ASD881",
+        "PE-2",
+        "PE-3"
+      ],
+      "IV": [
+        "ASD882",
+        "PE-4",
+        "PE-5",
+        "PE-6",
+        "PE-7"
+      ]
+    }
+  },
+  "CTE": {
+    "code": "CTE",
+    "name": "Master of Technology in Electric Mobility",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "CTL703",
+        "CTL705",
+        "CTP702",
+        "PE-1"
+      ],
+      "II": [
+        "CTL707",
+        "CTL717",
+        "CTP704",
+        "PE-2"
+      ],
+      "III": [
+        "CTD801",
+        "OE-1",
+        "OE-2",
+        "CTD802",
+        "PE-3",
+        "PE-4",
+        "PE-5",
+        "PE-6"
+      ],
+      "IV": []
+    }
+  },
+  "BMT": {
+    "code": "BMT",
+    "name": "Master of Technology in Biomedical Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "BML770",
+        "BML710",
+        "BML720",
+        "PE-1"
+      ],
+      "II": [
+        "BML737",
+        "BML760",
+        "BML740",
+        "BMP743",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "BMD801",
+        "OE-1"
+      ],
+      "IV": [
+        "BMD802",
+        "PE-1",
+        "OE-1"
+      ]
+    }
+  },
+  "JCS": {
+    "code": "JCS",
+    "name": "Master of Technology in Cyber Security",
+    "seats": 20,
+    "semesters": {
+      "I": [
+        "COL702",
+        "ELL781",
+        "JCP781",
+        "COL759",
+        "MTL730",
+        "PE-1"
+      ],
+      "II": [
+        "JCD891",
+        "SIL765",
+        "ELL810",
+        "JCP810",
+        "PE-2"
+      ],
+      "III": [
+        "JCD892",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "JCD893",
+        "PE-5",
+        "JCD892"
+      ]
+    }
+  },
+  "ESR": {
+    "code": "ESR",
+    "name": "Master of Technology in Renewable Energy Technologies and Management",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ESL739",
+        "ESL742",
+        "ESL755",
+        "ESL753",
+        "PE-1"
+      ],
+      "II": [
+        "ESP705",
+        "ESL768",
+        "PE-2",
+        "PE-3",
+        "PE-4",
+        "ESD801"
+      ],
+      "III": [
+        "ESD851",
+        "ESD798"
+      ],
+      "IV": [
+        "ESD852",
+        "PE-5",
+        "PE-6",
+        "PE-7",
+        "PE-8"
+      ]
+    }
+  },
+  "JIT": {
+    "code": "JIT",
+    "name": "Master of Technology in Industrial Tribology and Maintenance Engineering",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ITL703",
+        "ITL705",
+        "PE-1",
+        "OE-1"
+      ],
+      "II": [
+        "ITL702",
+        "ITL714",
+        "PE-2",
+        "PE-3"
+      ],
+      "III": [
+        "JID801",
+        "OE-2"
+      ],
+      "IV": [
+        "JID802"
+      ]
+    }
+  },
+  "JID": {
+    "code": "JID",
+    "name": "Master of Technology in Instrument Technology",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "DSP703",
+        "DSL711",
+        "DSL731",
+        "DSL601",
+        "DSL603",
+        "PE-1"
+      ],
+      "II": [
+        "DSP704",
+        "DSL712",
+        "DSL714",
+        "DSL734",
+        "PE-2"
+      ],
+      "III": [
+        "DSD801",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "DSD802"
+      ]
+    }
+  },
+  "JOP": {
+    "code": "JOP",
+    "name": "Master of Technology in Optoelectronics and Optical Communication",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "PYL791",
+        "ELL727",
+        "JOP791",
+        "PE-1",
+        "PE-2"
+      ],
+      "II": [
+        "PYL792",
+        "ELL717",
+        "JOP792",
+        "PE-3",
+        "PE-4"
+      ],
+      "III": [
+        "PE-5",
+        "JOD801"
+      ],
+      "IV": [
+        "JOD802"
+      ]
+    }
+  },
+  "JTM": {
+    "code": "JTM",
+    "name": "Master of Technology in Telecommunication Technology & Management",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELL711",
+        "ELL712",
+        "ELL785",
+        "BSP710"
+      ],
+      "II": [
+        "ELP725",
+        "JTD792",
+        "PE-1",
+        "MSL723",
+        "PE-2"
+      ],
+      "III": [
+        "JTD801",
+        "PE-3",
+        "PE-4"
+      ],
+      "IV": [
+        "JTD802"
+      ]
+    }
+  },
+  "JVL": {
+    "code": "JVL",
+    "name": "Master of Technology in VLSI Design Tools and Technology",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "ELP736",
+        "ELL734",
+        "PE-1",
+        "PE-2"
+      ],
+      "II": [
+        "PE-3",
+        "PE-4",
+        "PE-5",
+        "PE-6"
+      ],
+      "III": [
+        "JVD811",
+        "PE-7",
+        "PE-8",
+        "JVD799",
+        "PE-9",
+        "PE-10"
+      ],
+      "IV": [
+        "JVD812",
+        "JVD811"
+      ]
+    }
+  },
+  "JRB": {
+    "code": "JRB",
+    "name": "Master of Technology in Robotics",
+    "seats": 25,
+    "semesters": {
+      "I": [
+        "JRL704",
+        "ELL701",
+        "MCL799",
+        "COL671",
+        "ELL225",
+        "MCL212"
+      ],
+      "II": [
+        "COL778",
+        "COL770",
+        "JRL780",
+        "ELL705"
+      ],
+      "III": [
+        "PE-1",
+        "PE-2",
+        "JRD892",
+        "JRL747"
+      ],
+      "IV": []
+    }
+  },
+  "PPM": {
+    "code": "PPM",
+    "name": "Master of PPM",
+    "seats": 30,
+    "semesters": {
+      "I": [
+        "SPL704",
+        "SPL706",
+        "SPL708",
+        "SPL709"
+      ],
+      "II": [
+        "SPL703",
+        "SPL705",
+        "SPL707",
+        "PE-1"
+      ],
+      "III": [
+        "PE-2",
+        "PE-3",
+        "OE-1"
+      ],
+      "IV": [
+        "OE-1"
+      ]
+    }
+  },
+  "MBA": {
+    "code": "MBA",
+    "name": "Master of Business Administration",
+    "seats": 112,
+    "semesters": {
+      "I": [
+        "MSL700",
+        "MSL701",
+        "MSL702",
+        "MSL703"
+      ],
+      "II": [
+        "MSL704",
+        "MSL705",
+        "MSL706",
+        "MSL707"
+      ],
+      "III": [
+        "MSL800",
+        "MSL801",
+        "MSL729"
+      ],
+      "IV": [
+        "MSD891",
+        "MSD892"
+      ]
+    }
+  }
+}
