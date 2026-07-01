@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
+
+# Data outputs
+trajectory.csv
+schedule.csv
+student_data.csv
+professor_data.csv
+
+# Visualization outputs
+*.html
+*.png

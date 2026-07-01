@@ -249,13 +249,10 @@ def generate_pg_students(pg_data):
                 
                 # Hostel allocation logic for PG students:
                 # 50% live outside like PhD students (60% in JS, 40% in KS)
-                # Remaining 50% live in Hostels (Year 1: standard hostels, Year 2: Dronagiri)
+                # Remaining 50% live in Hostels (assigned to standard hostels)
                 category = random.choices(['JS', 'KS', 'Standard'], weights=[30, 20, 50], k=1)[0]
                 if category == 'Standard':
-                    if year == 1:
-                        hostel = random.choices(hostels, weights=weights, k=1)[0]
-                    else:
-                        hostel = "Dronagiri"
+                    hostel = random.choices(hostels, weights=weights, k=1)[0]
                 else:
                     hostel = category
                     
@@ -286,7 +283,7 @@ def generate_phd_students(phd_matrix_df, duration=5):
                 student_id = f"{entry_year}{branch}{i:04d}"
 
                 # Hostel allocation logic
-                category = random.choices(['PQ', 'KS', 'JS', 'Standard'], weights=[10, 20, 30, 40], k=1)[0]
+                category = random.choices(['KS', 'JS', 'Standard'], weights=[20, 30, 50], k=1)[0]
                 if category == 'Standard':
                     phd_standard_hostels = ['aravali', 'jwala', 'karakoram', 'nilgiri', 'kumaon', 'zanskar', 'shivalik', 'satpura', 'girnar', 'udaigiri', 'vindhyachal', 'sahadri']
                     phd_weights = [1]*11 + [3]
@@ -423,30 +420,352 @@ if __name__ == "__main__":
         build_student_timetable(student, df)
 
 
-student_data_list=[]
-for student in campus_students:
-    student_data_list.append({
-        'Student ID': student.student_id,
-        'Batch Number': student.batchnumber,
-        'Year': student.year,
-        'Branch': student.course,
-        'Hostel': student.hostel,
-        'Group Number': student.group_number,
-        'Total Courses': 1 if student.course.endswith('Z') else len(student.courses_alloted),
-        'Courses Allotted': "Doctoral Research Work" if student.course.endswith('Z') else ", ".join(student.courses_alloted),
-        'Slots Allotted': "Work Hours: 08:00-17:00 (Mon-Fri) | Lunch Break: 12:00-13:00" if student.course.endswith('Z') else ", ".join(student.slots_alloted)
-    })
+    # Load iitd.json to map hostels and residential zones to coordinates
+    with open('iitd.json') as f:
+        geojson = json.load(f)
 
-# Convert the list of dictionaries into a Pandas DataFrame
-student_df = pd.DataFrame(student_data_list)
+    # Build coordinates mapping from GeoJSON features
+    mapping = {}
+    for feat in geojson['features']:
+        name = feat.get('properties', {}).get('name')
+        if not name:
+            continue
+        gtype = feat['geometry']['type']
+        coords = feat['geometry']['coordinates']
+        
+        if gtype == 'Point':
+            mapping[name] = [coords[1], coords[0]]
+        elif gtype in ('Polygon', 'MultiPolygon'):
+            if gtype == 'Polygon':
+                ring = coords[0]
+            else:
+                ring = coords[0][0]
+            lats = [pt[1] for pt in ring if pt]
+            lons = [pt[0] for pt in ring if pt]
+            centroid = [sum(lats)/len(lats), sum(lons)/len(lons)]
+            mapping[name] = centroid
 
-# Export the DataFrame to a CSV file inside the unisim folder
-student_df.to_csv('student_data.csv', index=False)
-print("Student data list saved to student_data.csv successfully!")
+    # Student hostel mapping to GeoJSON names or direct coordinates
+    student_hostel_mapping = {
+        'aravali': 'ara',
+        'jwala': 'jwala',
+        'karakoram': 'kara',
+        'nilgiri': 'nil',
+        'kumaon': 'kum',
+        'zanskar': 'zans',
+        'shivalik': 'shiv',
+        'satpura': 'sat',
+        'girnar': 'gir',
+        'udaigiri': 'udai',
+        'kailash': 'kailash',
+        'vindhyachal': 'vind',
+        'himadri': 'him',
+        'sahadri': 'saha',
+        'JS': 'js',
+        'KS': 'ks',
+        'Dronagiri': 'Dronagiri'
+    }
 
-# Display the first few rows to verify
-print(student_df)
+    def get_student_coord(hostel):
+        if hostel in student_hostel_mapping:
+            mapped = student_hostel_mapping[hostel]
+            if isinstance(mapped, list):
+                return mapped
+            return mapping.get(mapped, [28.545955, 77.18614])
+        return [28.545955, 77.18614]
 
+    student_data_list = []
+    for student in campus_students:
+        coord = get_student_coord(student.hostel)
+        student_data_list.append({
+            'Student ID': student.student_id,
+            'Batch Number': student.batchnumber,
+            'Year': student.year,
+            'Branch': student.course,
+            'Hostel': student.hostel,
+            'Group Number': student.group_number,
+            'Total Courses': 1 if student.course.endswith('Z') else len(student.courses_alloted),
+            'Courses Allotted': "Doctoral Research Work" if student.course.endswith('Z') else ", ".join(student.courses_alloted),
+            'Slots Allotted': "Work Hours: 08:00-17:00 (Mon-Fri) | Lunch Break: 12:00-13:00" if student.course.endswith('Z') else ", ".join(student.slots_alloted),
+            'Home Latitude': coord[0],
+            'Home Longitude': coord[1]
+        })
 
-#postgraduate data
+    # Convert the list of dictionaries into a Pandas DataFrame
+    student_df = pd.DataFrame(student_data_list)
+
+    # Export the DataFrame to a CSV file inside the unisim folder
+    student_df.to_csv('student_data.csv', index=False)
+    print("Student data list saved to student_data.csv successfully!")
+
+    # Display the first few rows to verify
+    print(student_df.head())
+
+    # ==========================================
+    # 5. Professor Generation & Assignment
+    # ==========================================
+    def get_prof_coord(locality):
+        if locality == 'SDA':
+            return mapping.get('SDA', [28.5488852, 77.1997977])
+        elif locality == 'Type 4':
+            name = random.choice(['type4_1', 'type4_2'])
+            return mapping.get(name, [28.546655, 77.184649])
+        elif locality == 'Type 5':
+            return mapping.get('type5', [28.5437311, 77.197072])
+        elif locality == 'Nalanda Apt.':
+            return mapping.get('nalanda apt', [28.5459136, 77.1829884])
+        elif locality == 'New Multi Story':
+            name = random.choice(['tax', 'vik'])
+            return mapping.get(name, [28.544161, 77.181316])
+        elif locality == 'Chattpura':
+            return mapping.get('chat', [28.525859, 77.194400])
+        return [28.545955, 77.18614]
+
+    class Professor:
+        def __init__(self, prof_id, branch, description, locality="", schedule="", home_lat=0.0, home_lon=0.0):
+            self.prof_id = prof_id
+            self.branch = branch
+            self.description = description
+            self.locality = locality
+            self.schedule = schedule
+            self.home_lat = home_lat
+            self.home_lon = home_lon
+            
+        def to_dict(self):
+            return {
+                "Professor ID": self.prof_id,
+                "Branch": self.branch,
+                "Description": self.description,
+                "Locality": self.locality,
+                "Schedule": self.schedule,
+                "Home Latitude": self.home_lat,
+                "Home Longitude": self.home_lon
+            }
+
+    prof_dept_counts = {
+        "All India JAM-2025 Organising": 1,
+        "Central Library": 8,
+        "Central Research Facility": 1,
+        "Centre for Applied Research in Electronics": 16,
+        "Centre for Atmospheric Sciences": 20,
+        "Centre for Automotive Research and Tribology": 12,
+        "Centre for Biomedical Engineering": 22,
+        "Centre for Rural Development and Technology": 16,
+        "Centre for Sensors, Instrumentation and Cyber Physical System Engineering": 10,
+        "Computer Services Centre": 20,
+        "Department of Applied Mechanics": 38,
+        "Department of Biochemical Engineering and Biotechnology": 23,
+        "Department of Chemical Engineering": 32,
+        "Department of Chemistry": 38,
+        "Department of Civil Engineering": 63,
+        "Department of Computer Science and Engineering": 51,
+        "Department of Design": 12,
+        "Department of Electrical Engineering": 74,
+        "Department of Energy Science and Engineering": 33,
+        "Department of Humanities and Social Sciences": 49,
+        "Department of Management Studies": 33,
+        "Department of Materials Science and Engineering": 21,
+        "Department of Mathematics": 37,
+        "Department of Mechanical Engineering": 57,
+        "Department of Physics": 59,
+        "Department of Textile Technology": 27,
+        "Office of Registrar": 1,
+        "Optics and Photonics Centre": 9,
+        "School of Biological Sciences": 22,
+        "School of Public Policy": 14,
+        "Transportation research and injury prevention - centre": 2,
+        "TRIP Centre-Transportation Research and Injury Prevention Programme": 4,
+        "Yardi school of artificial intelligence": 4
+    }
+
+    def get_acronym(name):
+        clean_name = re.sub(r"\b(Department of|Centre for|School of|Office of)\b", "", name, flags=re.IGNORECASE).strip()
+        words = [w for w in clean_name.split() if w.lower() not in ["and", "for", "of", "in", "the", "-", "centre", "department", "school"]]
+        if len(words) == 1:
+            return words[0][:3].upper()
+        return "".join([w[0].upper() for w in words])
+
+    localities = ["SDA", "Chattpura", "Type 5", "Type 4", "New Multi Story", "Nalanda Apt."]
+    prof_weights = [44.5, 5.5, 12.5, 25.0, 6.25, 6.25]
+
+    all_professors = []
+    for dept, count in prof_dept_counts.items():
+        acronym = get_acronym(dept)
+        for i in range(1, count + 1):
+            prof_id = f"PROF-{acronym}-{i:03d}"
+            loc = random.choices(localities, weights=prof_weights, k=1)[0]
+            s = "Work Hours: 08:00-17:00 (Mon-Fri) | Lunch Break: 12:00-13:00"
+            coord = get_prof_coord(loc)
+            prof = Professor(prof_id=prof_id, branch=acronym, description=dept, locality=loc, schedule=s, home_lat=coord[0], home_lon=coord[1])
+            all_professors.append(prof)
+
+    prof_df = pd.DataFrame([p.to_dict() for p in all_professors])
+    prof_df.to_csv("professor_data.csv", index=False)
+    print(f"Generated {len(prof_df)} professor records with coordinates saved to professor_data.csv")
+
+    # ==========================================
+    # 6. Schedule Generation (Task 3)
+    # ==========================================
+    # Load offered courses for schedule details
+    courses_df = pd.read_csv('offered courses.csv')
+    course_dict = {}
+    for _, row in courses_df.iterrows():
+        code = str(row['Course Code']).strip()
+        course_dict[code] = {
+            'Lecture Time': str(row['Lecture Time']),
+            'Room': str(row['Room'])
+        }
+
+    def parse_lecture_time(time_str):
+        slots = []
+        if not isinstance(time_str, str) or not time_str.strip() or time_str == 'nan':
+            return slots
+        
+        blocks = time_str.split(',')
+        for block in blocks:
+            block = block.strip()
+            if ' ' in block:
+                days_str, time_slot = block.split(' ', 1)
+                days = re.findall(r'Th|M|T|W|F', days_str)
+                time_slot = time_slot.strip()
+                
+                time_parts = time_slot.split('-')
+                if len(time_parts) == 2:
+                    start_time, end_time = time_parts[0].strip(), time_parts[1].strip()
+                else:
+                    start_time, end_time = time_slot, time_slot
+                
+                for day in days:
+                    slots.append({
+                        'day': day,
+                        'slot': time_slot,
+                        'start_time': start_time,
+                        'end_time': end_time
+                    })
+        return slots
+
+    def get_room_coord(room):
+        room = str(room).strip().upper()
+        if not room or room in ('NAN', 'TBA', ''):
+            return mapping.get('main_building', [28.5452719, 77.192312])
+        
+        if 'DOD' in room or 'WS' in room:
+            return mapping.get('ws', [28.5439754, 77.192382])
+        elif 'DH' in room:
+            return mapping.get('dogra', [28.5447235, 77.191756])
+        elif 'DMS' in room:
+            return mapping.get('DMS', [28.5424921, 77.1830029])
+        elif 'LH' in room:
+            return mapping.get('lhc', [28.5434165, 77.1931136])
+        elif any(block in room for block in ['TX', 'ME', 'EE', 'AM', 'PH']):
+            return mapping.get('blocks', [28.5450652, 77.1917522])
+        elif re.match(r'^(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII)', room):
+            return mapping.get('blocks', [28.5450652, 77.1917522])
+            
+        return mapping.get('main_building', [28.5452719, 77.192312])
+
+    schedule_rows = []
+
+    print("Generating B.Tech/M.Tech and PhD student schedules...")
+    for _, row in student_df.iterrows():
+        agent_id = row['Student ID']
+        branch = row['Branch']
+        
+        if str(branch).endswith('Z'):
+            # PhD Schedule: Mon-Fri: 08:00-12:00 and 13:00-17:00
+            if branch == 'DDZ':
+                room = 'WS'
+                room_coord = mapping.get('ws', [28.5439754, 77.192382])
+            elif branch == 'MSZ':
+                room = 'DMS'
+                room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
+            else:
+                room = 'Blocks'
+                room_coord = mapping.get('blocks', [28.5450652, 77.1917522])
+                
+            for day in ['M', 'T', 'W', 'Th', 'F']:
+                schedule_rows.append({
+                    'agent_id': agent_id,
+                    'day': day,
+                    'slot': '08:00-12:00',
+                    'start_time': '08:00',
+                    'end_time': '12:00',
+                    'room': room,
+                    'room_lat': room_coord[0],
+                    'room_lon': room_coord[1]
+                })
+                schedule_rows.append({
+                    'agent_id': agent_id,
+                    'day': day,
+                    'slot': '13:00-17:00',
+                    'start_time': '13:00',
+                    'end_time': '17:00',
+                    'room': room,
+                    'room_lat': room_coord[0],
+                    'room_lon': room_coord[1]
+                })
+        else:
+            courses_str = str(row['Courses Allotted'])
+            if courses_str and courses_str != 'nan':
+                courses = [c.strip() for c in courses_str.split(',') if c.strip()]
+                for c in courses:
+                    if c in course_dict:
+                        lecture_time = course_dict[c]['Lecture Time']
+                        room = course_dict[c]['Room']
+                        room_coord = get_room_coord(room)
+                        
+                        parsed_slots = parse_lecture_time(lecture_time)
+                        for ps in parsed_slots:
+                            schedule_rows.append({
+                                'agent_id': agent_id,
+                                'day': ps['day'],
+                                'slot': ps['slot'],
+                                'start_time': ps['start_time'],
+                                'end_time': ps['end_time'],
+                                'room': room,
+                                'room_lat': room_coord[0],
+                                'room_lon': room_coord[1]
+                            })
+
+    print("Generating professor schedules...")
+    for _, row in prof_df.iterrows():
+        agent_id = row['Professor ID']
+        branch = row['Branch']
+        
+        if branch == 'DD':
+            room = 'WS'
+            room_coord = mapping.get('ws', [28.5439754, 77.192382])
+        elif branch == 'MS' or branch == 'DMS':
+            room = 'DMS'
+            room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
+        else:
+            room = 'Blocks'
+            room_coord = mapping.get('blocks', [28.5450652, 77.1917522])
+            
+        for day in ['M', 'T', 'W', 'Th', 'F']:
+            schedule_rows.append({
+                'agent_id': agent_id,
+                'day': day,
+                'slot': '08:00-12:00',
+                'start_time': '08:00',
+                'end_time': '12:00',
+                'room': room,
+                'room_lat': room_coord[0],
+                'room_lon': room_coord[1]
+            })
+            schedule_rows.append({
+                'agent_id': agent_id,
+                'day': day,
+                'slot': '13:00-17:00',
+                'start_time': '13:00',
+                'end_time': '17:00',
+                'room': room,
+                'room_lat': room_coord[0],
+                'room_lon': room_coord[1]
+            })
+
+    schedule_df = pd.DataFrame(schedule_rows)
+    schedule_df.to_csv('schedule.csv', index=False)
+    print(f"Schedule table with {len(schedule_df)} entries saved to schedule.csv successfully!")
+
 
