@@ -95,6 +95,17 @@ To prevent students from having incomplete or empty schedules (which results in 
 * **Open Electives (OE / OC):** Assigns an offered course from a different department via vacancy-weighted random choices to model inter-departmental learning.
 * **Conflict Resolution:** Electives are only assigned if they do not introduce schedule slot collisions with the student's existing core courses and do not allocate the same course twice to a student.
 
+### 5. Conditional Student Attendance Model
+To model realistic campus behaviors, B.Tech and PG student class attendance is determined dynamically using a state-dependent Markov chain model:
+* **First Class of the Day:** Attended with a base probability $P(A_1 = 1) = 0.75$.
+* **Subsequent Classes ($i > 1$):**
+  * If Class $i$ is **back-to-back** with Class $i-1$ (`start_time` of Class $i$ equals `end_time` of Class $i-1$):
+    * If Class $i-1$ was attended: $P(A_i = 1 \mid A_{i-1} = 1) = 1.0$ (100% chance to attend).
+    * If Class $i-1$ was skipped: $P(A_i = 1 \mid A_{i-1} = 0) = 0.50$ (50% chance to attend).
+  * If Class $i$ is **not back-to-back** (e.g. after lunch break or a free slot gap):
+    * Resets to the base probability: $P(A_i = 1) = 0.75$.
+* **Routing Redirection:** If a class is decided as skipped, the schedule entry's destination is changed to the student's home/hostel coordinates and the activity is set to `'Home'`. This causes the agent to either stay home or walk back home instead of going to the classroom.
+
 ---
 
 ## 4. Key Database Schema

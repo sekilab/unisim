@@ -980,6 +980,8 @@ if __name__ == "__main__":
                 })
         else:
             courses_str = str(row['Courses Allotted'])
+            student_slots = []
+            
             if courses_str and courses_str != 'nan':
                 courses = [c.strip() for c in courses_str.split(',') if c.strip()]
                 for c in courses:
@@ -990,7 +992,7 @@ if __name__ == "__main__":
                         
                         parsed_slots = parse_lecture_time(lecture_time)
                         for ps in parsed_slots:
-                            schedule_rows.append({
+                            student_slots.append({
                                 'agent_id': agent_id,
                                 'day': ps['day'],
                                 'slot': ps['slot'],
@@ -1001,6 +1003,106 @@ if __name__ == "__main__":
                                 'room_lon': room_coord[1],
                                 'activity': 'Class'
                             })
+                            
+            # Process attendance day-by-day
+            if student_slots:
+                slots_by_day = {d: [] for d in ['M', 'T', 'W', 'Th', 'F']}
+                for s in student_slots:
+                    slots_by_day[s['day']].append(s)
+                    
+                for day in ['M', 'T', 'W', 'Th', 'F']:
+                    day_slots = slots_by_day[day]
+                    if not day_slots:
+                        continue
+                    # Sort day_slots chronologically by start_time
+                    day_slots.sort(key=lambda x: x['start_time'])
+                    
+                    prev_attended = None
+                    prev_end_time = None
+                    
+                    for idx, slot_entry in enumerate(day_slots):
+                        # Attendance decision
+                        is_back_to_back = (prev_end_time is not None and slot_entry['start_time'] == prev_end_time)
+                        
+                        if is_back_to_back:
+                            if prev_attended:
+                                # 100% chance to attend if previous back-to-back class was attended
+                                attend = True
+                            else:
+                                # 50% chance to attend if previous back-to-back class was skipped
+                                attend = (random.random() < 0.50)
+                        else:
+                            # Reset to base probability of 75% for first class or after a break
+                            attend = (random.random() < 0.75)
+                            
+                        if attend:
+                            schedule_rows.append(slot_entry)
+                            prev_attended = True
+                        else:
+                            # Redirect skipped class to Home location
+                            skipped_entry = dict(slot_entry)
+                            skipped_entry['room'] = row['Hostel']
+                            skipped_entry['room_lat'] = float(row['Home Latitude'])
+                            skipped_entry['room_lon'] = float(row['Home Longitude'])
+                            skipped_entry['activity'] = 'Home'
+                            schedule_rows.append(skipped_entry)
+                            prev_attended = False
+                            
+                        prev_end_time = slot_entry['end_time']
+            else:
+                # Fallback for students with 0 scheduled class hours (e.g. M.Tech 2nd years doing Major Project/Thesis)
+                branch_upper = branch.upper()
+                if 'DD' in branch_upper:
+                    room = 'WS'
+                    room_coord = mapping.get('ws', [28.5439754, 77.192382])
+                elif 'MS' in branch_upper or 'DMS' in branch_upper or 'MBA' in branch_upper:
+                    room = 'DMS'
+                    room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
+                elif 'EE' in branch_upper:
+                    room = 'Block 2 (EE)'
+                    room_coord = mapping.get('block2', [28.5450652, 77.1917522])
+                elif 'ME' in branch_upper or 'TT' in branch_upper:
+                    room = 'Block 3 (ME/TT)'
+                    room_coord = mapping.get('block3', [28.5450652, 77.1917522])
+                elif 'AM' in branch_upper or 'CE' in branch_upper:
+                    room = 'Block 4 (AM/CE)'
+                    room_coord = mapping.get('block4', [28.5450652, 77.1917522])
+                elif 'CY' in branch_upper or 'BE' in branch_upper or 'CHE' in branch_upper or 'BEB' in branch_upper:
+                    room = 'Block 1 (CY/BE/CHE)'
+                    room_coord = mapping.get('block1', [28.5450652, 77.1917522])
+                elif 'CS' in branch_upper or 'PH' in branch_upper or 'PHY' in branch_upper:
+                    room = 'Block 6 (CS/PH)'
+                    room_coord = mapping.get('block6', [28.5450652, 77.1917522])
+                elif 'MAT' in branch_upper or 'MAS' in branch_upper or 'MA' in branch_upper:
+                    room = 'Mathematics Dept'
+                    room_coord = mapping.get('math_dept', [28.5450652, 77.1917522])
+                else:
+                    room = 'Main Building'
+                    room_coord = mapping.get('main_building', [28.5452719, 77.192312])
+                    
+                for day in ['M', 'T', 'W', 'Th', 'F']:
+                    schedule_rows.append({
+                        'agent_id': agent_id,
+                        'day': day,
+                        'slot': '08:00-12:00',
+                        'start_time': '08:00',
+                        'end_time': '12:00',
+                        'room': room,
+                        'room_lat': room_coord[0],
+                        'room_lon': room_coord[1],
+                        'activity': 'Project'
+                    })
+                    schedule_rows.append({
+                        'agent_id': agent_id,
+                        'day': day,
+                        'slot': '13:00-17:00',
+                        'start_time': '13:00',
+                        'end_time': '17:00',
+                        'room': room,
+                        'room_lat': room_coord[0],
+                        'room_lon': room_coord[1],
+                        'activity': 'Project'
+                    })
 
     print("Generating professor schedules...")
     for _, row in prof_df.iterrows():
