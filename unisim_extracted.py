@@ -305,7 +305,7 @@ def generate_phd_students(phd_matrix_df, duration=5):
 def assign_mandatory_courses(students_list, curriculum, course_df):
     """Assigns courses based on batchnumber and looks up slots via Pandas."""
     def is_excluded(course_code):
-        for pattern in ['HUL', 'OC', 'DE', 'DC', 'OE', 'PE']:
+        for pattern in ['HUL', 'OC', 'DE', 'DC', 'OE', 'PE', 'XX', 'XXX']:
             if pattern in course_code:
                 return True
         return False
@@ -357,6 +357,175 @@ def assign_hul_courses(students_list, curriculum, course_df):
                     # Select one candidate randomly
                     chosen_code, chosen_slot = random.choice(valid_candidates)
                     student.add_course(chosen_code, chosen_slot, category='HUL')
+
+def get_dept_prefixes(branch):
+    # Remove year prefix if any (e.g., '1CE' -> 'CE', '4CS5' -> 'CS5')
+    branch = re.sub(r'^\d+', '', branch).upper()
+    mapping = {
+        'AM': ['APL', 'AMP', 'AMD', 'AML'],
+        'AM1': ['APL', 'AMP', 'AMD', 'AML'],
+        'BB': ['BBL', 'BBP', 'BBD', 'BBQ', 'BBV'],
+        'BB1': ['BBL', 'BBP', 'BBD', 'BBQ', 'BBV'],
+        'CH': ['CLL', 'CLP', 'CLD', 'CLQ'],
+        'CH1': ['CLL', 'CLP', 'CLD', 'CLQ'],
+        'CH7': ['CLL', 'CLP', 'CLD', 'CLQ'],
+        'CE': ['CVL', 'CVP', 'CVD', 'CVC'],
+        'CE1': ['CVL', 'CVP', 'CVD', 'CVC'],
+        'CS': ['COL', 'COP', 'COD', 'COQ', 'COV', 'CON', 'COS'],
+        'CS1': ['COL', 'COP', 'COD', 'COQ', 'COV', 'CON', 'COS'],
+        'CS5': ['COL', 'COP', 'COD', 'COQ', 'COV', 'CON', 'COS'],
+        'EE': ['ELL', 'ELP', 'EED', 'ELQ', 'ELS', 'ELV'],
+        'EE1': ['ELL', 'ELP', 'EED', 'ELQ', 'ELS', 'ELV'],
+        'EE3': ['ELL', 'ELP', 'EED', 'ELQ', 'ELS', 'ELV'],
+        'ES': ['ESL', 'ESD', 'ESN', 'ESQ', 'ESS'],
+        'ES1': ['ESL', 'ESD', 'ESN', 'ESQ', 'ESS'],
+        'MS1': ['MLL', 'MLP', 'MLD', 'MLQ', 'MLV'],
+        'ME': ['MCL', 'MCP', 'MCD', 'MCQ', 'MCV'],
+        'ME1': ['MCL', 'MCP', 'MCD', 'MCQ', 'MCV'],
+        'ME2': ['MCL', 'MCP', 'MCD', 'MCQ', 'MCV'],
+        'MT': ['MTL', 'MTQ', 'MTD'],
+        'MT1': ['MTL', 'MTQ', 'MTD'],
+        'MT6': ['MTL', 'MTQ', 'MTD'],
+        'PH': ['PYL', 'PYP', 'PYD', 'PYQ', 'PYV'],
+        'PH1': ['PYL', 'PYP', 'PYD', 'PYQ', 'PYV'],
+        'TT': ['TXL', 'TXP', 'TXD', 'TXQ', 'TXR', 'TXS', 'TXT'],
+        'TT1': ['TXL', 'TXP', 'TXD', 'TXQ', 'TXR', 'TXS', 'TXT'],
+        
+        # PG Programs
+        'CYS': ['COL', 'COP', 'COD', 'CON', 'COV'],
+        'HCS': ['HSL', 'HSD', 'HSP'],
+        'HES': ['HSL', 'HSD', 'HSP'],
+        'MAS': ['MTL', 'MTD'],
+        'PHS': ['PYL', 'PYP', 'PYD'],
+        'BLS': ['BBL', 'BBP', 'BBD'],
+        'DDS': ['DDL', 'DDP', 'DDR'],
+        'HST': ['HSL', 'HSD', 'HSP'],
+        'AMA': ['APL', 'AMP', 'AMD', 'AML'],
+        'BEM': ['BBL', 'BBP', 'BBD'],
+        'CHE': ['CLL', 'CLP', 'CLD'],
+        'CEP': ['CVL', 'CVP', 'CVD'],
+        'CES': ['CVL', 'CVP', 'CVD'],
+        'CET': ['CVL', 'CVP', 'CVD'],
+        'CEU': ['CVL', 'CVP', 'CVD'],
+        'CEV': ['CVL', 'CVP', 'CVD'],
+        'CEW': ['CVL', 'CVP', 'CVD'],
+        'EEA': ['ELL', 'ELP', 'EED'],
+        'EEE': ['ELL', 'ELP', 'EED'],
+        'EEN': ['ELL', 'ELP', 'EED'],
+        'EEP': ['ELL', 'ELP', 'EED'],
+        'EES': ['ELL', 'ELP', 'EED'],
+        'MSM': ['MSL', 'MSD'],
+        'MSP': ['MSL', 'MSD'],
+        'MEE': ['MCL', 'MCP', 'MCD'],
+        'MEM': ['MCL', 'MCP', 'MCD'],
+        'MEP': ['MCL', 'MCP', 'MCD'],
+        'MET': ['MCL', 'MCP', 'MCD'],
+        'PHA': ['PYL', 'PYP', 'PYD'],
+        'PHM': ['PYL', 'PYP', 'PYD'],
+        'TTE': ['TXL', 'TXP', 'TXD'],
+        'TTC': ['TXL', 'TXP', 'TXD'],
+        'TTF': ['TXL', 'TXP', 'TXD'],
+        'CRF': ['CRL', 'CRP', 'CRD'],
+        'AST': ['ASL', 'ASP', 'ASD'],
+        'CTE': ['CTL', 'CTP', 'CTD'],
+        'BMT': ['BML', 'BMD'],
+        'JCS': ['JC'],
+        'ESR': ['ESL', 'ESD'],
+        'JIT': ['JI'],
+        'JID': ['JI'],
+        'JOP': ['OPL', 'OPD'],
+        'JTM': ['JTL', 'JTD'],
+        'JVD': ['JVL', 'JVD'],
+        'JRB': ['JRL', 'JRD'],
+        'PPM': ['SPL', 'SPD'],
+        'MBA': ['MSL', 'MSD'],
+    }
+    if branch in mapping:
+        return mapping[branch]
+    short_branch = branch[:2]
+    if short_branch in mapping:
+        return mapping[short_branch]
+    return []
+
+def build_elective_candidates(course_df):
+    ug_candidates = []
+    pg_candidates = []
+    
+    clean_df = course_df.dropna(subset=['Course Code', 'Slot Name', 'Lecture Time', 'Room']).copy()
+    clean_df = clean_df[
+        (~clean_df['Slot Name'].str.upper().isin(['TBA', 'NAN', ''])) &
+        (~clean_df['Lecture Time'].str.upper().isin(['TBA', 'NAN', ''])) &
+        (~clean_df['Room'].str.upper().isin(['TBA', 'NAN', '']))
+    ]
+    
+    for _, row in clean_df.iterrows():
+        code = str(row['Course Code']).strip()
+        slot = str(row['Slot Name']).strip()
+        
+        match = re.search(r'\d', code)
+        if match:
+            level = int(match.group())
+        else:
+            level = 1
+            
+        candidate = (code, slot)
+        if level < 7:
+            ug_candidates.append(candidate)
+        else:
+            pg_candidates.append(candidate)
+            
+    return ug_candidates, pg_candidates
+
+def assign_elective_courses(students_list, curriculum, course_df):
+    """Assigns electives (PE, DE, OE, OC) and department placeholders (COD3XX, etc.) dynamically based on student level and branch."""
+    ug_candidates, pg_candidates = build_elective_candidates(course_df)
+    
+    def is_placeholder(item):
+        for pattern in ['PE', 'DE', 'OE', 'OC', 'XX', 'XXX', 'HUL2', 'HUL3']:
+            if pattern in item:
+                return True
+        return False
+        
+    for student in students_list:
+        batch = student.batchnumber
+        if batch not in curriculum:
+            continue
+            
+        is_pg = student.course.endswith('Z') or student.course in pg_data
+        candidates = pg_candidates if is_pg else ug_candidates
+        dept_prefixes = get_dept_prefixes(student.course)
+        
+        for item in curriculum[batch]:
+            if not is_placeholder(item):
+                continue
+            if 'HUL' in item:
+                continue
+                
+            is_dept_elective = any(p in item for p in ['PE', 'DE', 'XX', 'XXX'])
+            valid_candidates = []
+            
+            for code, slot in candidates:
+                if code in student.courses_alloted or slot in student.slots_alloted:
+                    continue
+                    
+                has_dept_prefix = any(code.startswith(pref) for pref in dept_prefixes)
+                
+                if is_dept_elective:
+                    if has_dept_prefix:
+                        valid_candidates.append((code, slot))
+                else:
+                    if not has_dept_prefix:
+                        valid_candidates.append((code, slot))
+                        
+            # Fallback if no specific open elective in other departments
+            if not is_dept_elective and not valid_candidates:
+                for code, slot in candidates:
+                    if code not in student.courses_alloted and slot not in student.slots_alloted:
+                        valid_candidates.append((code, slot))
+                        
+            if valid_candidates:
+                chosen_code, chosen_slot = random.choice(valid_candidates)
+                student.add_course(chosen_code, chosen_slot)
 
 def build_student_timetable(student, course_dataframe):
     """Constructs a daily schedule dict based on the student's allocated courses."""
@@ -411,6 +580,9 @@ if __name__ == "__main__":
 
     # Assign the mandatory courses dynamically
     assign_mandatory_courses(campus_students, curriculum_data, df)
+
+    # Assign elective courses (PE, DE, OE, OC)
+    assign_elective_courses(campus_students, curriculum_data, df)
 
     # Assign HUL courses randomly based on free slots
     assign_hul_courses(campus_students, curriculum_data, df)

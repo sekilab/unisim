@@ -86,6 +86,13 @@ $$lat_{jitter} = lat + U(-0.00008, 0.00008)$$
 $$lon_{jitter} = lon + U(-0.00008, 0.00008)$$
 This distributes the heat spots across the actual physical footprint of the buildings.
 
+### 4. Dynamic Elective Course Allocation
+To prevent students from having incomplete or empty schedules (which results in static agents), the engine maps elective placeholders (`PE`, `DE`, `OE`, `OC`, `XX`, `XXX`) to actual active courses from `offered courses.csv`:
+* **Department Mapping:** Maps each student's branch/course code to its corresponding department prefixes (e.g. `CS1` / `CS5` $\rightarrow$ `CO`/`CS`, `EE1` $\rightarrow$ `EL`/`EE`, `PPM` $\rightarrow$ `SP`).
+* **Departmental Electives (PE / DE / XX):** Filters offered courses that match the student's department prefix and academic level (UG vs. PG), randomly assigning one.
+* **Open Electives (OE / OC):** Assigns an offered course from a different department to simulate inter-departmental learning.
+* **Conflict Resolution:** Electives are only assigned if they do not introduce schedule slot collisions with the student's existing core courses.
+
 ---
 
 ## 4. Key Database Schema
