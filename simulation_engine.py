@@ -151,6 +151,13 @@ for _, row in students_df.iterrows():
 for _, row in profs_df.iterrows():
     agent_home[row['Professor ID']] = (row['Home Latitude'], row['Home Longitude'])
 
+# Load and map non-teaching staff home coordinates
+staff_data_path = os.path.join(WORKSPACE_DIR, 'staff_data.csv')
+if os.path.exists(staff_data_path):
+    staff_df = pd.read_csv(staff_data_path)
+    for _, row in staff_df.iterrows():
+        agent_home[row['Staff ID']] = (row['Home Latitude'], row['Home Longitude'])
+
 # Map schedules by agent and day
 print("Indexing schedule data...")
 # Index schedules: schedule_dict[agent_id][day] = list of (start_min, end_min, lat, lon)

@@ -104,8 +104,20 @@ To model realistic campus behaviors, B.Tech and PG student class attendance is d
     * If Class $i-1$ was skipped: $P(A_i = 1 \mid A_{i-1} = 0) = 0.50$ (50% chance to attend).
   * If Class $i$ is **not back-to-back** (e.g. after lunch break or a free slot gap):
     * Resets to the base probability: $P(A_i = 1) = 0.75$.
-* **MBA Exemption:** MBA students are exempt from the attendance skip model and have a 100% attendance policy (always attend all scheduled classes).
 * **Routing Redirection:** If a class is decided as skipped, the schedule entry's destination is changed to the student's home/hostel coordinates and the activity is set to `'Home'`. This causes the agent to either stay home or walk back home instead of going to the classroom.
+
+### 6. Non-Teaching Staff & Duty Timetables
+The simulation supports **490 non-teaching staff members** (agents `STAFF-001` to `STAFF-490`):
+* **Housing Location:** Housed inside the new `"staff residence"` polygon feature added to `iitd.json`. Their home coordinates are sampled randomly within this polygon footprint. Their home/locality name matches their staff ID.
+* **Timetable:** They work from **08:00 to 18:00 (Mon-Fri) with a 12:00 to 14:00 lunch break**.
+  * Duty Slot 1: `08:00-12:00` (Activity: `'Duty'`)
+  * Duty Slot 2: `14:00-18:00` (Activity: `'Duty'`)
+  * During the 12:00-14:00 lunch break, they return home automatically.
+* **Work Location Distribution:** Their duties are distributed across campus as follows:
+  * **10% (49 staff):** LHC (`lhc`)
+  * **20% (98 staff):** Academic Blocks (distributed among `block1` to `block6`, `math_dept`, `bharti_school`, `library`)
+  * **20% (98 staff):** Administration Building (`main_building`)
+  * **50% (245 staff):** Hostels and other buildings (Library, Bharti School, Dogra Hall, Workshop, DMS) distributed evenly.
 
 ---
 

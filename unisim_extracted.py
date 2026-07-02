@@ -836,6 +836,95 @@ if __name__ == "__main__":
     print(f"Generated {len(prof_df)} professor records with coordinates saved to professor_data.csv")
 
     # ==========================================
+    # 5.5 Non-Teaching Staff Generation
+    # ==========================================
+    from shapely.geometry import shape, Point
+
+    class Staff:
+        def __init__(self, staff_id, locality="", work_room="", schedule="", home_lat=0.0, home_lon=0.0):
+            self.staff_id = staff_id
+            self.locality = locality
+            self.work_room = work_room
+            self.schedule = schedule
+            self.home_lat = home_lat
+            self.home_lon = home_lon
+            
+        def to_dict(self):
+            return {
+                "Staff ID": self.staff_id,
+                "Locality": self.locality,
+                "Work Room": self.work_room,
+                "Schedule": self.schedule,
+                "Home Latitude": self.home_lat,
+                "Home Longitude": self.home_lon
+            }
+
+    # Find the staff residence polygon from GeoJSON
+    staff_polygon = None
+    for feat in geojson['features']:
+        if feat.get('properties', {}).get('@id') == 'staff':
+            staff_polygon = shape(feat['geometry'])
+            break
+
+    def get_staff_home_coord(poly):
+        if poly is None:
+            return [28.541725, 77.1929797]
+        min_lon, min_lat, max_lon, max_lat = poly.bounds
+        while True:
+            lon = random.uniform(min_lon, max_lon)
+            lat = random.uniform(min_lat, max_lat)
+            point = Point(lon, lat)
+            if poly.contains(point):
+                return [lat, lon]
+
+    # Pre-determine work rooms based on the 10%/20%/20%/50% distribution
+    lhc_rooms = ['lhc']
+    blocks_rooms = ['block1', 'block2', 'block3', 'block4', 'block5', 'block6', 'math_dept', 'bharti_school', 'library']
+    admin_rooms = ['main_building']
+    hostels_others_rooms = [
+        'ara', 'jwala', 'kara', 'nil', 'kum', 'zans', 'gir', 'udai', 'sat', 'vind', 'shiv', 'kailash', 'him', 'saha',
+        'library', 'bharti_school', 'dogra', 'ws', 'DMS'
+    ]
+
+    staff_rooms = []
+    # 10% (49 staff) in LHC
+    for _ in range(49):
+        staff_rooms.append(random.choice(lhc_rooms))
+    # 20% (98 staff) in Academic Blocks
+    for _ in range(98):
+        staff_rooms.append(random.choice(blocks_rooms))
+    # 20% (98 staff) in Admin
+    for _ in range(98):
+        staff_rooms.append(random.choice(admin_rooms))
+    # 50% (245 staff) in Hostels and other buildings
+    for _ in range(245):
+        staff_rooms.append(random.choice(hostels_others_rooms))
+
+    random.shuffle(staff_rooms)
+
+    all_staff = []
+    for i in range(1, 491):
+        staff_id = f"STAFF-{i:03d}"
+        coord = get_staff_home_coord(staff_polygon)
+        locality = staff_id
+        work_room = staff_rooms[i-1]
+        s_desc = "Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00"
+        
+        staff_member = Staff(
+            staff_id=staff_id,
+            locality=locality,
+            work_room=work_room,
+            schedule=s_desc,
+            home_lat=coord[0],
+            home_lon=coord[1]
+        )
+        all_staff.append(staff_member)
+
+    staff_df = pd.DataFrame([s.to_dict() for s in all_staff])
+    staff_df.to_csv("staff_data.csv", index=False)
+    print(f"Generated {len(staff_df)} non-teaching staff records with coordinates saved to staff_data.csv")
+
+    # ==========================================
     # 6. Schedule Generation (Task 3)
     # ==========================================
     # Load offered courses for schedule details
@@ -1024,9 +1113,7 @@ if __name__ == "__main__":
                         # Attendance decision
                         is_back_to_back = (prev_end_time is not None and slot_entry['start_time'] == prev_end_time)
                         
-                        if branch == 'MBA':
-                            attend = True
-                        elif is_back_to_back:
+                        if is_back_to_back:
                             if prev_attended:
                                 # 100% chance to attend if previous back-to-back class was attended
                                 attend = True
@@ -1161,6 +1248,35 @@ if __name__ == "__main__":
                 'room_lat': room_coord[0],
                 'room_lon': room_coord[1],
                 'activity': 'Work'
+            })
+    print("Generating non-teaching staff schedules...")
+    for _, row in staff_df.iterrows():
+        agent_id = row['Staff ID']
+        room = row['Work Room']
+        room_coord = mapping.get(room, mapping.get('main_building', [28.5452719, 77.192312]))
+        
+        for day in ['M', 'T', 'W', 'Th', 'F']:
+            schedule_rows.append({
+                'agent_id': agent_id,
+                'day': day,
+                'slot': '08:00-12:00',
+                'start_time': '08:00',
+                'end_time': '12:00',
+                'room': room,
+                'room_lat': room_coord[0],
+                'room_lon': room_coord[1],
+                'activity': 'Duty'
+            })
+            schedule_rows.append({
+                'agent_id': agent_id,
+                'day': day,
+                'slot': '14:00-18:00',
+                'start_time': '14:00',
+                'end_time': '18:00',
+                'room': room,
+                'room_lat': room_coord[0],
+                'room_lon': room_coord[1],
+                'activity': 'Duty'
             })
 
     schedule_df = pd.DataFrame(schedule_rows)
