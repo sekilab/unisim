@@ -8,7 +8,7 @@ df=pd.read_csv('offered courses.csv')
 phd_sm=pd.read_csv('student matrix phd.csv')
 
 
-df = df[['Course Code','Slot Name','Lecture Time','Room']]
+df = df[['Course Code','Slot Name','Lecture Time','Room','Vacancy']]
 df = df.dropna(subset=['Room'])
 df['Slot Name'].unique().tolist()
 
@@ -328,9 +328,25 @@ def assign_mandatory_courses(students_list, curriculum, course_df):
 
 def assign_hul_courses(students_list, curriculum, course_df):
     """Assigns HUL courses randomly based on free slots if HUL is mentioned in the student's curriculum."""
-    # Filter course_df for only HUL courses with rooms
-    hul_df = course_df[course_df['Course Code'].str.startswith('HUL', na=False)]
-    hul_candidates = hul_df[['Course Code', 'Slot Name']].drop_duplicates().values.tolist()
+    # Filter course_df for HUL courses with rooms and lecture/seminar restriction
+    hul_df = course_df[course_df['Course Code'].str.startswith('HUL', na=False)].dropna(subset=['Room']).copy()
+    hul_df = hul_df[
+        (~hul_df['Slot Name'].str.upper().isin(['TBA', 'NAN', ''])) &
+        (~hul_df['Lecture Time'].str.upper().isin(['TBA', 'NAN', ''])) &
+        (~hul_df['Room'].str.upper().isin(['TBA', 'NAN', '']))
+    ]
+    # Filter for lecture/seminar courses (3rd character of code must be 'L', 'V', or 'S')
+    hul_df = hul_df[hul_df['Course Code'].str.len() >= 3]
+    hul_df = hul_df[hul_df['Course Code'].str[2].isin(('L', 'V', 'S'))]
+    
+    # Get unique Course Code, Slot Name and its Vacancy
+    # Group by code and slot and take the first Vacancy
+    hul_candidates = hul_df.groupby(['Course Code', 'Slot Name'])['Vacancy'].first().reset_index()
+    # Convert vacancy to float, default to 30.0
+    hul_candidates['Vacancy'] = pd.to_numeric(hul_candidates['Vacancy'], errors='coerce').fillna(30.0)
+    hul_candidates.loc[hul_candidates['Vacancy'] <= 0, 'Vacancy'] = 30.0
+    
+    hul_candidates_list = hul_candidates.values.tolist() # list of [code, slot, vacancy]
 
     for student in students_list:
         batch = student.batchnumber  # e.g., '1CE', '2CE'
@@ -349,14 +365,15 @@ def assign_hul_courses(students_list, curriculum, course_df):
 
                 # Find all candidates of this level whose slot is NOT in the student's currently allotted slots
                 valid_candidates = []
-                for code, slot in hul_candidates:
+                for code, slot, vac in hul_candidates_list:
                     if code.startswith(prefix) and slot not in student.slots_alloted:
-                        valid_candidates.append((code, slot))
+                        valid_candidates.append((code, slot, vac))
 
                 if valid_candidates:
-                    # Select one candidate randomly
-                    chosen_code, chosen_slot = random.choice(valid_candidates)
-                    student.add_course(chosen_code, chosen_slot, category='HUL')
+                    # Weighted random selection based on Vacancy
+                    weights = [cand[2] for cand in valid_candidates]
+                    chosen = random.choices(valid_candidates, weights=weights, k=1)[0]
+                    student.add_course(chosen[0], chosen[1], category='HUL')
 
 def get_dept_prefixes(branch):
     # Remove year prefix if any (e.g., '1CE' -> 'CE', '4CS5' -> 'CS5')
@@ -462,18 +479,28 @@ def build_elective_candidates(course_df):
         code = str(row['Course Code']).strip()
         slot = str(row['Slot Name']).strip()
         
-        match = re.search(r'\d', code)
-        if match:
-            level = int(match.group())
-        else:
-            level = 1
-            
-        candidate = (code, slot)
-        if level < 7:
-            ug_candidates.append(candidate)
-        else:
-            pg_candidates.append(candidate)
-            
+        # Classroom and lecture/seminar/special course restriction
+        # 3rd character must be 'L', 'V', or 'S'
+        if len(code) >= 3 and code[2] in ('L', 'V', 'S'):
+            try:
+                vac_val = float(row.get('Vacancy', 30.0))
+                if pd.isna(vac_val) or vac_val <= 0:
+                    vac_val = 30.0
+            except Exception:
+                vac_val = 30.0
+                
+            match = re.search(r'\d', code)
+            if match:
+                level = int(match.group())
+            else:
+                level = 1
+                
+            candidate = (code, slot, vac_val)
+            if level < 7:
+                ug_candidates.append(candidate)
+            else:
+                pg_candidates.append(candidate)
+                
     return ug_candidates, pg_candidates
 
 def assign_elective_courses(students_list, curriculum, course_df):
@@ -504,7 +531,7 @@ def assign_elective_courses(students_list, curriculum, course_df):
             is_dept_elective = any(p in item for p in ['PE', 'DE', 'XX', 'XXX'])
             valid_candidates = []
             
-            for code, slot in candidates:
+            for code, slot, vac in candidates:
                 if code in student.courses_alloted or slot in student.slots_alloted:
                     continue
                     
@@ -512,20 +539,22 @@ def assign_elective_courses(students_list, curriculum, course_df):
                 
                 if is_dept_elective:
                     if has_dept_prefix:
-                        valid_candidates.append((code, slot))
+                        valid_candidates.append((code, slot, vac))
                 else:
                     if not has_dept_prefix:
-                        valid_candidates.append((code, slot))
+                        valid_candidates.append((code, slot, vac))
                         
             # Fallback if no specific open elective in other departments
             if not is_dept_elective and not valid_candidates:
-                for code, slot in candidates:
+                for code, slot, vac in candidates:
                     if code not in student.courses_alloted and slot not in student.slots_alloted:
-                        valid_candidates.append((code, slot))
+                        valid_candidates.append((code, slot, vac))
                         
             if valid_candidates:
-                chosen_code, chosen_slot = random.choice(valid_candidates)
-                student.add_course(chosen_code, chosen_slot)
+                # Weighted random selection based on Vacancy
+                weights = [cand[2] for cand in valid_candidates]
+                chosen = random.choices(valid_candidates, weights=weights, k=1)[0]
+                student.add_course(chosen[0], chosen[1])
 
 def build_student_timetable(student, course_dataframe):
     """Constructs a daily schedule dict based on the student's allocated courses."""

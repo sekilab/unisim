@@ -89,9 +89,11 @@ This distributes the heat spots across the actual physical footprint of the buil
 ### 4. Dynamic Elective Course Allocation
 To prevent students from having incomplete or empty schedules (which results in static agents), the engine maps elective placeholders (`PE`, `DE`, `OE`, `OC`, `XX`, `XXX`) to actual active courses from `offered courses.csv`:
 * **Department Mapping:** Maps each student's branch/course code to its corresponding department prefixes (e.g. `CS1` / `CS5` $\rightarrow$ `CO`/`CS`, `EE1` $\rightarrow$ `EL`/`EE`, `PPM` $\rightarrow$ `SP`).
-* **Departmental Electives (PE / DE / XX):** Filters offered courses that match the student's department prefix and academic level (UG vs. PG), randomly assigning one.
-* **Open Electives (OE / OC):** Assigns an offered course from a different department to simulate inter-departmental learning.
-* **Conflict Resolution:** Electives are only assigned if they do not introduce schedule slot collisions with the student's existing core courses.
+* **Classroom & Lecture Restriction:** Only includes courses that have a valid classroom listed in the `'Room'` column (not null, `TBA`, or empty) and whose 3rd character in the course code is `'L'` (Lecture), `'V'` (Special Lecture), or `'S'` (Seminar). This excludes practical, lab, and project courses which do not have traditional classroom assignments.
+* **Weighted Seat Capacity Selection:** Instead of uniform selection, the probability of selecting an elective or HUL course is proportional to its seat capacity (fetched from the `'Vacancy'` column in `offered courses.csv`, defaulting to `30.0` if empty or $\le 0$). This ensures realistic enrollment densities.
+* **Departmental Electives (PE / DE / XX):** Filters offered courses that match the student's department prefix and academic level (UG vs. PG), assigning one via vacancy-weighted random choices.
+* **Open Electives (OE / OC):** Assigns an offered course from a different department via vacancy-weighted random choices to model inter-departmental learning.
+* **Conflict Resolution:** Electives are only assigned if they do not introduce schedule slot collisions with the student's existing core courses and do not allocate the same course twice to a student.
 
 ---
 
