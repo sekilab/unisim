@@ -1024,7 +1024,9 @@ if __name__ == "__main__":
                         # Attendance decision
                         is_back_to_back = (prev_end_time is not None and slot_entry['start_time'] == prev_end_time)
                         
-                        if is_back_to_back:
+                        if branch == 'MBA':
+                            attend = True
+                        elif is_back_to_back:
                             if prev_attended:
                                 # 100% chance to attend if previous back-to-back class was attended
                                 attend = True

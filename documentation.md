@@ -104,6 +104,7 @@ To model realistic campus behaviors, B.Tech and PG student class attendance is d
     * If Class $i-1$ was skipped: $P(A_i = 1 \mid A_{i-1} = 0) = 0.50$ (50% chance to attend).
   * If Class $i$ is **not back-to-back** (e.g. after lunch break or a free slot gap):
     * Resets to the base probability: $P(A_i = 1) = 0.75$.
+* **MBA Exemption:** MBA students are exempt from the attendance skip model and have a 100% attendance policy (always attend all scheduled classes).
 * **Routing Redirection:** If a class is decided as skipped, the schedule entry's destination is changed to the student's home/hostel coordinates and the activity is set to `'Home'`. This causes the agent to either stay home or walk back home instead of going to the classroom.
 
 ---
