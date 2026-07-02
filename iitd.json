@@ -3,6 +3,3167 @@
     "features": [
         {
             "type": "Feature",
+            "properties": {
+                "name": "SDA",
+                "@id": "boundary"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.19604,
+                            28.5462813
+                        ],
+                        [
+                            77.1980382,
+                            28.5508919
+                        ],
+                        [
+                            77.1977996,
+                            28.5511538
+                        ],
+                        [
+                            77.1986943,
+                            28.5539044
+                        ],
+                        [
+                            77.2045694,
+                            28.5523588
+                        ],
+                        [
+                            77.2034659,
+                            28.5495297
+                        ],
+                        [
+                            77.2030186,
+                            28.5478793
+                        ],
+                        [
+                            77.201438,
+                            28.5450238
+                        ],
+                        [
+                            77.1988732,
+                            28.5455477
+                        ],
+                        [
+                            77.19604,
+                            28.5462813
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "kara"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1829565,
+                    28.5477768
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "nil",
+                "@id": "hostel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1823954,
+                    28.5466899
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "ara",
+                "@id": "hostel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1834633,
+                    28.5487815
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "jwala",
+                "@id": "hostel"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1839684,
+                    28.5497073
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "addr:city": "",
+                "name": "kum"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1852118,
+                    28.5492593
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "boundary",
+                "name": "chat"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1924734,
+                            28.5301358
+                        ],
+                        [
+                            77.1892578,
+                            28.5276177
+                        ],
+                        [
+                            77.1902015,
+                            28.5270035
+                        ],
+                        [
+                            77.1902015,
+                            28.523564
+                        ],
+                        [
+                            77.1940813,
+                            28.5225198
+                        ],
+                        [
+                            77.1963182,
+                            28.5224891
+                        ],
+                        [
+                            77.1965979,
+                            28.5231955
+                        ],
+                        [
+                            77.1969474,
+                            28.5235333
+                        ],
+                        [
+                            77.1978562,
+                            28.5241782
+                        ],
+                        [
+                            77.1978911,
+                            28.5247003
+                        ],
+                        [
+                            77.1975066,
+                            28.5254373
+                        ],
+                        [
+                            77.1968775,
+                            28.5261436
+                        ],
+                        [
+                            77.1939414,
+                            28.5280169
+                        ],
+                        [
+                            77.1933822,
+                            28.5292145
+                        ],
+                        [
+                            77.1924734,
+                            28.5301358
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "tax",
+                "@id": "nms"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1817453,
+                    28.5450044
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "nms",
+                "name": "vik"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.180888,
+                    28.5433179
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "gir"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1888821,
+                    28.5476382
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "udai"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1893514,
+                    28.547653
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "js_gate"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1888363,
+                    28.5470903
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "boundary",
+                "name": "js"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1900912,
+                            28.5477405
+                        ],
+                        [
+                            77.1897784,
+                            28.5473983
+                        ],
+                        [
+                            77.1893357,
+                            28.5472116
+                        ],
+                        [
+                            77.1888105,
+                            28.547082
+                        ],
+                        [
+                            77.1885331,
+                            28.5464184
+                        ],
+                        [
+                            77.1883265,
+                            28.5456563
+                        ],
+                        [
+                            77.190044,
+                            28.545169
+                        ],
+                        [
+                            77.1900263,
+                            28.5458222
+                        ],
+                        [
+                            77.190162,
+                            28.5463925
+                        ],
+                        [
+                            77.1902092,
+                            28.5470924
+                        ],
+                        [
+                            77.1897666,
+                            28.5472428
+                        ],
+                        [
+                            77.1902683,
+                            28.5476627
+                        ],
+                        [
+                            77.1900912,
+                            28.5477405
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "ks"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1891441,
+                    28.5418429
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "boundary",
+                "name": "ks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.183324,
+                            28.5417354
+                        ],
+                        [
+                            77.1844426,
+                            28.5409217
+                        ],
+                        [
+                            77.1861379,
+                            28.5402768
+                        ],
+                        [
+                            77.1877284,
+                            28.5398776
+                        ],
+                        [
+                            77.1882528,
+                            28.5397087
+                        ],
+                        [
+                            77.1894413,
+                            28.5407067
+                        ],
+                        [
+                            77.1899656,
+                            28.5413209
+                        ],
+                        [
+                            77.1869769,
+                            28.5430405
+                        ],
+                        [
+                            77.1868021,
+                            28.5428562
+                        ],
+                        [
+                            77.1865749,
+                            28.5429791
+                        ],
+                        [
+                            77.1868196,
+                            28.5435779
+                        ],
+                        [
+                            77.186505,
+                            28.5436393
+                        ],
+                        [
+                            77.1868021,
+                            28.5441152
+                        ],
+                        [
+                            77.1863127,
+                            28.5442841
+                        ],
+                        [
+                            77.186103,
+                            28.5444223
+                        ],
+                        [
+                            77.1856835,
+                            28.5437314
+                        ],
+                        [
+                            77.1850543,
+                            28.5435471
+                        ],
+                        [
+                            77.1839707,
+                            28.5438235
+                        ],
+                        [
+                            77.183761,
+                            28.5434397
+                        ],
+                        [
+                            77.1836736,
+                            28.5431787
+                        ],
+                        [
+                            77.1839183,
+                            28.5425031
+                        ],
+                        [
+                            77.183324,
+                            28.5417354
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "name": "dod"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1921934,
+                    28.5434881
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "name": "ws"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1921934,
+                    28.5434881
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "main_gate"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1964898,
+                    28.545781
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "gate_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1849341,
+                    28.5498317
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "gate_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1793438,
+                    28.5460061
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "gate_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1989228,
+                    28.5395356
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "sda_gate"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.2027942,
+                    28.5479795
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "kailash"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1965784,
+                    28.5446385
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "him"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1971108,
+                    28.5452966
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "saha"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1978106,
+                    28.544996
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.197072,
+                    28.5437311
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1824851,
+                    28.545268
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1868123,
+                    28.5480472
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "ks_gate"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.189291,
+                    28.5417095
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "gate",
+                "name": "chat_gate"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1903814,
+                    28.5286723
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "name": "dogra"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1921137,
+                    28.5448303
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "name": "Dronagiri"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1971,
+                    28.544
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20149392693476,
+                    28.54524591051283
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1983858350681,
+                    28.547006045281204
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20232165757409,
+                    28.55103329746801
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19790485074229,
+                    28.549511658171532
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19626633589982,
+                    28.546789597640686
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20158312432359,
+                    28.549863207312644
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19792022624164,
+                    28.55025683283223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20291315472657,
+                    28.551223696711133
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19894213275559,
+                    28.546404551246027
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20326861844832,
+                    28.550385249394157
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_11"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20292431989407,
+                    28.551504256104913
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_12"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19926867111695,
+                    28.549926252030083
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_13"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.20311432414327,
+                    28.550516626512845
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_14"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.2033898428355,
+                    28.550151033461166
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "sda",
+                "name": "sda_15"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19798383555234,
+                    28.547593738749566
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19474585451268,
+                    28.525278862222933
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1924536833434,
+                    28.524091137412203
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19485248389145,
+                    28.527146942061034
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19073529129149,
+                    28.528064513885887
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19066850274939,
+                    28.52539068192649
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19406611422293,
+                    28.527724139793044
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1919812007998,
+                    28.524536434156325
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19682374462963,
+                    28.5248953473511
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19491639862909,
+                    28.525514378457842
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19154458994143,
+                    28.524374986563085
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_11"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19410425951267,
+                    28.524498206257892
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_12"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19270594438103,
+                    28.52416618004905
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_13"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19020443383705,
+                    28.52728699164709
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_14"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19609605877636,
+                    28.525717230618127
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "chat",
+                "name": "chat_15"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19514321012892,
+                    28.52659515102554
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18884462115385,
+                    28.54681723326505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18854311201069,
+                    28.546286998842096
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19002723123963,
+                    28.545846304944007
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18929853811433,
+                    28.545628403310783
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18890602009604,
+                    28.54681205862605
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18950899835657,
+                    28.545562026179077
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18980714347158,
+                    28.54655601317595
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18983843689621,
+                    28.54653280446805
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19003141903974,
+                    28.547604080498584
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18981359729483,
+                    28.545499158650962
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_11"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1892494033218,
+                    28.546582819940674
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_12"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18914814925229,
+                    28.545713639085296
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_13"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18937370514519,
+                    28.547046017744165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_14"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18871709513489,
+                    28.545970578443082
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "js",
+                "name": "js_15"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18917720274294,
+                    28.546499946275222
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18556942906956,
+                    28.54248175197532
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18490473157962,
+                    28.542861993655777
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18646329188834,
+                    28.543407082118335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18868707206036,
+                    28.540606216172336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18396777569578,
+                    28.54174050285339
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18613723978265,
+                    28.541910067475257
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1859980495072,
+                    28.54130803676079
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18904688431743,
+                    28.540880766495565
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1845872914863,
+                    28.541823284819067
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18612596909912,
+                    28.5410216503939
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_11"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18626709715635,
+                    28.543768755140206
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_12"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18896069758968,
+                    28.54049262405094
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_13"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1865494340988,
+                    28.540716219269505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_14"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18508537263115,
+                    28.543404495189346
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "ks",
+                "name": "ks_15"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18634598357252,
+                    28.54170258808596
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18258702640524,
+                    28.545015385658203
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1825712666906,
+                    28.544719908847366
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18249506043074,
+                    28.545002579025223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18263569267164,
+                    28.54511315685864
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1827515748043,
+                    28.54539580532508
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18238524700153,
+                    28.545447577918868
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18194880306689,
+                    28.545045417574922
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18261133062138,
+                    28.544886732771126
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18207899261974,
+                    28.544988879292514
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_1_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18240537459992,
+                    28.545847385340092
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18704523653373,
+                    28.54759453010438
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1865158128228,
+                    28.548187827256495
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1869061657239,
+                    28.547984850971325
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18675792243887,
+                    28.54814281282443
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18708922633229,
+                    28.548009620083914
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18726978407116,
+                    28.548459669605684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18660473535047,
+                    28.548307111114916
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18666862446504,
+                    28.547920179785653
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.18703042734593,
+                    28.548213024599153
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_2_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1860334484874,
+                    28.5480177958514
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19726879069604,
+                    28.54307950888638
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19740532875272,
+                    28.543852392909596
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19739607928899,
+                    28.543374669200738
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19724338092898,
+                    28.543842978532663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19693245475156,
+                    28.543297625664366
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19714253370135,
+                    28.544109158286513
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_7"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19699686281403,
+                    28.543857296323303
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_8"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1964418717659,
+                    28.543892743506845
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_9"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1969060904988,
+                    28.543659784851393
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "name": "type5_10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.19674102212781,
+                    28.544270281462364
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type4",
+                "name": "type4_building_w1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1804127,
+                            28.5457673
+                        ],
+                        [
+                            77.1804383,
+                            28.5457074
+                        ],
+                        [
+                            77.1806971,
+                            28.5457897
+                        ],
+                        [
+                            77.1806698,
+                            28.5458555
+                        ],
+                        [
+                            77.1805558,
+                            28.5458166
+                        ],
+                        [
+                            77.1805234,
+                            28.5458944
+                        ],
+                        [
+                            77.1806358,
+                            28.5459378
+                        ],
+                        [
+                            77.1806,
+                            28.5460245
+                        ],
+                        [
+                            77.1803395,
+                            28.5459468
+                        ],
+                        [
+                            77.1803702,
+                            28.5458705
+                        ],
+                        [
+                            77.1804757,
+                            28.5459019
+                        ],
+                        [
+                            77.1805165,
+                            28.5458047
+                        ],
+                        [
+                            77.1804127,
+                            28.5457673
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "addr:housename": "Zanskar",
+                "building": "hostel",
+                "name": "zans",
+                "source": "local knowledge",
+                "type": "multipolygon"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1868402,
+                            28.5469833
+                        ],
+                        [
+                            77.1865033,
+                            28.5471325
+                        ],
+                        [
+                            77.1862861,
+                            28.5467543
+                        ],
+                        [
+                            77.1858862,
+                            28.5469315
+                        ],
+                        [
+                            77.1857312,
+                            28.5466615
+                        ],
+                        [
+                            77.1864681,
+                            28.5463351
+                        ],
+                        [
+                            77.1868402,
+                            28.5469833
+                        ]
+                    ],
+                    [
+                        [
+                            77.1865622,
+                            28.5470237
+                        ],
+                        [
+                            77.1867315,
+                            28.5469487
+                        ],
+                        [
+                            77.1865724,
+                            28.5466715
+                        ],
+                        [
+                            77.1864031,
+                            28.5467465
+                        ],
+                        [
+                            77.1865622,
+                            28.5470237
+                        ]
+                    ],
+                    [
+                        [
+                            77.1858202,
+                            28.5466983
+                        ],
+                        [
+                            77.1858838,
+                            28.546809
+                        ],
+                        [
+                            77.1862076,
+                            28.5466656
+                        ],
+                        [
+                            77.186144,
+                            28.5465549
+                        ],
+                        [
+                            77.1858202,
+                            28.5466983
+                        ]
+                    ]
+                ]
+            },
+            "id": "relation/5275220"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "college",
+                "building:colour": "white",
+                "building:levels": "5",
+                "building:use": "education",
+                "name": "lhc",
+                "roof:shape": "flat",
+                "short_name": "LHC",
+                "type": "multipolygon",
+                "wheelchair": "yes"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1923705,
+                            28.542983
+                        ],
+                        [
+                            77.1924628,
+                            28.5427359
+                        ],
+                        [
+                            77.1925559,
+                            28.5427617
+                        ],
+                        [
+                            77.1925767,
+                            28.5426807
+                        ],
+                        [
+                            77.1927675,
+                            28.5427418
+                        ],
+                        [
+                            77.1927555,
+                            28.5427714
+                        ],
+                        [
+                            77.1928063,
+                            28.5427938
+                        ],
+                        [
+                            77.1928902,
+                            28.5427193
+                        ],
+                        [
+                            77.1930158,
+                            28.5426564
+                        ],
+                        [
+                            77.1931633,
+                            28.5426226
+                        ],
+                        [
+                            77.1934173,
+                            28.5426853
+                        ],
+                        [
+                            77.193576,
+                            28.5428118
+                        ],
+                        [
+                            77.1936303,
+                            28.5430026
+                        ],
+                        [
+                            77.1936171,
+                            28.5431359
+                        ],
+                        [
+                            77.1939769,
+                            28.5432817
+                        ],
+                        [
+                            77.1938732,
+                            28.5435102
+                        ],
+                        [
+                            77.1937681,
+                            28.5434646
+                        ],
+                        [
+                            77.193735,
+                            28.5435294
+                        ],
+                        [
+                            77.193224,
+                            28.5433274
+                        ],
+                        [
+                            77.1931705,
+                            28.5433363
+                        ],
+                        [
+                            77.1931015,
+                            28.5433258
+                        ],
+                        [
+                            77.193022,
+                            28.543283
+                        ],
+                        [
+                            77.1929734,
+                            28.5432342
+                        ],
+                        [
+                            77.1924003,
+                            28.5430857
+                        ],
+                        [
+                            77.1924311,
+                            28.5430041
+                        ],
+                        [
+                            77.1923705,
+                            28.542983
+                        ]
+                    ],
+                    [
+                        [
+                            77.1932739,
+                            28.5430859
+                        ],
+                        [
+                            77.193284,
+                            28.5430698
+                        ],
+                        [
+                            77.1932907,
+                            28.5430523
+                        ],
+                        [
+                            77.1932937,
+                            28.5430341
+                        ],
+                        [
+                            77.193293,
+                            28.5430156
+                        ],
+                        [
+                            77.1932885,
+                            28.5429976
+                        ],
+                        [
+                            77.1932805,
+                            28.5429806
+                        ],
+                        [
+                            77.1932691,
+                            28.5429651
+                        ],
+                        [
+                            77.1932615,
+                            28.5429573
+                        ],
+                        [
+                            77.1932548,
+                            28.5429516
+                        ],
+                        [
+                            77.1932379,
+                            28.5429407
+                        ],
+                        [
+                            77.1932191,
+                            28.5429325
+                        ],
+                        [
+                            77.193199,
+                            28.5429274
+                        ],
+                        [
+                            77.1931781,
+                            28.5429255
+                        ],
+                        [
+                            77.1931572,
+                            28.542927
+                        ],
+                        [
+                            77.1931369,
+                            28.5429317
+                        ],
+                        [
+                            77.1931179,
+                            28.5429395
+                        ],
+                        [
+                            77.1931008,
+                            28.5429502
+                        ],
+                        [
+                            77.1930861,
+                            28.5429634
+                        ],
+                        [
+                            77.1930744,
+                            28.5429787
+                        ],
+                        [
+                            77.1930659,
+                            28.5429956
+                        ],
+                        [
+                            77.1930619,
+                            28.5430093
+                        ],
+                        [
+                            77.1930611,
+                            28.5430135
+                        ],
+                        [
+                            77.1930599,
+                            28.5430319
+                        ],
+                        [
+                            77.1930625,
+                            28.5430502
+                        ],
+                        [
+                            77.1930688,
+                            28.5430678
+                        ],
+                        [
+                            77.1930785,
+                            28.5430841
+                        ],
+                        [
+                            77.1930914,
+                            28.5430986
+                        ],
+                        [
+                            77.1931071,
+                            28.5431109
+                        ],
+                        [
+                            77.193125,
+                            28.5431205
+                        ],
+                        [
+                            77.1931445,
+                            28.5431272
+                        ],
+                        [
+                            77.1931651,
+                            28.5431307
+                        ],
+                        [
+                            77.1931861,
+                            28.5431308
+                        ],
+                        [
+                            77.1932068,
+                            28.5431277
+                        ],
+                        [
+                            77.1932265,
+                            28.5431215
+                        ],
+                        [
+                            77.1932446,
+                            28.5431122
+                        ],
+                        [
+                            77.1932606,
+                            28.5431002
+                        ],
+                        [
+                            77.1932739,
+                            28.5430859
+                        ]
+                    ]
+                ]
+            },
+            "id": "relation/19120455"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "building:levels": "3",
+                "layer": "1",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1904019,
+                            28.5464944
+                        ],
+                        [
+                            77.1904613,
+                            28.5463551
+                        ],
+                        [
+                            77.1920485,
+                            28.5468766
+                        ],
+                        [
+                            77.1919891,
+                            28.547016
+                        ],
+                        [
+                            77.1914207,
+                            28.5468195
+                        ],
+                        [
+                            77.1912047,
+                            28.54675
+                        ],
+                        [
+                            77.1911346,
+                            28.546727
+                        ],
+                        [
+                            77.1911223,
+                            28.546723
+                        ],
+                        [
+                            77.1904019,
+                            28.5464944
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408520"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "building:levels": "3",
+                "layer": "1",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1905406,
+                            28.5460972
+                        ],
+                        [
+                            77.1905969,
+                            28.5459676
+                        ],
+                        [
+                            77.1926377,
+                            28.5466511
+                        ],
+                        [
+                            77.1925815,
+                            28.5467807
+                        ],
+                        [
+                            77.1905406,
+                            28.5460972
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408521"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "building:levels": "3",
+                "layer": "1",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1907891,
+                            28.5457137
+                        ],
+                        [
+                            77.19085,
+                            28.5455731
+                        ],
+                        [
+                            77.1934274,
+                            28.546435
+                        ],
+                        [
+                            77.1933665,
+                            28.5465756
+                        ],
+                        [
+                            77.1907891,
+                            28.5457137
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408522"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "building:levels": "3",
+                "layer": "1",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1909336,
+                            28.5453426
+                        ],
+                        [
+                            77.19099,
+                            28.5452119
+                        ],
+                        [
+                            77.1910706,
+                            28.5452385
+                        ],
+                        [
+                            77.1915733,
+                            28.5454045
+                        ],
+                        [
+                            77.1920742,
+                            28.5455699
+                        ],
+                        [
+                            77.1920153,
+                            28.5457253
+                        ],
+                        [
+                            77.1909336,
+                            28.5453426
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408523"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "building:levels": "3",
+                "layer": "1",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1922523,
+                            28.5457875
+                        ],
+                        [
+                            77.1923118,
+                            28.5456598
+                        ],
+                        [
+                            77.1927985,
+                            28.5458223
+                        ],
+                        [
+                            77.1940272,
+                            28.5462325
+                        ],
+                        [
+                            77.1939715,
+                            28.5463613
+                        ],
+                        [
+                            77.1922523,
+                            28.5457875
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408524"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "level": "1",
+                "name": "main_building"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1919941,
+                            28.5458021
+                        ],
+                        [
+                            77.1920334,
+                            28.5457087
+                        ],
+                        [
+                            77.192086,
+                            28.5455768
+                        ],
+                        [
+                            77.1922388,
+                            28.5452095
+                        ],
+                        [
+                            77.192398,
+                            28.5448423
+                        ],
+                        [
+                            77.1926249,
+                            28.544916
+                        ],
+                        [
+                            77.1924721,
+                            28.5452873
+                        ],
+                        [
+                            77.1923118,
+                            28.5456598
+                        ],
+                        [
+                            77.1922523,
+                            28.5457875
+                        ],
+                        [
+                            77.1922209,
+                            28.5458758
+                        ],
+                        [
+                            77.1919941,
+                            28.5458021
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408525"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "na",
+                "building": "yes",
+                "name": "nalanda apt",
+                "tourism": "hostel"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.183474,
+                            28.5461561
+                        ],
+                        [
+                            77.1833862,
+                            28.5461962
+                        ],
+                        [
+                            77.1829448,
+                            28.5454059
+                        ],
+                        [
+                            77.1830601,
+                            28.5453598
+                        ],
+                        [
+                            77.183474,
+                            28.5461561
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/44408529"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "addr:postcode": "110016",
+                "building": "residential",
+                "building:levels": "2",
+                "name": "sat"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1874012,
+                            28.5484774
+                        ],
+                        [
+                            77.1873993,
+                            28.548159
+                        ],
+                        [
+                            77.1876226,
+                            28.548158
+                        ],
+                        [
+                            77.1879675,
+                            28.5481543
+                        ],
+                        [
+                            77.1879896,
+                            28.5481107
+                        ],
+                        [
+                            77.1880392,
+                            28.548101
+                        ],
+                        [
+                            77.1880452,
+                            28.5478009
+                        ],
+                        [
+                            77.1884128,
+                            28.5478066
+                        ],
+                        [
+                            77.1884041,
+                            28.5482424
+                        ],
+                        [
+                            77.1881798,
+                            28.548239
+                        ],
+                        [
+                            77.1881771,
+                            28.5483723
+                        ],
+                        [
+                            77.1880172,
+                            28.5484256
+                        ],
+                        [
+                            77.1878143,
+                            28.5484265
+                        ],
+                        [
+                            77.1878146,
+                            28.5484755
+                        ],
+                        [
+                            77.1874012,
+                            28.5484774
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/256266967"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "alt_name": "Department of Biochemical Engineering and Biotechnology",
+                "building": "university",
+                "building:colour": "white",
+                "building:levels": "4",
+                "building:use": "education",
+                "name": "blocks",
+                "roof:shape": "flat"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1929616,
+                            28.5456236
+                        ],
+                        [
+                            77.1929977,
+                            28.5455395
+                        ],
+                        [
+                            77.1929382,
+                            28.5455198
+                        ],
+                        [
+                            77.1929512,
+                            28.5454896
+                        ],
+                        [
+                            77.1940985,
+                            28.5458709
+                        ],
+                        [
+                            77.1941586,
+                            28.5457315
+                        ],
+                        [
+                            77.1942347,
+                            28.5457569
+                        ],
+                        [
+                            77.1941924,
+                            28.545855
+                        ],
+                        [
+                            77.1943013,
+                            28.5458912
+                        ],
+                        [
+                            77.1942193,
+                            28.5460812
+                        ],
+                        [
+                            77.1941284,
+                            28.5460508
+                        ],
+                        [
+                            77.1940736,
+                            28.5461777
+                        ],
+                        [
+                            77.1939749,
+                            28.5461448
+                        ],
+                        [
+                            77.1940441,
+                            28.5459849
+                        ],
+                        [
+                            77.1929616,
+                            28.5456236
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272259456"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "university",
+                "building:levels": "2",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1911142,
+                            28.544746
+                        ],
+                        [
+                            77.1912736,
+                            28.5443569
+                        ],
+                        [
+                            77.1917063,
+                            28.5444937
+                        ],
+                        [
+                            77.1916327,
+                            28.5446734
+                        ],
+                        [
+                            77.1915952,
+                            28.5447648
+                        ],
+                        [
+                            77.1915469,
+                            28.5448828
+                        ],
+                        [
+                            77.1911142,
+                            28.544746
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272259457"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1919231,
+                            28.5449315
+                        ],
+                        [
+                            77.1920787,
+                            28.544597
+                        ],
+                        [
+                            77.1923496,
+                            28.5447336
+                        ],
+                        [
+                            77.1922449,
+                            28.5450305
+                        ],
+                        [
+                            77.1919231,
+                            28.5449315
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272259458"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "building:levels": "3",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1902489,
+                            28.5468448
+                        ],
+                        [
+                            77.1902955,
+                            28.5467396
+                        ],
+                        [
+                            77.1903075,
+                            28.5467124
+                        ],
+                        [
+                            77.1914329,
+                            28.5470968
+                        ],
+                        [
+                            77.1913743,
+                            28.5472292
+                        ],
+                        [
+                            77.1902489,
+                            28.5468448
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272260779"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1909901,
+                            28.5464577
+                        ],
+                        [
+                            77.191061,
+                            28.5462898
+                        ],
+                        [
+                            77.1912363,
+                            28.5463469
+                        ],
+                        [
+                            77.1911654,
+                            28.5465148
+                        ],
+                        [
+                            77.1909901,
+                            28.5464577
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272260780"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "yes",
+                "name": "blocks"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1918364,
+                            28.546278
+                        ],
+                        [
+                            77.1919065,
+                            28.5461219
+                        ],
+                        [
+                            77.1920856,
+                            28.5461839
+                        ],
+                        [
+                            77.1920155,
+                            28.54634
+                        ],
+                        [
+                            77.1918364,
+                            28.546278
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272260781"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "addr:city": "New Delhi",
+                "addr:housenumber": "Block-IIA-102",
+                "addr:postcode": "110016",
+                "addr:street": "ndian Institute Of Technology Delhi",
+                "building": "university",
+                "building:levels": "4",
+                "name": "blocks",
+                "phone": "+911126596200"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1900533,
+                            28.5450634
+                        ],
+                        [
+                            77.190157,
+                            28.5449429
+                        ],
+                        [
+                            77.1901885,
+                            28.5448518
+                        ],
+                        [
+                            77.1902256,
+                            28.5448697
+                        ],
+                        [
+                            77.1902497,
+                            28.5448013
+                        ],
+                        [
+                            77.1908465,
+                            28.5449983
+                        ],
+                        [
+                            77.1907353,
+                            28.5452571
+                        ],
+                        [
+                            77.1905351,
+                            28.5451888
+                        ],
+                        [
+                            77.1905852,
+                            28.545109
+                        ],
+                        [
+                            77.190398,
+                            28.545039
+                        ],
+                        [
+                            77.1903609,
+                            28.5451285
+                        ],
+                        [
+                            77.1902831,
+                            28.5451481
+                        ],
+                        [
+                            77.1900533,
+                            28.5450634
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/272261119"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "boundary",
+                "addr:city": "National Capital Territory of Delhi",
+                "addr:country": "IN",
+                "addr:district": "South Delhi",
+                "addr:postcode": "110016",
+                "addr:street": "Gamal Abdel Nasser Marg",
+                "amenity": "university",
+                "barrier": "wall",
+                "contact:facebook": "https://www.facebook.com/IITDelhi",
+                "email": "director@admin.iitd.ac.in",
+                "internet_access": "yes",
+                "name": "IITD",
+                "name:ar": "\u0627\u0644\u0645\u0639\u0647\u062f \u0627\u0644\u0647\u0646\u062f\u064a \u0644\u0644\u062a\u0643\u0646\u0648\u0644\u0648\u062c\u064a\u0627 \u062f\u0644\u0647\u064a",
+                "name:fr": "Institut indien de technologie de Delhi",
+                "name:hi": "\u092d\u093e\u0930\u0924\u0940\u092f \u092a\u094d\u0930\u094c\u0926\u094d\u092f\u094b\u0917\u093f\u0915\u0940 \u0938\u0902\u0938\u094d\u0925\u093e\u0928 \u0926\u093f\u0932\u094d\u0932\u0940",
+                "name:ml": "\u0d07\u0d28\u0d4d\u0d24\u0d4d\u0d2f\u0d7b \u0d07\u0d7b\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d3f\u0d31\u0d4d\u0d31\u0d4d\u0d2f\u0d42\u0d1f\u0d4d\u0d1f\u0d4d \u0d13\u0d2b\u0d4d \u0d1f\u0d46\u0d15\u0d4d\u0d28\u0d4b\u0d33\u0d1c\u0d3f \u0d21\u0d46\u0d7d\u0d39\u0d3f",
+                "name:mr": "\u092d\u093e\u0930\u0924\u0940\u092f \u0924\u0902\u0924\u094d\u0930\u091c\u094d\u091e\u093e\u0928 \u0938\u0902\u0938\u094d\u0925\u093e \u0926\u093f\u0932\u094d\u0932\u0940",
+                "name:ta": "\u0b87\u0ba8\u0bcd\u0ba4\u0bbf\u0baf \u0ba4\u0bca\u0bb4\u0bbf\u0bb2\u0bcd\u0ba8\u0bc1\u0b9f\u0bcd\u0baa\u0b95\u0bcd \u0b95\u0bb4\u0b95\u0bae\u0bcd \u0ba4\u0bbf\u0bb2\u0bcd\u0bb2\u0bbf",
+                "official_name": "Indian Institute of Technology Delhi",
+                "official_name:hi": "\u092d\u093e\u0930\u0924\u0940\u092f \u092a\u094d\u0930\u094c\u0926\u094d\u092f\u094b\u0917\u093f\u0915\u0940 \u0938\u0902\u0938\u094d\u0925\u093e\u0928 \u0926\u093f\u0932\u094d\u0932\u0940",
+                "operator": "Govt of India",
+                "operator:type": "public",
+                "phone": "+91 11 2659 7135",
+                "short_name": "IIT Delhi;IITD",
+                "start_date": "1961-08-21",
+                "website": "http://iitd.ac.in/",
+                "wikidata": "Q1194650",
+                "wikimedia_commons": "Category:IIT Delhi",
+                "wikipedia": "en:IIT Delhi"
+            },
             "geometry": {
                 "type": "Polygon",
                 "coordinates": [
@@ -346,843 +3507,827 @@
                     ]
                 ]
             },
-            "properties": {
-                "@id": "boundary",
-                "name": "IITD",
-                "name:ar": "المعهد الهندي للتكنولوجيا دلهي",
-                "name:fr": "Institut indien de technologie de Delhi",
-                "name:hi": "भारतीय प्रौद्योगिकी संस्थान दिल्ली",
-                "name:ml": "ഇന്ത്യൻ ഇൻസ്റ്റിറ്റ്യൂട്ട് ഓഫ് ടെക്നോളജി ഡെൽഹി",
-                "name:mr": "भारतीय तंत्रज्ञान संस्था दिल्ली",
-                "name:ta": "இந்திய தொழில்நுட்பக் கழகം தில்லி",
-                "official_name": "Indian Institute of Technology Delhi",
-                "official_name:hi": "भारतीय प्रौद्योगिकी संस्थान दिल्ली",
-                "operator": "Govt of India",
-                "operator:type": "public",
-                "phone": "+91 11 2659 7135",
-                "short_name": "IIT Delhi;IITD",
-                "start_date": "1961-08-21",
-                "website": "http://iitd.ac.in/",
-                "wikidata": "Q1194650",
-                "wikimedia_commons": "Category:IIT Delhi",
-                "wikipedia": "en:IIT Delhi"
-            },
-            "id": "boundary"
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "SDA",
-                "@id": "boundary"
-            },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [
-                            77.19604,
-                            28.5462813
-                        ],
-                        [
-                            77.1980382,
-                            28.5508919
-                        ],
-                        [
-                            77.1977996,
-                            28.5511538
-                        ],
-                        [
-                            77.1986943,
-                            28.5539044
-                        ],
-                        [
-                            77.2045694,
-                            28.5523588
-                        ],
-                        [
-                            77.2034659,
-                            28.5495297
-                        ],
-                        [
-                            77.2030186,
-                            28.5478793
-                        ],
-                        [
-                            77.201438,
-                            28.5450238
-                        ],
-                        [
-                            77.1988732,
-                            28.5455477
-                        ],
-                        [
-                            77.19604,
-                            28.5462813
-                        ]
-                    ]
-                ]
-            }
+            "id": "way/283148869"
         },
         {
             "type": "Feature",
             "properties": {
                 "@id": "hostel",
-                "name": "kara"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1829565,
-                    28.5477768
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "nil",
-                "@id": "hostel"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1823954,
-                    28.5466899
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "ara",
-                "@id": "hostel"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1834633,
-                    28.5487815
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "jwala",
-                "@id": "hostel"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1839684,
-                    28.5497073
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "addr:city": "",
-                "name": "kum"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1852118,
-                    28.5492593
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
+                "building": "dormitory",
                 "name": "vind"
             },
             "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1863483,
-                    28.5485042
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "boundary",
-                "name": "chat"
-            },
-            "geometry": {
                 "type": "Polygon",
                 "coordinates": [
                     [
                         [
-                            77.1924734,
-                            28.5301358
+                            77.1863513,
+                            28.5480632
                         ],
                         [
-                            77.1892578,
-                            28.5276177
+                            77.1863511,
+                            28.5481929
                         ],
                         [
-                            77.1902015,
-                            28.5270035
+                            77.186466,
+                            28.5481931
                         ],
                         [
-                            77.1902015,
-                            28.523564
+                            77.1864659,
+                            28.5482597
                         ],
                         [
-                            77.1940813,
-                            28.5225198
+                            77.1866179,
+                            28.5482599
                         ],
                         [
-                            77.1963182,
-                            28.5224891
+                            77.1866181,
+                            28.5481868
                         ],
                         [
-                            77.1965979,
-                            28.5231955
+                            77.1867095,
+                            28.548187
                         ],
                         [
-                            77.1969474,
-                            28.5235333
+                            77.1867092,
+                            28.5483285
                         ],
                         [
-                            77.1978562,
-                            28.5241782
+                            77.1868003,
+                            28.5483287
                         ],
                         [
-                            77.1978911,
-                            28.5247003
+                            77.1868001,
+                            28.548409
                         ],
                         [
-                            77.1975066,
-                            28.5254373
+                            77.1866349,
+                            28.5484088
                         ],
                         [
-                            77.1968775,
-                            28.5261436
+                            77.1866347,
+                            28.5484962
                         ],
                         [
-                            77.1939414,
-                            28.5280169
+                            77.1865756,
+                            28.5484961
                         ],
                         [
-                            77.1933822,
-                            28.5292145
+                            77.186575,
+                            28.5488231
                         ],
                         [
-                            77.1924734,
-                            28.5301358
+                            77.1864918,
+                            28.5488229
+                        ],
+                        [
+                            77.1864916,
+                            28.5489265
+                        ],
+                        [
+                            77.1863749,
+                            28.5489263
+                        ],
+                        [
+                            77.1863751,
+                            28.5488475
+                        ],
+                        [
+                            77.1864102,
+                            28.5488476
+                        ],
+                        [
+                            77.1864104,
+                            28.5487761
+                        ],
+                        [
+                            77.1863571,
+                            28.548776
+                        ],
+                        [
+                            77.186357,
+                            28.5488075
+                        ],
+                        [
+                            77.1861892,
+                            28.5488073
+                        ],
+                        [
+                            77.1861895,
+                            28.5486484
+                        ],
+                        [
+                            77.186061,
+                            28.5486482
+                        ],
+                        [
+                            77.1860613,
+                            28.5485051
+                        ],
+                        [
+                            77.1859701,
+                            28.548505
+                        ],
+                        [
+                            77.1859702,
+                            28.5484309
+                        ],
+                        [
+                            77.1861433,
+                            28.5484311
+                        ],
+                        [
+                            77.1861435,
+                            28.5483314
+                        ],
+                        [
+                            77.1862077,
+                            28.5483314
+                        ],
+                        [
+                            77.186208,
+                            28.5482046
+                        ],
+                        [
+                            77.1861138,
+                            28.5482045
+                        ],
+                        [
+                            77.1861139,
+                            28.5481334
+                        ],
+                        [
+                            77.1862838,
+                            28.5481337
+                        ],
+                        [
+                            77.1862839,
+                            28.5480631
+                        ],
+                        [
+                            77.1863513,
+                            28.5480632
                         ]
                     ]
                 ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "tax",
-                "@id": "nms"
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1817453,
-                    28.5450044
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "nms",
-                "name": "vik"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.180888,
-                    28.5433179
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "school",
-                "name": "DMS"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1830029,
-                    28.5424921
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "zans"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1863031,
-                    28.5466573
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "shiv"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1859916,
-                    28.5476721
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "sat"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1879048,
-                    28.5482765
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "gir"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1888821,
-                    28.5476382
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "udai"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1893514,
-                    28.547653
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "js_gate"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1888363,
-                    28.5470903
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "boundary",
-                "name": "js"
-            },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [
-                            77.1900912,
-                            28.5477405
-                        ],
-                        [
-                            77.1897784,
-                            28.5473983
-                        ],
-                        [
-                            77.1893357,
-                            28.5472116
-                        ],
-                        [
-                            77.1888105,
-                            28.547082
-                        ],
-                        [
-                            77.1885331,
-                            28.5464184
-                        ],
-                        [
-                            77.1883265,
-                            28.5456563
-                        ],
-                        [
-                            77.190044,
-                            28.545169
-                        ],
-                        [
-                            77.1900263,
-                            28.5458222
-                        ],
-                        [
-                            77.190162,
-                            28.5463925
-                        ],
-                        [
-                            77.1902092,
-                            28.5470924
-                        ],
-                        [
-                            77.1897666,
-                            28.5472428
-                        ],
-                        [
-                            77.1902683,
-                            28.5476627
-                        ],
-                        [
-                            77.1900912,
-                            28.5477405
-                        ]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "ks"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1891441,
-                    28.5418429
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "boundary",
-                "name": "ks"
-            },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [
-                            77.183324,
-                            28.5417354
-                        ],
-                        [
-                            77.1844426,
-                            28.5409217
-                        ],
-                        [
-                            77.1861379,
-                            28.5402768
-                        ],
-                        [
-                            77.1877284,
-                            28.5398776
-                        ],
-                        [
-                            77.1882528,
-                            28.5397087
-                        ],
-                        [
-                            77.1894413,
-                            28.5407067
-                        ],
-                        [
-                            77.1899656,
-                            28.5413209
-                        ],
-                        [
-                            77.1869769,
-                            28.5430405
-                        ],
-                        [
-                            77.1868021,
-                            28.5428562
-                        ],
-                        [
-                            77.1865749,
-                            28.5429791
-                        ],
-                        [
-                            77.1868196,
-                            28.5435779
-                        ],
-                        [
-                            77.186505,
-                            28.5436393
-                        ],
-                        [
-                            77.1868021,
-                            28.5441152
-                        ],
-                        [
-                            77.1863127,
-                            28.5442841
-                        ],
-                        [
-                            77.186103,
-                            28.5444223
-                        ],
-                        [
-                            77.1856835,
-                            28.5437314
-                        ],
-                        [
-                            77.1850543,
-                            28.5435471
-                        ],
-                        [
-                            77.1839707,
-                            28.5438235
-                        ],
-                        [
-                            77.183761,
-                            28.5434397
-                        ],
-                        [
-                            77.1836736,
-                            28.5431787
-                        ],
-                        [
-                            77.1839183,
-                            28.5425031
-                        ],
-                        [
-                            77.183324,
-                            28.5417354
-                        ]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "school",
-                "name": "lhc"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1931879,
-                    28.5430307
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "school",
-                "name": "dod"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1921934,
-                    28.5434881
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "school",
-                "name": "ws"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1921934,
-                    28.5434881
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "adm",
-                "name": "main_building"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.192182,
-                    28.5456467
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "school",
-                "name": "blocks"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1917647,
-                    28.5462378
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "main_gate"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1964898,
-                    28.545781
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "gate_6"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1849341,
-                    28.5498317
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "gate_5"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1793438,
-                    28.5460061
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "gate_3"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1989228,
-                    28.5395356
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "sda_gate"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.2027942,
-                    28.5479795
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "kailash"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1965784,
-                    28.5446385
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "him"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1971108,
-                    28.5452966
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "hostel",
-                "name": "saha"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1978106,
-                    28.544996
-                ]
-            }
+            "id": "way/301448255"
         },
         {
             "type": "Feature",
             "properties": {
                 "@id": "type5",
-                "name": "type5"
+                "building": "apartments",
+                "name": "new_vindhyachal_apts"
             },
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    77.197072,
-                    28.5437311
+                    [
+                        [
+                            77.1866023,
+                            28.5487154
+                        ],
+                        [
+                            77.1866023,
+                            28.5486683
+                        ],
+                        [
+                            77.1866881,
+                            28.5486612
+                        ],
+                        [
+                            77.1866908,
+                            28.548501
+                        ],
+                        [
+                            77.1867444,
+                            28.5485034
+                        ],
+                        [
+                            77.1867444,
+                            28.5485788
+                        ],
+                        [
+                            77.1869456,
+                            28.548567
+                        ],
+                        [
+                            77.1869456,
+                            28.5486259
+                        ],
+                        [
+                            77.1868625,
+                            28.5486306
+                        ],
+                        [
+                            77.1868598,
+                            28.5488144
+                        ],
+                        [
+                            77.186782,
+                            28.5488144
+                        ],
+                        [
+                            77.186782,
+                            28.5487154
+                        ],
+                        [
+                            77.1866023,
+                            28.5487154
+                        ]
+                    ]
                 ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "type4",
-                "name": "type4_1"
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1824851,
-                    28.545268
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "type4",
-                "name": "type4_2"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1868123,
-                    28.5480472
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "na",
-                "name": "nalanda apt"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1829884,
-                    28.5459136
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "ks_gate"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.189291,
-                    28.5417095
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "gate",
-                "name": "chat_gate"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1903814,
-                    28.5286723
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "@id": "school",
-                "name": "dogra"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    77.1921137,
-                    28.5448303
-                ]
-            }
+            "id": "way/301448308"
         },
         {
             "type": "Feature",
             "properties": {
                 "@id": "hostel",
-                "name": "Dronagiri"
+                "building": "yes",
+                "name": "shiv"
             },
             "geometry": {
-                "type": "Point",
+                "type": "Polygon",
                 "coordinates": [
-                    77.1971,
-                    28.5440
+                    [
+                        [
+                            77.1857086,
+                            28.5476404
+                        ],
+                        [
+                            77.1857062,
+                            28.5474987
+                        ],
+                        [
+                            77.1856177,
+                            28.5474999
+                        ],
+                        [
+                            77.1856167,
+                            28.5474381
+                        ],
+                        [
+                            77.1857765,
+                            28.547436
+                        ],
+                        [
+                            77.185775,
+                            28.5473459
+                        ],
+                        [
+                            77.1858393,
+                            28.5473451
+                        ],
+                        [
+                            77.185842,
+                            28.5475089
+                        ],
+                        [
+                            77.1859409,
+                            28.5475076
+                        ],
+                        [
+                            77.1859418,
+                            28.5475644
+                        ],
+                        [
+                            77.1857722,
+                            28.5475665
+                        ],
+                        [
+                            77.1857734,
+                            28.5476396
+                        ],
+                        [
+                            77.1857086,
+                            28.5476404
+                        ]
+                    ]
                 ]
-            }
+            },
+            "id": "way/351840823"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "building": "yes",
+                "name": "shiv"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1861813,
+                            28.5474844
+                        ],
+                        [
+                            77.1861789,
+                            28.5473433
+                        ],
+                        [
+                            77.1860841,
+                            28.5473445
+                        ],
+                        [
+                            77.1860831,
+                            28.5472878
+                        ],
+                        [
+                            77.1862543,
+                            28.5472856
+                        ],
+                        [
+                            77.1862529,
+                            28.5472042
+                        ],
+                        [
+                            77.1863363,
+                            28.5472031
+                        ],
+                        [
+                            77.1863387,
+                            28.5473469
+                        ],
+                        [
+                            77.1864371,
+                            28.5473456
+                        ],
+                        [
+                            77.1864382,
+                            28.5474081
+                        ],
+                        [
+                            77.1862603,
+                            28.5474104
+                        ],
+                        [
+                            77.1862615,
+                            28.5474833
+                        ],
+                        [
+                            77.1861813,
+                            28.5474844
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840825"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "building": "yes",
+                "name": "shiv"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1862491,
+                            28.5477106
+                        ],
+                        [
+                            77.1862481,
+                            28.5476514
+                        ],
+                        [
+                            77.1863243,
+                            28.5476505
+                        ],
+                        [
+                            77.1863216,
+                            28.5474857
+                        ],
+                        [
+                            77.1863977,
+                            28.5474847
+                        ],
+                        [
+                            77.1863994,
+                            28.5475858
+                        ],
+                        [
+                            77.1865503,
+                            28.5475838
+                        ],
+                        [
+                            77.1865514,
+                            28.5476456
+                        ],
+                        [
+                            77.1864718,
+                            28.5476466
+                        ],
+                        [
+                            77.1864744,
+                            28.5477966
+                        ],
+                        [
+                            77.1864049,
+                            28.5477975
+                        ],
+                        [
+                            77.1864034,
+                            28.5477086
+                        ],
+                        [
+                            77.1862491,
+                            28.5477106
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840828"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "hostel",
+                "building": "yes",
+                "name": "shiv"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1858483,
+                            28.5473663
+                        ],
+                        [
+                            77.1858456,
+                            28.5472021
+                        ],
+                        [
+                            77.1857368,
+                            28.5472035
+                        ],
+                        [
+                            77.1857359,
+                            28.5471496
+                        ],
+                        [
+                            77.1859101,
+                            28.5471474
+                        ],
+                        [
+                            77.1859085,
+                            28.5470485
+                        ],
+                        [
+                            77.1859883,
+                            28.5470475
+                        ],
+                        [
+                            77.1859909,
+                            28.5472068
+                        ],
+                        [
+                            77.1860886,
+                            28.5472056
+                        ],
+                        [
+                            77.1860895,
+                            28.5472636
+                        ],
+                        [
+                            77.185914,
+                            28.5472658
+                        ],
+                        [
+                            77.1859157,
+                            28.5473654
+                        ],
+                        [
+                            77.1858483,
+                            28.5473663
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840829"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "building": "residential",
+                "name": "type5_building_s1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1874083,
+                            28.5474678
+                        ],
+                        [
+                            77.1873112,
+                            28.5474678
+                        ],
+                        [
+                            77.1873112,
+                            28.5473776
+                        ],
+                        [
+                            77.1873608,
+                            28.5473776
+                        ],
+                        [
+                            77.1873608,
+                            28.5472774
+                        ],
+                        [
+                            77.1873112,
+                            28.5472774
+                        ],
+                        [
+                            77.1873112,
+                            28.547195
+                        ],
+                        [
+                            77.187406,
+                            28.547195
+                        ],
+                        [
+                            77.187406,
+                            28.5472764
+                        ],
+                        [
+                            77.1874286,
+                            28.5472764
+                        ],
+                        [
+                            77.1874286,
+                            28.5473696
+                        ],
+                        [
+                            77.1874083,
+                            28.5473696
+                        ],
+                        [
+                            77.1874083,
+                            28.5474678
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840830"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "school",
+                "building": "office",
+                "name": "DMS"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1826146,
+                            28.5428208
+                        ],
+                        [
+                            77.1826946,
+                            28.5425559
+                        ],
+                        [
+                            77.1828947,
+                            28.5426025
+                        ],
+                        [
+                            77.1829202,
+                            28.5425179
+                        ],
+                        [
+                            77.1830677,
+                            28.5425523
+                        ],
+                        [
+                            77.1830556,
+                            28.5425925
+                        ],
+                        [
+                            77.1832196,
+                            28.5426307
+                        ],
+                        [
+                            77.1832285,
+                            28.5426328
+                        ],
+                        [
+                            77.1832108,
+                            28.5426918
+                        ],
+                        [
+                            77.1832436,
+                            28.5426995
+                        ],
+                        [
+                            77.183168,
+                            28.5429498
+                        ],
+                        [
+                            77.1827682,
+                            28.5428566
+                        ],
+                        [
+                            77.1827629,
+                            28.5428744
+                        ],
+                        [
+                            77.1827048,
+                            28.5428609
+                        ],
+                        [
+                            77.1827102,
+                            28.5428431
+                        ],
+                        [
+                            77.1826146,
+                            28.5428208
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840835"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "building": "residential",
+                "name": "type5_building_s2"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1869375,
+                            28.5479607
+                        ],
+                        [
+                            77.1869375,
+                            28.5478821
+                        ],
+                        [
+                            77.1869838,
+                            28.5478821
+                        ],
+                        [
+                            77.1869838,
+                            28.5477783
+                        ],
+                        [
+                            77.1869375,
+                            28.5477783
+                        ],
+                        [
+                            77.1869375,
+                            28.5476997
+                        ],
+                        [
+                            77.1869726,
+                            28.5476997
+                        ],
+                        [
+                            77.1869726,
+                            28.5476338
+                        ],
+                        [
+                            77.1870508,
+                            28.5476338
+                        ],
+                        [
+                            77.1870508,
+                            28.5477025
+                        ],
+                        [
+                            77.1870237,
+                            28.5477025
+                        ],
+                        [
+                            77.1870237,
+                            28.5477825
+                        ],
+                        [
+                            77.1870748,
+                            28.5477825
+                        ],
+                        [
+                            77.1870748,
+                            28.5478723
+                        ],
+                        [
+                            77.1870285,
+                            28.5478723
+                        ],
+                        [
+                            77.1870285,
+                            28.5479607
+                        ],
+                        [
+                            77.1869375,
+                            28.5479607
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840840"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "type5",
+                "building": "residential",
+                "name": "type5_building_s3"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            77.1874486,
+                            28.5479679
+                        ],
+                        [
+                            77.1874474,
+                            28.5478746
+                        ],
+                        [
+                            77.1874897,
+                            28.5478742
+                        ],
+                        [
+                            77.1874886,
+                            28.5477804
+                        ],
+                        [
+                            77.1874501,
+                            28.5477808
+                        ],
+                        [
+                            77.1874491,
+                            28.5477021
+                        ],
+                        [
+                            77.187484,
+                            28.5477018
+                        ],
+                        [
+                            77.1874828,
+                            28.5476025
+                        ],
+                        [
+                            77.1875818,
+                            28.5476015
+                        ],
+                        [
+                            77.1875829,
+                            28.5476951
+                        ],
+                        [
+                            77.1875295,
+                            28.5476956
+                        ],
+                        [
+                            77.1875305,
+                            28.5477785
+                        ],
+                        [
+                            77.18757,
+                            28.5477781
+                        ],
+                        [
+                            77.1875713,
+                            28.5478768
+                        ],
+                        [
+                            77.1875342,
+                            28.5478771
+                        ],
+                        [
+                            77.1875353,
+                            28.5479671
+                        ],
+                        [
+                            77.1874486,
+                            28.5479679
+                        ]
+                    ]
+                ]
+            },
+            "id": "way/351840844"
         }
     ]
 }

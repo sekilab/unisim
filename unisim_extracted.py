@@ -424,17 +424,32 @@ if __name__ == "__main__":
     with open('iitd.json') as f:
         geojson = json.load(f)
 
-    # Build coordinates mapping from GeoJSON features
+    # Build coordinates mapping and sub-points list from GeoJSON features
+    sub_points = {
+        'sda': [],
+        'chat': [],
+        'js': [],
+        'ks': [],
+        'type4': [],
+        'type5': []
+    }
     mapping = {}
     for feat in geojson['features']:
-        name = feat.get('properties', {}).get('name')
+        props = feat.get('properties', {})
+        name = props.get('name')
         if not name:
             continue
         gtype = feat['geometry']['type']
         coords = feat['geometry']['coordinates']
         
         if gtype == 'Point':
-            mapping[name] = [coords[1], coords[0]]
+            coord = [coords[1], coords[0]]
+            mapping[name] = coord
+            
+            # Check if this point belongs to a sub-point category (e.g. sda_1, type4_1_1)
+            pid = props.get('@id')
+            if pid in sub_points:
+                sub_points[pid].append(coord)
         elif gtype in ('Polygon', 'MultiPolygon'):
             if gtype == 'Polygon':
                 ring = coords[0]
@@ -444,6 +459,11 @@ if __name__ == "__main__":
             lons = [pt[0] for pt in ring if pt]
             centroid = [sum(lats)/len(lats), sum(lons)/len(lons)]
             mapping[name] = centroid
+            
+            # Check if this polygon centroid belongs to a sub-point category (e.g. sda, type4, type5)
+            pid = props.get('@id')
+            if pid in sub_points:
+                sub_points[pid].append(centroid)
 
     # Student hostel mapping to GeoJSON names or direct coordinates
     student_hostel_mapping = {
@@ -469,6 +489,9 @@ if __name__ == "__main__":
     def get_student_coord(hostel):
         if hostel in student_hostel_mapping:
             mapped = student_hostel_mapping[hostel]
+            # Randomly select from sub-building points if available (e.g. for js or ks)
+            if mapped in sub_points and sub_points[mapped]:
+                return random.choice(sub_points[mapped])
             if isinstance(mapped, list):
                 return mapped
             return mapping.get(mapped, [28.545955, 77.18614])
@@ -506,11 +529,17 @@ if __name__ == "__main__":
     # ==========================================
     def get_prof_coord(locality):
         if locality == 'SDA':
+            if sub_points['sda']:
+                return random.choice(sub_points['sda'])
             return mapping.get('SDA', [28.5488852, 77.1997977])
         elif locality == 'Type 4':
+            if sub_points['type4']:
+                return random.choice(sub_points['type4'])
             name = random.choice(['type4_1', 'type4_2'])
             return mapping.get(name, [28.546655, 77.184649])
         elif locality == 'Type 5':
+            if sub_points['type5']:
+                return random.choice(sub_points['type5'])
             return mapping.get('type5', [28.5437311, 77.197072])
         elif locality == 'Nalanda Apt.':
             return mapping.get('nalanda apt', [28.5459136, 77.1829884])
@@ -518,6 +547,8 @@ if __name__ == "__main__":
             name = random.choice(['tax', 'vik'])
             return mapping.get(name, [28.544161, 77.181316])
         elif locality == 'Chattpura':
+            if sub_points['chat']:
+                return random.choice(sub_points['chat'])
             return mapping.get('chat', [28.525859, 77.194400])
         return [28.545955, 77.18614]
 
@@ -692,7 +723,8 @@ if __name__ == "__main__":
                     'end_time': '12:00',
                     'room': room,
                     'room_lat': room_coord[0],
-                    'room_lon': room_coord[1]
+                    'room_lon': room_coord[1],
+                    'activity': 'Research'
                 })
                 schedule_rows.append({
                     'agent_id': agent_id,
@@ -702,7 +734,8 @@ if __name__ == "__main__":
                     'end_time': '17:00',
                     'room': room,
                     'room_lat': room_coord[0],
-                    'room_lon': room_coord[1]
+                    'room_lon': room_coord[1],
+                    'activity': 'Research'
                 })
         else:
             courses_str = str(row['Courses Allotted'])
@@ -724,7 +757,8 @@ if __name__ == "__main__":
                                 'end_time': ps['end_time'],
                                 'room': room,
                                 'room_lat': room_coord[0],
-                                'room_lon': room_coord[1]
+                                'room_lon': room_coord[1],
+                                'activity': 'Class'
                             })
 
     print("Generating professor schedules...")
@@ -751,7 +785,8 @@ if __name__ == "__main__":
                 'end_time': '12:00',
                 'room': room,
                 'room_lat': room_coord[0],
-                'room_lon': room_coord[1]
+                'room_lon': room_coord[1],
+                'activity': 'Work'
             })
             schedule_rows.append({
                 'agent_id': agent_id,
@@ -761,11 +796,10 @@ if __name__ == "__main__":
                 'end_time': '17:00',
                 'room': room,
                 'room_lat': room_coord[0],
-                'room_lon': room_coord[1]
+                'room_lon': room_coord[1],
+                'activity': 'Work'
             })
 
     schedule_df = pd.DataFrame(schedule_rows)
     schedule_df.to_csv('schedule.csv', index=False)
     print(f"Schedule table with {len(schedule_df)} entries saved to schedule.csv successfully!")
-
-

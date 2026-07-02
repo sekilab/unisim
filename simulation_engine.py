@@ -177,7 +177,8 @@ for _, row in schedule_df.iterrows():
         'start_min': start_min,
         'end_min': end_min,
         'lat': row['room_lat'],
-        'lon': row['room_lon']
+        'lon': row['room_lon'],
+        'activity': row['activity']
     })
 
 # Sort schedules by start time
@@ -209,7 +210,7 @@ print(f"Total agents to simulate: {len(all_agents)}")
 simulated_count = 0
 
 with open(trajectory_file_path, 'w') as f_out:
-    f_out.write("agent_id,timestamp,lat,lon\n")
+    f_out.write("agent_id,timestamp,lat,lon,activity\n")
     
     for agent_idx, agent_id in enumerate(all_agents):
         home_lat, home_lon = agent_home[agent_id]
@@ -224,6 +225,7 @@ with open(trajectory_file_path, 'w') as f_out:
             # Construct hourly schedule plan (288 steps)
             # Default target is home
             target_coords = [(home_lat, home_lon)] * 288
+            target_activities = ["Home"] * 288
             
             # Overlay scheduled classes/work
             for activity in day_schedule:
@@ -233,11 +235,16 @@ with open(trajectory_file_path, 'w') as f_out:
                 start_step = max(0, min(287, start_step))
                 end_step = max(0, min(287, end_step))
                 
+                # Determine activity name from schedule data
+                act_name = activity['activity']
+                
                 for step in range(start_step, end_step):
                     target_coords[step] = (activity['lat'], activity['lon'])
+                    target_activities[step] = act_name
             
             # Apply transition smoothing (routing)
             actual_coords = list(target_coords)
+            actual_activities = list(target_activities)
             
             # Identify transition intervals
             step = 1
@@ -266,6 +273,7 @@ with open(trajectory_file_path, 'w') as f_out:
                     
                     for t_idx, t_step in enumerate(range(start_transition_step, end_transition_step)):
                         actual_coords[t_step] = interpolated[t_idx]
+                        actual_activities[t_step] = "Commuting"
                         
                     # Skip checked steps
                     step = end_transition_step
@@ -278,7 +286,8 @@ with open(trajectory_file_path, 'w') as f_out:
                 mm = total_min % 60
                 timestamp_str = f"{date_str} {hh:02d}:{mm:02d}:00"
                 lat, lon = actual_coords[step]
-                f_out.write(f"{agent_id},{timestamp_str},{lat:.6f},{lon:.6f}\n")
+                act = actual_activities[step]
+                f_out.write(f"{agent_id},{timestamp_str},{lat:.6f},{lon:.6f},{act}\n")
 
 print(f"Trajectory generation complete! Saved to {trajectory_file_path}")
 

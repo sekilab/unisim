@@ -178,14 +178,13 @@ print(f"Simulating Monday trajectories for {len(sample_agents)} sample agents...
 walking_speed_mps = 1.2
 timestep_min = 5
 
-# We will collect coordinates at 15-minute intervals (96 intervals per day)
-# each interval is 3 steps of 5-minutes
-heatmap_steps = 96
+# We will collect coordinates at 5-minute intervals (288 intervals per day)
+heatmap_steps = 288
 heatmap_data = [[] for _ in range(heatmap_steps)]
 index_labels = []
 
 for step in range(heatmap_steps):
-    total_min = step * 15
+    total_min = step * 5
     hh = total_min // 60
     mm = total_min % 60
     index_labels.append(f"{hh:02d}:{mm:02d}")
@@ -217,13 +216,13 @@ for agent_id in sample_agents:
                 actual_coords[t_step] = interpolated[t_idx]
         s_idx += 1
         
-    # Pick every 3rd step (corresponding to 15-minute intervals)
+    # Use every step directly (5-minute intervals)
     for step in range(heatmap_steps):
-        lat, lon = actual_coords[step * 3]
+        lat, lon = actual_coords[step]
         # Add a tiny random jitter (approx +/- 10 meters) so overlapping agents spread out over building shapes
         jitter_lat = lat + random.uniform(-0.00008, 0.00008)
         jitter_lon = lon + random.uniform(-0.00008, 0.00008)
-        heatmap_data[step].append([jitter_lat, jitter_lon, 0.01])
+        heatmap_data[step].append([jitter_lat, jitter_lon, 0.001])
 
 # 5. Build Folium HeatMapWithTime Map
 print("Building Leaflet map with HeatMapWithTime...")
@@ -250,7 +249,7 @@ hm = HeatMapWithTime(
     min_opacity=0.03,
     max_opacity=0.35,  # Lower opacity to prevent solid red saturation
     scale_radius=False,
-    use_local_extrema=True,  # Scales heatmap locally per timestep rather than globally
+    use_local_extrema=False,  # Scales heatmap locally per timestep rather than globally
     auto_play=True,
     max_speed=5,
     speed_step=1,
