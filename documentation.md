@@ -48,7 +48,7 @@ python3 simulation_engine.py
 * **Outputs:** [trajectory.csv](file:///Users/mohit/Documents/unisim/trajectory.csv), [sample_trajectories_map.html](file:///Users/mohit/Documents/unisim/sample_trajectories_map.html) (interactive path visualizer), and screen plots of overall occupancy curves.
 
 ### Step 3: Generate the Play/Pause Motion Heatmap
-Compiles Monday's trajectories for all 11,945 agents into a 15-minute interval Leaflet time-lapse heatmap with a play/pause timeline slider.
+Compiles Monday's trajectories for all 11,945 agents into a 5-minute interval Leaflet time-lapse heatmap with a play/pause timeline slider.
 ```bash
 python3 generate_heatmap_animation.py
 ```

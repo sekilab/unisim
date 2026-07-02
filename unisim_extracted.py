@@ -688,10 +688,32 @@ if __name__ == "__main__":
             return mapping.get('DMS', [28.5424921, 77.1830029])
         elif 'LH' in room:
             return mapping.get('lhc', [28.5434165, 77.1931136])
-        elif any(block in room for block in ['TX', 'ME', 'EE', 'AM', 'PH']):
-            return mapping.get('blocks', [28.5450652, 77.1917522])
-        elif re.match(r'^(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII)', room):
-            return mapping.get('blocks', [28.5450652, 77.1917522])
+            
+        # Match specific blocks based on Roman Numeral room prefixes
+        if room.startswith('VI') or 'VI ' in room or 'VI_LT' in room:
+            return mapping.get('block6', [28.5450652, 77.1917522])
+        elif room.startswith('V') or 'V ' in room or 'V_LT' in room:
+            return mapping.get('block5', [28.5450652, 77.1917522])
+        elif room.startswith('IV') or 'IV ' in room or 'IV_LT' in room:
+            return mapping.get('block4', [28.5450652, 77.1917522])
+        elif room.startswith('III') or 'III ' in room or 'III_LT' in room:
+            return mapping.get('block3', [28.5450652, 77.1917522])
+        elif room.startswith('II') or 'II ' in room or 'II_LT' in room:
+            return mapping.get('block2', [28.5450652, 77.1917522])
+        elif room.startswith('I') or 'I ' in room or 'I_LT' in room:
+            return mapping.get('block1', [28.5450652, 77.1917522])
+            
+        # Match specific departments or subjects in room names
+        if 'TX' in room:
+            return mapping.get('block3', [28.5450652, 77.1917522])
+        elif 'ME' in room:
+            return mapping.get('block3', [28.5450652, 77.1917522])
+        elif 'EE' in room:
+            return mapping.get('block2', [28.5450652, 77.1917522])
+        elif 'AM' in room:
+            return mapping.get('block4', [28.5450652, 77.1917522])
+        elif 'PH' in room:
+            return mapping.get('block6', [28.5450652, 77.1917522])
             
         return mapping.get('main_building', [28.5452719, 77.192312])
 
@@ -710,9 +732,27 @@ if __name__ == "__main__":
             elif branch == 'MSZ':
                 room = 'DMS'
                 room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
+            elif branch == 'EEZ':
+                room = 'Block 2 (EE)'
+                room_coord = mapping.get('block2', [28.5450652, 77.1917522])
+            elif branch in ('MEZ', 'TTZ'):
+                room = 'Block 3 (ME/TT)'
+                room_coord = mapping.get('block3', [28.5450652, 77.1917522])
+            elif branch in ('AMZ', 'CEZ'):
+                room = 'Block 4 (AM/CE)'
+                room_coord = mapping.get('block4', [28.5450652, 77.1917522])
+            elif branch in ('CYZ', 'BEZ', 'CHEZ', 'BEBZ'):
+                room = 'Block 1 (CY/BE/CHE)'
+                room_coord = mapping.get('block1', [28.5450652, 77.1917522])
+            elif branch in ('CSZ', 'PHZ'):
+                room = 'Block 6 (CS/PH)'
+                room_coord = mapping.get('block6', [28.5450652, 77.1917522])
+            elif branch == 'MTZ':
+                room = 'Mathematics Dept'
+                room_coord = mapping.get('math_dept', [28.5450652, 77.1917522])
             else:
-                room = 'Blocks'
-                room_coord = mapping.get('blocks', [28.5450652, 77.1917522])
+                room = 'Main Building'
+                room_coord = mapping.get('main_building', [28.5452719, 77.192312])
                 
             for day in ['M', 'T', 'W', 'Th', 'F']:
                 schedule_rows.append({
@@ -772,9 +812,27 @@ if __name__ == "__main__":
         elif branch == 'MS' or branch == 'DMS':
             room = 'DMS'
             room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
+        elif branch == 'EE':
+            room = 'Block 2 (EE)'
+            room_coord = mapping.get('block2', [28.5450652, 77.1917522])
+        elif branch in ('ME', 'TT'):
+            room = 'Block 3 (ME/TT)'
+            room_coord = mapping.get('block3', [28.5450652, 77.1917522])
+        elif branch in ('AM', 'CE'):
+            room = 'Block 4 (AM/CE)'
+            room_coord = mapping.get('block4', [28.5450652, 77.1917522])
+        elif branch in ('CY', 'BE', 'CHE', 'BEB'):
+            room = 'Block 1 (CY/BE/CHE)'
+            room_coord = mapping.get('block1', [28.5450652, 77.1917522])
+        elif branch in ('CSE', 'CS', 'PHY', 'PH'):
+            room = 'Block 6 (CS/PH)'
+            room_coord = mapping.get('block6', [28.5450652, 77.1917522])
+        elif branch == 'MAT':
+            room = 'Mathematics Dept'
+            room_coord = mapping.get('math_dept', [28.5450652, 77.1917522])
         else:
-            room = 'Blocks'
-            room_coord = mapping.get('blocks', [28.5450652, 77.1917522])
+            room = 'Main Building'
+            room_coord = mapping.get('main_building', [28.5452719, 77.192312])
             
         for day in ['M', 'T', 'W', 'Th', 'F']:
             schedule_rows.append({

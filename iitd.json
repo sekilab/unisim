@@ -2395,7 +2395,7 @@
                 "building": "yes",
                 "building:levels": "3",
                 "layer": "1",
-                "name": "blocks"
+                "name": "block5"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2449,7 +2449,7 @@
                 "building": "yes",
                 "building:levels": "3",
                 "layer": "1",
-                "name": "blocks"
+                "name": "block4"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2487,7 +2487,7 @@
                 "building": "yes",
                 "building:levels": "3",
                 "layer": "1",
-                "name": "blocks"
+                "name": "block3"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2525,7 +2525,7 @@
                 "building": "yes",
                 "building:levels": "3",
                 "layer": "1",
-                "name": "blocks"
+                "name": "block2"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2571,7 +2571,7 @@
                 "building": "yes",
                 "building:levels": "3",
                 "layer": "1",
-                "name": "blocks"
+                "name": "block2"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2791,7 +2791,7 @@
                 "building:colour": "white",
                 "building:levels": "4",
                 "building:use": "education",
-                "name": "blocks",
+                "name": "block1",
                 "roof:shape": "flat"
             },
             "geometry": {
@@ -2869,7 +2869,7 @@
                 "@id": "school",
                 "building": "university",
                 "building:levels": "2",
-                "name": "blocks"
+                "name": "library"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2913,7 +2913,7 @@
             "properties": {
                 "@id": "school",
                 "building": "yes",
-                "name": "blocks"
+                "name": "math_dept"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2950,7 +2950,7 @@
                 "@id": "school",
                 "building": "yes",
                 "building:levels": "3",
-                "name": "blocks"
+                "name": "block6"
             },
             "geometry": {
                 "type": "Polygon",
@@ -2990,7 +2990,7 @@
             "properties": {
                 "@id": "school",
                 "building": "yes",
-                "name": "blocks"
+                "name": "block5_lt"
             },
             "geometry": {
                 "type": "Polygon",
@@ -3026,7 +3026,7 @@
             "properties": {
                 "@id": "school",
                 "building": "yes",
-                "name": "blocks"
+                "name": "block4_lt"
             },
             "geometry": {
                 "type": "Polygon",
@@ -3067,7 +3067,7 @@
                 "addr:street": "ndian Institute Of Technology Delhi",
                 "building": "university",
                 "building:levels": "4",
-                "name": "blocks",
+                "name": "bharti_school",
                 "phone": "+911126596200"
             },
             "geometry": {

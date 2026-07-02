@@ -96,6 +96,9 @@ for chunk in pd.read_csv(trajectory_path, chunksize=chunk_size):
     # Map coordinates to building names
     for (lat_r, lon_r), group in day_chunk.groupby(['lat_r', 'lon_r']):
         b_name = coord_to_building.get((lat_r, lon_r))
+        # Map sub-blocks back to the general 'blocks' category for occupancy calculations
+        if b_name and (b_name.startswith('block') or b_name in ('math_dept', 'bharti_school', 'library')):
+            b_name = 'blocks'
         if b_name in target_buildings:
             hour_counts = group['hour'].value_counts()
             for hr, count in hour_counts.items():
