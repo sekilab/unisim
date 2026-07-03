@@ -632,7 +632,8 @@ if __name__ == "__main__":
         'js': [],
         'ks': [],
         'type4': [],
-        'type5': []
+        'type5': [],
+        'staff': []
     }
     mapping = {}
     for feat in geojson['features']:
@@ -663,7 +664,7 @@ if __name__ == "__main__":
             
             # Check if this polygon centroid belongs to a sub-point category (e.g. sda, type4, type5)
             pid = props.get('@id')
-            if pid in sub_points:
+            if pid in sub_points and pid not in ('staff', 'type5', 'sda', 'chat', 'ks', 'js'):
                 sub_points[pid].append(centroid)
 
     # Student hostel mapping to GeoJSON names or direct coordinates
@@ -862,7 +863,7 @@ if __name__ == "__main__":
     # Find the staff residence polygon from GeoJSON
     staff_polygon = None
     for feat in geojson['features']:
-        if feat.get('properties', {}).get('@id') == 'staff':
+        if feat.get('properties', {}).get('@id') == 'staff' and feat['geometry']['type'] in ('Polygon', 'MultiPolygon'):
             staff_polygon = shape(feat['geometry'])
             break
 
@@ -905,7 +906,10 @@ if __name__ == "__main__":
     all_staff = []
     for i in range(1, 491):
         staff_id = f"STAFF-{i:03d}"
-        coord = get_staff_home_coord(staff_polygon)
+        if sub_points.get('staff'):
+            coord = sub_points['staff'][(i - 1) % len(sub_points['staff'])]
+        else:
+            coord = get_staff_home_coord(staff_polygon)
         locality = staff_id
         work_room = staff_rooms[i-1]
         s_desc = "Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00"

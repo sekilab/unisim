@@ -28,6 +28,8 @@ with open(os.path.join(WORKSPACE_DIR, 'iitd.json')) as f:
 students_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'student_data.csv'))
 profs_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'professor_data.csv'))
 schedule_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'schedule.csv'))
+staff_data_path = os.path.join(WORKSPACE_DIR, 'staff_data.csv')
+staff_df = pd.read_csv(staff_data_path) if os.path.exists(staff_data_path) else None
 
 # Create mapping of building coordinates from GeoJSON
 mapping = {}
@@ -135,7 +137,8 @@ def interpolate_coords(path_coords, num_steps):
 # 3. Choose sample agents
 all_students = students_df['Student ID'].tolist()
 all_profs = profs_df['Professor ID'].tolist()
-all_agents = all_students + all_profs
+all_staff = staff_df['Staff ID'].tolist() if staff_df is not None else []
+all_agents = all_students + all_profs + all_staff
 
 # We use 100% of the population for the heat map density animation
 sample_fraction = 1.0
@@ -146,6 +149,9 @@ for _, row in students_df.iterrows():
     agent_home[row['Student ID']] = (row['Home Latitude'], row['Home Longitude'])
 for _, row in profs_df.iterrows():
     agent_home[row['Professor ID']] = (row['Home Latitude'], row['Home Longitude'])
+if staff_df is not None:
+    for _, row in staff_df.iterrows():
+        agent_home[row['Staff ID']] = (row['Home Latitude'], row['Home Longitude'])
 
 # Index Monday schedules
 monday_schedule = {}
