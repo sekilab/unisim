@@ -878,30 +878,21 @@ if __name__ == "__main__":
             if poly.contains(point):
                 return [lat, lon]
 
-    # Pre-determine work rooms based on the 10%/20%/20%/50% distribution
-    lhc_rooms = ['lhc']
-    blocks_rooms = ['block1', 'block2', 'block3', 'block4', 'block5', 'block6', 'math_dept', 'bharti_school', 'library']
-    admin_rooms = ['main_building']
-    hostels_others_rooms = [
-        'ara', 'jwala', 'kara', 'nil', 'kum', 'zans', 'gir', 'udai', 'sat', 'vind', 'shiv', 'kailash', 'him', 'saha',
-        'library', 'bharti_school', 'dogra', 'ws', 'DMS'
+    # Staff Work Room Pools
+    academic_blocks = [
+        'Block 1', 'block 2', 'Block 3', 'Block 4', 'Block 5', 'Block 6',
+        'SIT, IIT Delhi', 'Bharti School of Telecom Technology and Management',
+        'Mathematics Department', 'Central Library', 'Admin Building', 'LHC',
+        'Dogra Hall', 'DMS', 'Academic Complex East', 'Academic Complex West',
+        'Synergy Building', 'Department of Material Science', 'Department of Textile Technology'
     ]
-
-    staff_rooms = []
-    # 10% (49 staff) in LHC
-    for _ in range(49):
-        staff_rooms.append(random.choice(lhc_rooms))
-    # 20% (98 staff) in Academic Blocks
-    for _ in range(98):
-        staff_rooms.append(random.choice(blocks_rooms))
-    # 20% (98 staff) in Admin
-    for _ in range(98):
-        staff_rooms.append(random.choice(admin_rooms))
-    # 50% (245 staff) in Hostels and other buildings
-    for _ in range(245):
-        staff_rooms.append(random.choice(hostels_others_rooms))
-
-    random.shuffle(staff_rooms)
+    
+    hostels = [
+        'ara', 'jwala', 'kara', 'nil', 'kum', 'zans', 'gir', 'udai', 'sat', 
+        'vind', 'shiv', 'kailash', 'him', 'saha'
+    ]
+    
+    all_buildings = academic_blocks + hostels + ['Central Workshop']
 
     all_staff = []
     for i in range(1, 491):
@@ -911,7 +902,14 @@ if __name__ == "__main__":
         else:
             coord = get_staff_home_coord(staff_polygon)
         locality = staff_id
-        work_room = staff_rooms[i-1]
+        
+        # TA/Adm (20% -> 98 members): only in academic blocks
+        # Maintenance (80% -> 392 members): evenly in all campus buildings
+        if i <= 98:
+            work_room = random.choice(academic_blocks)
+        else:
+            work_room = random.choice(all_buildings)
+            
         s_desc = "Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00"
         
         staff_member = Staff(
@@ -969,47 +967,116 @@ if __name__ == "__main__":
                     })
         return slots
 
+    def get_building_by_branch(branch):
+        if not branch or pd.isna(branch):
+            return 'Main Building'
+        b = str(branch).upper().strip()
+        
+        # Remove 'Z' suffix for PhD branches
+        if b.endswith('Z') and len(b) > 2:
+            b = b[:-1]
+            
+        # Design/Workshop
+        if b in ('DD', 'DDS'):
+            return 'Central Workshop'
+            
+        # Management Studies
+        if b in ('MS', 'MSM', 'MSP', 'MBA', 'DMS'):
+            return 'DMS'
+            
+        # Chemistry, Physics, Materials Science, CRF, Biomedical, AI
+        if b in ('CY', 'CYS', 'EP', 'PHY', 'PH', 'PHS', 'PHA', 'PHM', 'MSE', 'CRF', 'BEM', 'BMT', 'YAI', 'AI', 'AIZ'):
+            return 'Academic Complex East'
+            
+        # Mathematics
+        if b in ('MAT', 'MAS', 'MT', 'MT1', 'MT6'):
+            return 'Mathematics Department'
+            
+        # Textile
+        if b in ('TT', 'TTE', 'TTC', 'TTF', 'TX'):
+            return 'Department of Textile Technology'
+            
+        # Applied Mechanics, Civil Engineering
+        if b in ('AM', 'AMA', 'CE', 'CEP', 'CES', 'CET', 'CEU', 'CEV', 'CEW'):
+            return 'Block 4'
+            
+        # Biochemical, Biotech, Chemical
+        if b in ('BEB', 'BB', 'BE', 'CHE'):
+            if b == 'CHE':
+                return 'block 2'
+            return 'Block 1'
+            
+        # Chemical, Electrical, Computer Services Centre
+        if b in ('CH', 'CHE', 'CM', 'EE', 'EE1', 'EE3', 'EEA', 'EEE', 'EEN', 'EEP', 'EES', 'SICPSE'):
+            return 'block 2'
+            
+        # Computer Science, IT, Interdisciplinary
+        if b in ('CS', 'CS1', 'CS5', 'CSE', 'JCS', 'JIT', 'JID', 'JVL', 'JRB', 'JIS', 'TRIP'):
+            return 'SIT, IIT Delhi'
+            
+        # Telecom (Bharti School)
+        if b in ('JTM', 'ARE'):
+            return 'Bharti School of Telecom Technology and Management'
+            
+        # Mechanical, Design, Energy, Biotech, Public Policy, Biological Sciences
+        if b in ('ME', 'ME1', 'ME2', 'MEE', 'MEM', 'MEP', 'MET', 'ES', 'ESR', 'BS', 'BLS', 'PP', 'PPM'):
+            return 'Academic Complex West'
+            
+        # Humanities
+        if b in ('HS', 'HSS', 'HCS', 'HES', 'HST'):
+            return 'Block 5'
+            
+        # CARE, CART, CRDT
+        if b in ('ART', 'CTE', 'RDT', 'RDZ'):
+            return 'Block 3'
+            
+        if b in ('AS', 'AST', 'OP'):
+            return 'Block 6'
+            
+        return 'Main Building'
+
     def get_room_coord(room):
         room = str(room).strip().upper()
         if not room or room in ('NAN', 'TBA', ''):
             return mapping.get('main_building', [28.5452719, 77.192312])
         
         if 'DOD' in room or 'WS' in room:
-            return mapping.get('ws', [28.5439754, 77.192382])
+            return mapping.get('Central Workshop', [28.5435132, 77.1923034])
         elif 'DH' in room:
-            return mapping.get('dogra', [28.5447235, 77.191756])
+            return mapping.get('Dogra Hall', [28.5447903, 77.1920261])
         elif 'DMS' in room:
             return mapping.get('DMS', [28.5424921, 77.1830029])
         elif 'LH' in room:
-            return mapping.get('lhc', [28.5434165, 77.1931136])
+            return mapping.get('LHC', [28.5430479, 77.1931553])
             
         # Match specific blocks based on Roman Numeral room prefixes
         if room.startswith('VI') or 'VI ' in room or 'VI_LT' in room:
-            return mapping.get('block6', [28.5450652, 77.1917522])
+            return mapping.get('Block 6', [28.5469632, 77.1908641])
         elif room.startswith('V') or 'V ' in room or 'V_LT' in room:
-            return mapping.get('block5', [28.5450652, 77.1917522])
+            return mapping.get('Block 5', [28.5466664, 77.1912254])
         elif room.startswith('IV') or 'IV ' in room or 'IV_LT' in room:
-            return mapping.get('block4', [28.5450652, 77.1917522])
+            return mapping.get('Block 4', [28.546407, 77.1917174])
         elif room.startswith('III') or 'III ' in room or 'III_LT' in room:
-            return mapping.get('block3', [28.5450652, 77.1917522])
+            return mapping.get('Block 3', [28.546046, 77.1920059])
         elif room.startswith('II') or 'II ' in room or 'II_LT' in room:
-            return mapping.get('block2', [28.5450652, 77.1917522])
+            return mapping.get('block 2', [28.5457203, 77.1921961])
         elif room.startswith('I') or 'I ' in room or 'I_LT' in room:
-            return mapping.get('block1', [28.5450652, 77.1917522])
+            return mapping.get('Block 1', [28.5458336, 77.1936198])
             
         # Match specific departments or subjects in room names
         if 'TX' in room:
-            return mapping.get('block3', [28.5450652, 77.1917522])
+            return mapping.get('Block 3', [28.546046, 77.1920059])
         elif 'ME' in room:
-            return mapping.get('block3', [28.5450652, 77.1917522])
+            return mapping.get('Block 3', [28.546046, 77.1920059])
         elif 'EE' in room:
-            return mapping.get('block2', [28.5450652, 77.1917522])
+            return mapping.get('block 2', [28.5457203, 77.1921961])
         elif 'AM' in room:
-            return mapping.get('block4', [28.5450652, 77.1917522])
+            return mapping.get('Block 4', [28.546407, 77.1917174])
         elif 'PH' in room:
-            return mapping.get('block6', [28.5450652, 77.1917522])
+            return mapping.get('Block 6', [28.5469632, 77.1908641])
             
         return mapping.get('main_building', [28.5452719, 77.192312])
+
 
     schedule_rows = []
 
@@ -1020,33 +1087,10 @@ if __name__ == "__main__":
         
         if str(branch).endswith('Z'):
             # PhD Schedule: Mon-Fri: 08:00-12:00 and 13:00-17:00
-            if branch == 'DDZ':
-                room = 'WS'
-                room_coord = mapping.get('ws', [28.5439754, 77.192382])
-            elif branch == 'MSZ':
-                room = 'DMS'
-                room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
-            elif branch == 'EEZ':
-                room = 'Block 2 (EE)'
-                room_coord = mapping.get('block2', [28.5450652, 77.1917522])
-            elif branch in ('MEZ', 'TTZ'):
-                room = 'Block 3 (ME/TT)'
-                room_coord = mapping.get('block3', [28.5450652, 77.1917522])
-            elif branch in ('AMZ', 'CEZ'):
-                room = 'Block 4 (AM/CE)'
-                room_coord = mapping.get('block4', [28.5450652, 77.1917522])
-            elif branch in ('CYZ', 'BEZ', 'CHEZ', 'BEBZ'):
-                room = 'Block 1 (CY/BE/CHE)'
-                room_coord = mapping.get('block1', [28.5450652, 77.1917522])
-            elif branch in ('CSZ', 'PHZ'):
-                room = 'Block 6 (CS/PH)'
-                room_coord = mapping.get('block6', [28.5450652, 77.1917522])
-            elif branch == 'MTZ':
-                room = 'Mathematics Dept'
-                room_coord = mapping.get('math_dept', [28.5450652, 77.1917522])
-            else:
-                room = 'Main Building'
-                room_coord = mapping.get('main_building', [28.5452719, 77.192312])
+            room = get_building_by_branch(branch)
+            room_coord = mapping.get(room, mapping.get('main_building', [28.5452719, 77.192312]))
+            
+
                 
             for day in ['M', 'T', 'W', 'Th', 'F']:
                 schedule_rows.append({
@@ -1144,34 +1188,8 @@ if __name__ == "__main__":
                         prev_end_time = slot_entry['end_time']
             else:
                 # Fallback for students with 0 scheduled class hours (e.g. M.Tech 2nd years doing Major Project/Thesis)
-                branch_upper = branch.upper()
-                if 'DD' in branch_upper:
-                    room = 'WS'
-                    room_coord = mapping.get('ws', [28.5439754, 77.192382])
-                elif 'MS' in branch_upper or 'DMS' in branch_upper or 'MBA' in branch_upper:
-                    room = 'DMS'
-                    room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
-                elif 'EE' in branch_upper:
-                    room = 'Block 2 (EE)'
-                    room_coord = mapping.get('block2', [28.5450652, 77.1917522])
-                elif 'ME' in branch_upper or 'TT' in branch_upper:
-                    room = 'Block 3 (ME/TT)'
-                    room_coord = mapping.get('block3', [28.5450652, 77.1917522])
-                elif 'AM' in branch_upper or 'CE' in branch_upper:
-                    room = 'Block 4 (AM/CE)'
-                    room_coord = mapping.get('block4', [28.5450652, 77.1917522])
-                elif 'CY' in branch_upper or 'BE' in branch_upper or 'CHE' in branch_upper or 'BEB' in branch_upper:
-                    room = 'Block 1 (CY/BE/CHE)'
-                    room_coord = mapping.get('block1', [28.5450652, 77.1917522])
-                elif 'CS' in branch_upper or 'PH' in branch_upper or 'PHY' in branch_upper:
-                    room = 'Block 6 (CS/PH)'
-                    room_coord = mapping.get('block6', [28.5450652, 77.1917522])
-                elif 'MAT' in branch_upper or 'MAS' in branch_upper or 'MA' in branch_upper:
-                    room = 'Mathematics Dept'
-                    room_coord = mapping.get('math_dept', [28.5450652, 77.1917522])
-                else:
-                    room = 'Main Building'
-                    room_coord = mapping.get('main_building', [28.5452719, 77.192312])
+                room = get_building_by_branch(branch)
+                room_coord = mapping.get(room, mapping.get('main_building', [28.5452719, 77.192312]))
                     
                 for day in ['M', 'T', 'W', 'Th', 'F']:
                     schedule_rows.append({
@@ -1202,33 +1220,8 @@ if __name__ == "__main__":
         agent_id = row['Professor ID']
         branch = row['Branch']
         
-        if branch == 'DD':
-            room = 'WS'
-            room_coord = mapping.get('ws', [28.5439754, 77.192382])
-        elif branch == 'MS' or branch == 'DMS':
-            room = 'DMS'
-            room_coord = mapping.get('DMS', [28.5424921, 77.1830029])
-        elif branch == 'EE':
-            room = 'Block 2 (EE)'
-            room_coord = mapping.get('block2', [28.5450652, 77.1917522])
-        elif branch in ('ME', 'TT'):
-            room = 'Block 3 (ME/TT)'
-            room_coord = mapping.get('block3', [28.5450652, 77.1917522])
-        elif branch in ('AM', 'CE'):
-            room = 'Block 4 (AM/CE)'
-            room_coord = mapping.get('block4', [28.5450652, 77.1917522])
-        elif branch in ('CY', 'BE', 'CHE', 'BEB'):
-            room = 'Block 1 (CY/BE/CHE)'
-            room_coord = mapping.get('block1', [28.5450652, 77.1917522])
-        elif branch in ('CSE', 'CS', 'PHY', 'PH'):
-            room = 'Block 6 (CS/PH)'
-            room_coord = mapping.get('block6', [28.5450652, 77.1917522])
-        elif branch == 'MAT':
-            room = 'Mathematics Dept'
-            room_coord = mapping.get('math_dept', [28.5450652, 77.1917522])
-        else:
-            room = 'Main Building'
-            room_coord = mapping.get('main_building', [28.5452719, 77.192312])
+        room = get_building_by_branch(branch)
+        room_coord = mapping.get(room, mapping.get('main_building', [28.5452719, 77.192312]))
             
         for day in ['M', 'T', 'W', 'Th', 'F']:
             schedule_rows.append({
@@ -1254,34 +1247,42 @@ if __name__ == "__main__":
                 'activity': 'Work'
             })
     print("Generating non-teaching staff schedules...")
-    for _, row in staff_df.iterrows():
+    for idx, row in staff_df.iterrows():
         agent_id = row['Staff ID']
         room = row['Work Room']
         room_coord = mapping.get(room, mapping.get('main_building', [28.5452719, 77.192312]))
         
+        # TA/Adm (20% -> 98 members): index 0 to 97
+        # Maintenance Shift 1 (40% -> 196 members): index 98 to 293
+        # Maintenance Shift 2 (40% -> 196 members): index 294 to 489
+        if idx < 98:
+            slots = [
+                ('09:00-12:00', '09:00', '12:00'),
+                ('13:00-18:00', '13:00', '18:00')
+            ]
+        elif idx < 294:
+            slots = [
+                ('08:00-14:00', '08:00', '14:00')
+            ]
+        else:
+            slots = [
+                ('14:00-20:00', '14:00', '20:00')
+            ]
+            
         for day in ['M', 'T', 'W', 'Th', 'F']:
-            schedule_rows.append({
-                'agent_id': agent_id,
-                'day': day,
-                'slot': '08:00-12:00',
-                'start_time': '08:00',
-                'end_time': '12:00',
-                'room': room,
-                'room_lat': room_coord[0],
-                'room_lon': room_coord[1],
-                'activity': 'Duty'
-            })
-            schedule_rows.append({
-                'agent_id': agent_id,
-                'day': day,
-                'slot': '14:00-18:00',
-                'start_time': '14:00',
-                'end_time': '18:00',
-                'room': room,
-                'room_lat': room_coord[0],
-                'room_lon': room_coord[1],
-                'activity': 'Duty'
-            })
+            for slot_label, start_t, end_t in slots:
+                schedule_rows.append({
+                    'agent_id': agent_id,
+                    'day': day,
+                    'slot': slot_label,
+                    'start_time': start_t,
+                    'end_time': end_t,
+                    'room': room,
+                    'room_lat': room_coord[0],
+                    'room_lon': room_coord[1],
+                    'activity': 'Duty'
+                })
+
 
     schedule_df = pd.DataFrame(schedule_rows)
     schedule_df.to_csv('schedule.csv', index=False)

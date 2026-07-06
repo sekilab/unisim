@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Delhi Campus Occupancy Dashboard</title>
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0b0f19',
+                        darkCard: '#111827',
+                        accentBlue: '#3b82f6',
+                        accentOrange: '#f97316',
+                        accentCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Leaflet custom dark theme styling */
+        .leaflet-container {
+            background: #0d111d;
+        }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+            background: #1f2937 !important;
+            color: #f3f4f6 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden">
+
+    <!-- CORS/Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center bg-darkBg/95 transition-opacity duration-300">
+        <div class="glass-panel p-8 rounded-2xl max-w-md w-full mx-4 border border-gray-800 text-center shadow-2xl">
+            <div id="loading-spinner" class="inline-block w-12 h-12 border-4 border-accentBlue border-t-transparent rounded-full animate-spin mb-4"></div>
+            <div id="error-icon" class="hidden text-red-500 text-6xl mb-4">⚠️</div>
+            <h3 id="loading-title" class="text-xl font-semibold mb-2">Loading Simulation Data...</h3>
+            <p id="loading-desc" class="text-gray-400 text-sm">
+                Fetching `iitd.json` and `building_occupancy_data.json` from the local workspace.
+            </p>
+            <div id="cors-troubleshooter" class="hidden mt-6 text-left bg-black/40 p-4 rounded-xl border border-red-900/50">
+                <p class="text-xs text-red-400 font-semibold mb-2">Browser CORS Policy Detected:</p>
+                <p class="text-xs text-gray-300 mb-3">
+                    Browsers block reading local files directly via file:// URLs. Please start a local web server in the project directory:
+                </p>
+                <div class="bg-gray-950 p-2 rounded text-xs font-mono text-cyan-400 border border-gray-800 select-all mb-3">
+                    python3 -m http.server 8000
+                </div>
+                <p class="text-xs text-gray-400">
+                    Then open: <a href="http://localhost:8000/building_occupancy_dashboard.html" class="text-accentBlue hover:underline">http://localhost:8000/building_occupancy_dashboard.html</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="h-16 shrink-0 border-b border-gray-800/80 px-6 flex items-center justify-between bg-darkCard/50 backdrop-blur-md">
+        <div class="flex items-center space-x-3">
+            <div class="h-10 w-10 bg-gradient-to-tr from-accentBlue to-accentCyan rounded-xl flex items-center justify-center font-bold text-white shadow-lg shadow-accentBlue/20">
+                IITD
+            </div>
+            <div>
+                <h1 class="text-lg font-bold tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Campus Mobility & Density Visualizer</h1>
+                <p class="text-[11px] text-gray-500 font-medium">UniSim Multi-Agent Trajectory Output Analytics</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-6">
+            <div class="hidden md:flex items-center space-x-4 text-xs font-medium border-l border-gray-800 pl-6">
+                <div>
+                    <span class="text-gray-500">Total Population:</span>
+                    <span class="text-accentCyan font-bold ml-1">12,470</span>
+                </div>
+                <div class="h-1 w-1 bg-gray-700 rounded-full"></div>
+                <div>
+                    <span class="text-gray-500">Step Interval:</span>
+                    <span class="text-accentBlue font-bold ml-1">5 Mins</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex overflow-hidden">
+        
+        <!-- Left Sidebar: Controls & Leaderboard -->
+        <aside class="w-80 border-r border-gray-800/80 p-5 flex flex-col space-y-6 bg-darkCard/30 shrink-0 overflow-y-auto">
+            
+            <!-- Day & Time Controls -->
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400">Simulation Controls</h3>
+                    <span id="current-day-badge" class="text-[10px] bg-accentBlue/10 text-accentBlue px-2 py-0.5 rounded-full font-bold uppercase">Monday</span>
+                </div>
+                
+                <!-- Day Select tabs -->
+                <div class="grid grid-cols-5 gap-1 bg-gray-950 p-1 rounded-lg border border-gray-800">
+                    <button onclick="setDay('Monday')" class="day-tab px-1 py-1.5 text-xs font-semibold rounded-md transition-colors bg-accentBlue text-white" id="tab-Monday">M</button>
+                    <button onclick="setDay('Tuesday')" class="day-tab px-1 py-1.5 text-xs font-semibold rounded-md transition-colors text-gray-400 hover:text-white" id="tab-Tuesday">T</button>
+                    <button onclick="setDay('Wednesday')" class="day-tab px-1 py-1.5 text-xs font-semibold rounded-md transition-colors text-gray-400 hover:text-white" id="tab-Wednesday">W</button>
+                    <button onclick="setDay('Thursday')" class="day-tab px-1 py-1.5 text-xs font-semibold rounded-md transition-colors text-gray-400 hover:text-white" id="tab-Thursday">Th</button>
+                    <button onclick="setDay('Friday')" class="day-tab px-1 py-1.5 text-xs font-semibold rounded-md transition-colors text-gray-400 hover:text-white" id="tab-Friday">F</button>
+                </div>
+
+                <!-- Playback & Speed Controls -->
+                <div class="bg-gray-950/60 p-4 rounded-xl border border-gray-800 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-2">
+                            <button id="btn-play" onclick="togglePlay()" class="p-2 bg-accentBlue hover:bg-accentBlue/80 text-white rounded-lg transition shadow-md shadow-accentBlue/15">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="play-icon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path></svg>
+                            </button>
+                            <button onclick="resetPlayback()" class="p-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3m0 0l3 3m-3-3v8"></path></svg>
+                            </button>
+                        </div>
+                        <div class="text-right">
+                            <span id="time-display" class="text-lg font-bold font-mono text-accentCyan">08:00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Time slider -->
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] text-gray-500 font-bold">
+                            <span>12 AM</span>
+                            <span>6 AM</span>
+                            <span>12 PM</span>
+                            <span>6 PM</span>
+                        </div>
+                        <input id="time-slider" type="range" min="0" max="23" value="8" oninput="onSliderInput(this.value)" class="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-accentBlue transition" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Building Leaderboard -->
+            <div class="flex-1 flex flex-col overflow-hidden space-y-3">
+                <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 shrink-0">Occupancy Leaderboard</h3>
+                <div id="leaderboard" class="flex-1 overflow-y-auto space-y-2 pr-1">
+                    <!-- Dynamic updates -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center: Interactive Map -->
+        <main class="flex-1 relative flex flex-col">
+            <div id="map" class="w-full h-full"></div>
+            
+            <!-- Map Overlay Legend -->
+            <div class="absolute bottom-6 left-6 z-[1000] glass-panel p-4 rounded-xl border border-gray-800 max-w-xs shadow-2xl flex flex-col space-y-2 pointer-events-none">
+                <h4 class="text-xs font-bold uppercase tracking-wide text-gray-400">Map Legend</h4>
+                <div class="flex items-center space-x-2">
+                    <span class="w-3.5 h-3.5 rounded-full border border-blue-500/30 bg-blue-500/20 block"></span>
+                    <span class="text-[11px] text-gray-300 font-medium">Academic Buildings</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-3.5 h-3.5 rounded-full border border-orange-500/30 bg-orange-500/20 block"></span>
+                    <span class="text-[11px] text-gray-300 font-medium">Student Hostels</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="w-3.5 h-3.5 rounded-full border border-cyan-500/30 bg-cyan-500/20 block"></span>
+                    <span class="text-[11px] text-gray-300 font-medium">Residential Zones</span>
+                </div>
+                <div class="h-[1px] bg-gray-800 my-1"></div>
+                <p class="text-[9px] text-gray-500">Bubble radius represents density (average concurrent agents).</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar: Metrics and Graphs -->
+        <section class="w-96 border-l border-gray-800/80 p-5 flex flex-col space-y-6 bg-darkCard/30 shrink-0 overflow-y-auto">
+            
+            <!-- Selected Building Detailed Card -->
+            <div id="selected-building-panel" class="glass-panel p-4 rounded-xl border border-gray-800 bg-gray-950/20 space-y-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <span id="detail-type" class="text-[9px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Academic</span>
+                        <h3 id="detail-name" class="text-lg font-bold mt-1 text-white">Lecture Hall Complex</h3>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] text-gray-500 font-bold uppercase">Current Occupancy</p>
+                        <p id="detail-count" class="text-2xl font-extrabold text-accentCyan">245.5</p>
+                    </div>
+                </div>
+                <p id="detail-desc" class="text-xs text-gray-400 leading-relaxed">
+                    Select a building on the map or in the leaderboard to view its full 24-hour occupancy curve.
+                </p>
+            </div>
+
+            <!-- Chart 1: 24h Occupancy Curve -->
+            <div class="space-y-2 flex-1 min-h-[220px]">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">24-Hour Occupancy Curve</h4>
+                <div class="w-full h-full max-h-[240px] bg-gray-950/40 border border-gray-800/60 p-3 rounded-xl">
+                    <canvas id="occupancy-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 2: Top Occupied Buildings Breakdown -->
+            <div class="space-y-2 flex-1 min-h-[220px]">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Category Breakdown (Selected Hour)</h4>
+                <div class="w-full h-full max-h-[240px] bg-gray-950/40 border border-gray-800/60 p-3 rounded-xl">
+                    <canvas id="category-chart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- JavaScript logic -->
+    <script>
+        let map;
+        let geojsonLayer;
+        let mapMarkers = {};
+        
+        let simData = null;
+        let currentDay = "Monday";
+        let currentHour = 8;
+        let selectedBuilding = "LHC"; // Default selected building
+        
+        let playbackInterval = null;
+        let isPlaying = false;
+        
+        let occupancyChartInstance = null;
+        let categoryChartInstance = null;
+
+        // Color palettes
+        const colors = {
+            academic: '#3b82f6',   // Blue
+            hostel: '#f97316',     // Orange
+            residential: '#06b6d4',// Cyan
+            gate: '#10b981',       // Green
+            accent: '#3b82f6'
+        };
+
+        // Standard labels/aliases lookup for cleaner display
+        const nameAliases = {
+            'lhc': 'Lecture Hall Complex (LHC)',
+            'LHC': 'Lecture Hall Complex (LHC)',
+            'DMS': 'Management Studies (DMS)',
+            'dogra': 'Dogra Hall',
+            'Dogra Hall': 'Dogra Hall',
+            'ws': 'Central Workshop (WS)',
+            'Central Workshop': 'Central Workshop (WS)',
+            'blocks': 'Academic Blocks',
+            'main_building': 'Main Academic Block',
+            'library': 'Central Library',
+            'satpura': 'Satpura Hostel',
+            'vindhyachal': 'Vindhyachal Hostel',
+            'udaigiri': 'Udaigiri Hostel',
+            'shivalik': 'Shivalik Hostel',
+            'kailash': 'Kailash Hostel',
+            'girnar': 'Girnar Hostel',
+            'aravali': 'Aravali Hostel',
+            'jwala': 'Jwala Hostel',
+            'nilgiri': 'Nilgiri Hostel',
+            'karakoram': 'Karakoram Hostel',
+            'himadri': 'Himadri Hostel',
+            'zanskar': 'Zanskar Hostel',
+            'SDA': 'SDA Residential Area',
+            'Type 4': 'Type IV Staff Housing',
+            'Nalanda Apt.': 'Nalanda Apartments',
+            'chat': 'Chattpura (Off-Campus Residence)',
+            'chattpura': 'Chattpura (Off-Campus Residence)'
+        };
+
+        function getDisplayName(name) {
+            return nameAliases[name] || name;
+        }
+
+        // Initialize Map
+        function initMap(boundaryData) {
+            // Center around IIT Delhi coordinates
+            map = L.map('map', {
+                zoomControl: false,
+                attributionControl: false
+            }).setView([28.5455, 77.1895], 15.5);
+            
+            // Add custom Leaflet zoom buttons on the right side
+            L.control.zoom({ position: 'topright' }).addTo(map);
+
+            // Sleek CartoDB Dark Matter tile layer
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 20
+            }).addTo(map);
+
+            // Add Campus Boundary GeoJSON
+            if (boundaryData) {
+                geojsonLayer = L.geoJson(boundaryData, {
+                    style: {
+                        color: "#3b82f6",
+                        weight: 2,
+                        fillColor: "#3b82f6",
+                        fillOpacity: 0.04,
+                        dashArray: "4 4"
+                    }
+                }).addTo(map);
+            }
+        }
+
+        // Fetch local JSON simulation data and GeoJSON campus map
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Fetch iitd.json for campus boundary
+                let boundaryJson = null;
+                try {
+                    const boundaryRes = await fetch('iitd.json');
+                    boundaryJson = await boundaryRes.json();
+                } catch (e) {
+                    console.warn("Could not load campus boundary file directly.", e);
+                }
+
+                // Initialize the Leaflet map
+                initMap(boundaryJson);
+
+                // Fetch aggregated building occupancy data
+                const res = await fetch('building_occupancy_data.json');
+                simData = await res.json();
+
+                // Dismiss loader overlay
+                document.getElementById('loading-overlay').classList.add('opacity-0');
+                setTimeout(() => document.getElementById('loading-overlay').remove(), 300);
+
+                // Initialize markers
+                createMarkers();
+
+                // Update charts and controls
+                updateDashboard();
+
+            } catch (err) {
+                console.error("Data loading failure:", err);
+                document.getElementById('loading-spinner').classList.add('hidden');
+                document.getElementById('error-icon').classList.remove('hidden');
+                document.getElementById('loading-title').innerText = "Data Connection Failed";
+                document.getElementById('loading-desc').innerText = "Ensure you are running a local web server (CORS restrictions prevent direct file opening).";
+                document.getElementById('cors-troubleshooter').classList.remove('hidden');
+            }
+        });
+
+        // Create Leaflet circle markers for each building
+        function createMarkers() {
+            if (!simData || !simData.building_data) return;
+
+            // Clear old markers if they exist
+            for (let b in mapMarkers) {
+                map.removeLayer(mapMarkers[b]);
+            }
+            mapMarkers = {};
+
+            // Add markers
+            for (let name in simData.building_data) {
+                const info = simData.building_data[name];
+                const bType = info.type || "academic";
+                const color = colors[bType];
+
+                // Create circular density marker
+                const marker = L.circleMarker([info.lat, info.lon], {
+                    radius: 2, // Will scale dynamically
+                    color: color,
+                    weight: 1.5,
+                    fillColor: color,
+                    fillOpacity: 0.45,
+                }).addTo(map);
+
+                // Attach click listener
+                marker.on('click', () => {
+                    selectBuilding(name);
+                });
+
+                // Tooltip info
+                marker.bindTooltip(`
+                    <div class="text-xs p-1 font-sans">
+                        <p class="font-bold text-white">${getDisplayName(name)}</p>
+                        <p class="text-[9px] uppercase font-bold tracking-wider opacity-60 mt-0.5">${bType}</p>
+                        <p class="text-xs font-bold text-accentCyan mt-1">Occupancy: <span id="tooltip-${name.replace(/\s+/g, '-')}">-</span></p>
+                    </div>
+                `, { direction: 'top', offset: [0, -5] });
+
+                mapMarkers[name] = marker;
+            }
+        }
+
+        // Select a building and highlight its details and 24h curve
+        function selectBuilding(name) {
+            selectedBuilding = name;
+            
+            const info = simData.building_data[name];
+            const bType = info ? info.type : "academic";
+            
+            // Update selected building UI info card
+            const badge = document.getElementById('detail-type');
+            badge.innerText = bType;
+            badge.className = `text-[9px] font-bold uppercase px-2 py-0.5 rounded-full border border-current bg-opacity-10`;
+            if (bType === 'academic') badge.className += ' bg-blue-500/10 text-blue-400 border-blue-500/20';
+            else if (bType === 'hostel') badge.className += ' bg-orange-500/10 text-orange-400 border-orange-500/20';
+            else if (bType === 'residential') badge.className += ' bg-cyan-500/10 text-cyan-400 border-cyan-500/20';
+            else badge.className += ' bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
+
+            document.getElementById('detail-name').innerText = getDisplayName(name);
+            
+            const occupancy = simData.occupancy[currentDay][String(currentHour)][name] || 0;
+            document.getElementById('detail-count').innerText = occupancy.toFixed(1);
+
+            // Update description based on type
+            let desc = "";
+            if (bType === 'hostel') {
+                desc = `This is a student hostel housing B.Tech, M.Tech, and Ph.D. students. Peak densities occur during early morning, evening, and overnight hours.`;
+            } else if (bType === 'academic') {
+                desc = `Academic department, classroom complex, or laboratory. Peak occupancy occurs during core instruction and workshop hours (9:00 AM – 5:00 PM).`;
+            } else if (bType === 'residential') {
+                desc = `Staff and professor residential quarters. Holds stable evening occupancy with low academic-hour counts.`;
+            } else {
+                desc = `Transit node or gateway facilitating vehicle entry and pedestrian flow.`;
+            }
+            document.getElementById('detail-desc').innerText = desc;
+
+            // Re-render the charts
+            updateOccupancyCurveChart();
+        }
+
+        // Set Day of Week
+        function setDay(day) {
+            currentDay = day;
+            document.getElementById('current-day-badge').innerText = day;
+            
+            // Update active tab style
+            document.querySelectorAll('.day-tab').forEach(btn => {
+                btn.classList.remove('bg-accentBlue', 'text-white');
+                btn.classList.add('text-gray-400', 'hover:text-white');
+            });
+            document.getElementById(`tab-${day}`).classList.remove('text-gray-400', 'hover:text-white');
+            document.getElementById(`tab-${day}`).classList.add('bg-accentBlue', 'text-white');
+
+            updateDashboard();
+        }
+
+        // Time slider input event handler
+        function onSliderInput(value) {
+            currentHour = parseInt(value);
+            // Format to HH:00
+            document.getElementById('time-display').innerText = `${String(currentHour).padStart(2, '0')}:00`;
+            updateDashboard();
+        }
+
+        // Update dashboard elements when hour or day changes
+        function updateDashboard() {
+            if (!simData) return;
+
+            const hourStr = String(currentHour);
+            const hourOccupancies = simData.occupancy[currentDay][hourStr] || {};
+
+            // 1. Update Map Markers (Sizes and color density)
+            for (let name in mapMarkers) {
+                const count = hourOccupancies[name] || 0;
+                const marker = mapMarkers[name];
+
+                // Dynamic radius based on occupancy density
+                // Let base radius be 2px, scaling up to 25px for high densities
+                const radius = 3 + Math.min(25, Math.sqrt(count) * 1.5);
+                marker.setRadius(radius);
+
+                // Adjust opacity based on active vs inactive density
+                marker.setStyle({
+                    fillOpacity: count > 0 ? 0.6 : 0.15,
+                    weight: count > 0 ? 1.5 : 0.8
+                });
+
+                // Update tooltip text content dynamically (if active)
+                const tooltipElem = document.getElementById(`tooltip-${name.replace(/\s+/g, '-')}`);
+                if (tooltipElem) {
+                    tooltipElem.innerText = count.toFixed(1);
+                }
+            }
+
+            // 2. Update Leaderboard List
+            const sortedBuildings = Object.keys(simData.building_data)
+                .map(name => ({
+                    name: name,
+                    type: simData.building_data[name].type,
+                    count: hourOccupancies[name] || 0
+                }))
+                .sort((a, b) => b.count - a.count);
+
+            const leaderboard = document.getElementById('leaderboard');
+            leaderboard.innerHTML = "";
+
+            // Show top 15 buildings
+            sortedBuildings.slice(0, 15).forEach((b, idx) => {
+                const colorClass = b.type === 'academic' ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' 
+                                : b.type === 'hostel' ? 'bg-orange-500/10 text-orange-400 border-orange-500/20' 
+                                : 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20';
+
+                const card = document.createElement('div');
+                card.className = `flex items-center justify-between p-2.5 rounded-lg border text-xs cursor-pointer transition select-none ${b.name === selectedBuilding ? 'bg-accentBlue/10 border-accentBlue' : 'bg-gray-950/30 border-gray-800/80 hover:bg-gray-850'}`;
+                
+                card.onclick = () => selectBuilding(b.name);
+                
+                card.innerHTML = `
+                    <div class="flex items-center space-x-2.5 min-w-0">
+                        <span class="font-bold text-gray-500 w-4">${idx + 1}</span>
+                        <div class="truncate">
+                            <p class="font-semibold text-white truncate">${getDisplayName(b.name)}</p>
+                            <span class="text-[9px] uppercase tracking-wider font-semibold opacity-60">${b.type}</span>
+                        </div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <span class="font-bold text-accentCyan">${b.count.toFixed(1)}</span>
+                    </div>
+                `;
+                leaderboard.appendChild(card);
+            });
+
+            // 3. Update active card detailed values
+            const detailCount = hourOccupancies[selectedBuilding] || 0;
+            document.getElementById('detail-count').innerText = detailCount.toFixed(1);
+
+            // 4. Update the charts
+            updateOccupancyCurveChart();
+            updateCategoryChart(hourOccupancies);
+        }
+
+        // Draw Chart 1: 24h occupancy curve line graph
+        function updateOccupancyCurveChart() {
+            if (!simData) return;
+
+            const hours = Array.from({ length: 24 }, (_, i) => `${String(i).padStart(2, '0')}:00`);
+            const occupancyValues = [];
+
+            for (let h = 0; h < 24; h++) {
+                const hourData = simData.occupancy[currentDay][String(h)] || {};
+                occupancyValues.push(hourData[selectedBuilding] || 0);
+            }
+
+            const ctx = document.getElementById('occupancy-chart').getContext('2d');
+            
+            if (occupancyChartInstance) {
+                occupancyChartInstance.destroy();
+            }
+
+            const bType = simData.building_data[selectedBuilding]?.type || "academic";
+            const lineColor = colors[bType];
+
+            // Render Chart
+            occupancyChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: hours,
+                    datasets: [{
+                        label: getDisplayName(selectedBuilding),
+                        data: occupancyValues,
+                        borderColor: lineColor,
+                        backgroundColor: lineColor + '1a', // 10% opacity
+                        borderWidth: 2.5,
+                        fill: true,
+                        tension: 0.35,
+                        pointRadius: 3,
+                        pointHoverRadius: 6,
+                        pointBackgroundColor: lineColor
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: '#1f2937',
+                            titleColor: '#fff',
+                            bodyColor: '#e5e7eb',
+                            borderColor: '#374151',
+                            borderWidth: 1,
+                            titleFont: { family: 'Outfit', weight: 'bold' },
+                            bodyFont: { family: 'Outfit' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
+                            ticks: { color: '#9ca3af', font: { family: 'Outfit' } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { 
+                                color: '#9ca3af', 
+                                font: { family: 'Outfit' },
+                                maxTicksLimit: 8
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Draw Chart 2: Category distribution donut/bar chart
+        function updateCategoryChart(hourOccupancies) {
+            let academicSum = 0;
+            let hostelSum = 0;
+            let residentialSum = 0;
+            let gateSum = 0;
+
+            for (let name in hourOccupancies) {
+                const bType = simData.building_data[name]?.type;
+                const count = hourOccupancies[name] || 0;
+                
+                if (bType === 'academic') academicSum += count;
+                else if (bType === 'hostel') hostelSum += count;
+                else if (bType === 'residential') residentialSum += count;
+                else if (bType === 'gate') gateSum += count;
+            }
+
+            const ctx = document.getElementById('category-chart').getContext('2d');
+            
+            if (categoryChartInstance) {
+                categoryChartInstance.destroy();
+            }
+
+            // Doughnut chart rendering
+            categoryChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Academic', 'Hostels', 'Residential', 'Gateways'],
+                    datasets: [{
+                        data: [
+                            Math.round(academicSum),
+                            Math.round(hostelSum),
+                            Math.round(residentialSum),
+                            Math.round(gateSum)
+                        ],
+                        backgroundColor: [
+                            colors.academic,
+                            colors.hostel,
+                            colors.residential,
+                            colors.gate
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { 
+                            position: 'bottom',
+                            labels: {
+                                color: '#9ca3af',
+                                font: { family: 'Outfit', size: 10 },
+                                boxWidth: 10,
+                                boxHeight: 10,
+                                padding: 12
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#1f2937',
+                            titleFont: { family: 'Outfit' },
+                            bodyFont: { family: 'Outfit' }
+                        }
+                    },
+                    cutout: '65%'
+                }
+            });
+        }
+
+        // Playback toggle
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('btn-play');
+            const icon = document.getElementById('play-icon');
+            
+            if (isPlaying) {
+                btn.classList.replace('bg-accentBlue', 'bg-accentOrange');
+                icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>`;
+                playbackInterval = setInterval(() => {
+                    currentHour = (currentHour + 1) % 24;
+                    document.getElementById('time-slider').value = currentHour;
+                    document.getElementById('time-display').innerText = `${String(currentHour).padStart(2, '0')}:00`;
+                    updateDashboard();
+                }, 1000);
+            } else {
+                btn.classList.replace('bg-accentOrange', 'bg-accentBlue');
+                icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>`;
+                clearInterval(playbackInterval);
+            }
+        }
+
+        // Reset Playback
+        function resetPlayback() {
+            if (isPlaying) togglePlay();
+            currentHour = 8; // Default morning peak start
+            document.getElementById('time-slider').value = currentHour;
+            document.getElementById('time-display').innerText = "08:00";
+            updateDashboard();
+        }
+    </script>
+</body>
+</html>

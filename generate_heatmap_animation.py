@@ -15,6 +15,14 @@ from shapely.geometry import shape
 random.seed(42)
 np.random.seed(42)
 
+# Fast distance helper
+def get_distance_meters(p1, p2):
+    lat1, lon1 = p1
+    lat2, lon2 = p2
+    dy = (lat2 - lat1) * 111320.0
+    dx = (lon2 - lon1) * 111320.0 * math.cos(math.radians((lat1 + lat2) / 2.0))
+    return math.sqrt(dx*dx + dy*dy)
+
 print("Starting Heatmap Animation Generator...")
 
 WORKSPACE_DIR = "/Users/mohit/Documents/unisim"
@@ -62,16 +70,61 @@ if boundary_geom is None:
 
 # 2. Load OSM walk network
 print("Loading OSM Walk network...")
-buffered_boundary = boundary_geom.buffer(0.005)
-G = ox.graph_from_polygon(buffered_boundary, network_type='walk')
+all_lats = list(students_df['Home Latitude']) + list(profs_df['Home Latitude']) + list(schedule_df['room_lat'].dropna())
+all_lons = list(students_df['Home Longitude']) + list(profs_df['Home Longitude']) + list(schedule_df['room_lon'].dropna())
+if staff_df is not None:
+    all_lats += list(staff_df['Home Latitude'])
+    all_lons += list(staff_df['Home Longitude'])
 
-# Geodesic distance approximation
-def get_distance_meters(p1, p2):
-    lat1, lon1 = p1
-    lat2, lon2 = p2
-    dy = (lat2 - lat1) * 111320.0
-    dx = (lon2 - lon1) * 111320.0 * math.cos(math.radians((lat1 + lat2) / 2.0))
-    return math.sqrt(dx*dx + dy*dy)
+west = min(all_lons) - 0.002
+south = min(all_lats) - 0.002
+east = max(all_lons) + 0.002
+north = max(all_lats) + 0.002
+
+G = ox.graph_from_bbox(bbox=(west, south, east, north), network_type='walk')
+print(f"OSM Walk network loaded with {len(G.nodes)} nodes and {len(G.edges)} edges.")
+
+# Connect gates (ks_gate, js_gate) to bridge inside/outside network gaps
+gates_to_connect = [
+    ('ks_gate', 30.0),
+    ('js_gate', 50.0)
+]
+
+from shapely.geometry import Point
+for gate_name, search_radius in gates_to_connect:
+    gate_coords = mapping.get(gate_name)
+    if not gate_coords:
+        continue
+    gate_lat, gate_lon = gate_coords
+    
+    inside_node, outside_node = None, None
+    min_dist_in, min_dist_out = 999.0, 999.0
+    for n in G.nodes:
+        n_lat = G.nodes[n]['y']
+        n_lon = G.nodes[n]['x']
+        dist = get_distance_meters((gate_lat, gate_lon), (n_lat, n_lon))
+        if dist < search_radius:
+            p = Point(n_lon, n_lat)
+            if boundary_geom.contains(p):
+                if dist < min_dist_in:
+                    min_dist_in = dist
+                    inside_node = n
+            else:
+                if dist < min_dist_out:
+                    min_dist_out = dist
+                    outside_node = n
+                    
+    if inside_node is not None and outside_node is not None:
+        dist_m = get_distance_meters((G.nodes[inside_node]['y'], G.nodes[inside_node]['x']),
+                                      (G.nodes[outside_node]['y'], G.nodes[outside_node]['x']))
+        G.add_edge(inside_node, outside_node, key=0, length=dist_m, highway='path')
+        G.add_edge(outside_node, inside_node, key=0, length=dist_m, highway='path')
+        print(f"Connected {gate_name}: node {inside_node} (inside) <-> node {outside_node} (outside), distance {dist_m:.2f}m")
+
+
+
+
+
 
 # Shortest path lookups
 node_cache = {}
@@ -164,8 +217,13 @@ for _, row in schedule_df.iterrows():
         eh, em_ = map(int, row['end_time'].split(':'))
         start_min = sh * 60 + sm_
         end_min = eh * 60 + em_
+        
+        # Add random offset of +/- 5 minutes
+        start_min = max(0, min(1439, start_min + random.randint(-5, 5)))
+        end_min = max(start_min + 5, min(1440, end_min + random.randint(-5, 5)))
     except Exception:
         continue
+
         
     if agent_id not in monday_schedule:
         monday_schedule[agent_id] = []
@@ -180,7 +238,12 @@ for agent_id in monday_schedule:
     monday_schedule[agent_id].sort(key=lambda x: x['start_min'])
 
 # 4. Simulate Monday trajectories
-print(f"Simulating Monday trajectories for {len(sample_agents)} sample agents...")
+# Helper for random walking speed (ranges from 1.0 to 1.4 m/s)
+def get_agent_speed(agent_id=None):
+    return random.uniform(1.0, 1.4)
+
+
+
 walking_speed_mps = 1.2
 timestep_min = 5
 
@@ -198,6 +261,7 @@ for step in range(heatmap_steps):
 for agent_id in sample_agents:
     home_lat, home_lon = agent_home[agent_id]
     day_schedule = monday_schedule.get(agent_id, [])
+    agent_speed = get_agent_speed(agent_id)
     
     # 288 steps (5-minute timesteps)
     target_coords = [(home_lat, home_lon)] * 288
@@ -215,7 +279,7 @@ for agent_id in sample_agents:
         if prev_loc != curr_loc:
             path_points = get_shortest_path_coords(prev_loc[0], prev_loc[1], curr_loc[0], curr_loc[1])
             path_dist = sum(get_distance_meters(path_points[i-1], path_points[i]) for i in range(1, len(path_points)))
-            duration_steps = max(1, int(math.ceil((path_dist / walking_speed_mps) / (timestep_min * 60))))
+            duration_steps = max(1, int(math.ceil((path_dist / agent_speed) / (timestep_min * 60))))
             start_transition_step = max(0, s_idx - duration_steps)
             interpolated = interpolate_coords(path_points, s_idx - start_transition_step)
             for t_idx, t_step in enumerate(range(start_transition_step, s_idx)):

@@ -15010,6 +15010,429 @@
                     28.5464022
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/272259456",
+                "alt_name": "Department of Biochemical Engineering and Biotechnology",
+                "building": "university",
+                "building:colour": "white",
+                "building:levels": "4",
+                "building:use": "education",
+                "name": "Block 1",
+                "roof:shape": "flat",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1936198,
+                    28.5458336
+                ]
+            },
+            "id": "way/272259456"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/272259457",
+                "building": "university",
+                "building:levels": "2",
+                "name": "Central Library",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1914103,
+                    28.5446198
+                ]
+            },
+            "id": "way/272259457"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/272259458",
+                "building": "yes",
+                "name": "Mathematics Department",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1921363,
+                    28.5448137
+                ]
+            },
+            "id": "way/272259458"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/272261119",
+                "addr:city": "New Delhi",
+                "addr:housenumber": "Block-IIA-102",
+                "addr:postcode": "110016",
+                "addr:street": "ndian Institute Of Technology Delhi",
+                "building": "university",
+                "building:levels": "4",
+                "name": "Bharti School of Telecom Technology and Management",
+                "phone": "+911126596200",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1904499,
+                    28.5450292
+                ]
+            },
+            "id": "way/272261119"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/358757485",
+                "building": "university",
+                "layer": "-1",
+                "name": "Admin Building",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1923576,
+                    28.5448635
+                ]
+            },
+            "id": "way/358757485"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/358768033",
+                "building": "university",
+                "name": "Central Workshop",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1923034,
+                    28.5435132
+                ]
+            },
+            "id": "way/358768033"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/362007373",
+                "building": "university",
+                "name": "6 LT 2",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1912454,
+                    28.5468817
+                ]
+            },
+            "id": "way/362007373"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/362007376",
+                "building": "university",
+                "name": "6 LT 1",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1904809,
+                    28.54661
+                ]
+            },
+            "id": "way/362007376"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/649533941",
+                "addr:city": "New Delhi",
+                "addr:postcode": "110016",
+                "addr:street": "Indian Institute of Technology Delhi,  Hauz Khas",
+                "building": "university",
+                "building:entrances": "main",
+                "building:levels": "4",
+                "entrance:door": "stairs",
+                "name": "SIT, IIT Delhi",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1902187,
+                    28.5454567
+                ]
+            },
+            "id": "way/649533941"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/1088204564",
+                "building": "university",
+                "name": "Academic Complex East",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1946241,
+                    28.5439903
+                ]
+            },
+            "id": "way/1088204564"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/1088204565",
+                "building": "university",
+                "name": "Academic Complex West",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1914733,
+                    28.5428278
+                ]
+            },
+            "id": "way/1088204565"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/1088204566",
+                "addr:housename": "Synergy Building",
+                "building": "university",
+                "@geometry": "center",
+                "name": "Synergy Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1910373,
+                    28.5436101
+                ]
+            },
+            "id": "way/1088204566"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/1088204567",
+                "building": "university",
+                "building:levels": "2",
+                "name": "Department of Material Science",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1935968,
+                    28.5444077
+                ]
+            },
+            "id": "way/1088204567"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/1088204568",
+                "building": "university",
+                "building:levels": "1",
+                "name": "Department of Textile Technology",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1935479,
+                    28.544007
+                ]
+            },
+            "id": "way/1088204568"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "way/1501293289",
+                "building": "university",
+                "name": "2 LT 2",
+                "@geometry": "center"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.192869,
+                    28.5457877
+                ]
+            },
+            "id": "way/1501293289"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "",
+                "name": "block 2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1921961,
+                    28.5457203
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Block 3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1920059,
+                    28.546046
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Block 4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1917174,
+                    28.546407
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Block 5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1912254,
+                    28.5466664
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Block 6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1908641,
+                    28.5469632
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "2 LT 1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1909547,
+                    28.54551
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "2 LT 2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1915292,
+                    28.5456852
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "3 LT 1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1908342,
+                    28.5458562
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "3 LT 2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1913585,
+                    28.5460498
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "LHC",
+                "name": "LHC"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1931553,
+                    28.5430479
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@id": "DH",
+                "name": "Dogra Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.1920261,
+                    28.5447903
+                ]
+            }
         }
     ]
 }

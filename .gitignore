@@ -4,12 +4,12 @@ __pycache__/
 .DS_Store
 .ipynb_checkpoints/
 
-# Data outputs
-trajectory.csv
-schedule.csv
-student_data.csv
-professor_data.csv
+# # Data outputs
+# trajectory.csv
+# schedule.csv
+# student_data.csv
+# professor_data.csv
 
-# Visualization outputs
-*.html
-*.png
+# # Visualization outputs
+# *.html
+# *.png
