@@ -252,7 +252,10 @@ def generate_pg_students(pg_data):
                 # Remaining 50% live in Hostels (assigned to standard hostels)
                 category = random.choices(['JS', 'KS', 'Standard'], weights=[30, 20, 50], k=1)[0]
                 if category == 'Standard':
-                    hostel = random.choices(hostels, weights=weights, k=1)[0]
+                    if year == 1:
+                        hostel = random.choices(hostels, weights=weights, k=1)[0]
+                    else:
+                        hostel = "Dronagiri"
                 else:
                     hostel = category
                     

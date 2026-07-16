@@ -69,57 +69,68 @@ if boundary_geom is None:
     raise ValueError("Campus boundary geometry not found in iitd.json")
 
 # 2. Load OSM walk network
-print("Loading OSM Walk network...")
-all_lats = list(students_df['Home Latitude']) + list(profs_df['Home Latitude']) + list(schedule_df['room_lat'].dropna())
-all_lons = list(students_df['Home Longitude']) + list(profs_df['Home Longitude']) + list(schedule_df['room_lon'].dropna())
-if staff_df is not None:
-    all_lats += list(staff_df['Home Latitude'])
-    all_lons += list(staff_df['Home Longitude'])
+import graph_io
+geojson_path = os.path.join(WORKSPACE_DIR, 'graph.geojson')
+if os.path.exists(geojson_path):
+    print(f"Loading custom waypoint graph from {geojson_path}...")
+    G = graph_io.load_graph_from_geojson(geojson_path)
+else:
+    print("Loading OSM Walk network...")
+    all_lats = list(students_df['Home Latitude']) + list(profs_df['Home Latitude']) + list(schedule_df['room_lat'].dropna())
+    all_lons = list(students_df['Home Longitude']) + list(profs_df['Home Longitude']) + list(schedule_df['room_lon'].dropna())
+    if staff_df is not None:
+        all_lats += list(staff_df['Home Latitude'])
+        all_lons += list(staff_df['Home Longitude'])
 
-west = min(all_lons) - 0.002
-south = min(all_lats) - 0.002
-east = max(all_lons) + 0.002
-north = max(all_lats) + 0.002
+    west = min(all_lons) - 0.002
+    south = min(all_lats) - 0.002
+    east = max(all_lons) + 0.002
+    north = max(all_lats) + 0.002
 
-G = ox.graph_from_bbox(bbox=(west, south, east, north), network_type='walk')
-print(f"OSM Walk network loaded with {len(G.nodes)} nodes and {len(G.edges)} edges.")
+    G = ox.graph_from_bbox(bbox=(west, south, east, north), network_type='walk')
+    print(f"OSM Walk network loaded with {len(G.nodes)} nodes and {len(G.edges)} edges.")
 
-# Connect gates (ks_gate, js_gate) to bridge inside/outside network gaps
-gates_to_connect = [
-    ('ks_gate', 30.0),
-    ('js_gate', 50.0)
-]
+    # Connect gates (ks_gate, js_gate) to bridge inside/outside network gaps
+    gates_to_connect = [
+        ('ks_gate', 30.0),
+        ('js_gate', 50.0)
+    ]
 
-from shapely.geometry import Point
-for gate_name, search_radius in gates_to_connect:
-    gate_coords = mapping.get(gate_name)
-    if not gate_coords:
-        continue
-    gate_lat, gate_lon = gate_coords
-    
-    inside_node, outside_node = None, None
-    min_dist_in, min_dist_out = 999.0, 999.0
-    for n in G.nodes:
-        n_lat = G.nodes[n]['y']
-        n_lon = G.nodes[n]['x']
-        dist = get_distance_meters((gate_lat, gate_lon), (n_lat, n_lon))
-        if dist < search_radius:
-            p = Point(n_lon, n_lat)
-            if boundary_geom.contains(p):
-                if dist < min_dist_in:
-                    min_dist_in = dist
-                    inside_node = n
-            else:
-                if dist < min_dist_out:
-                    min_dist_out = dist
-                    outside_node = n
-                    
-    if inside_node is not None and outside_node is not None:
-        dist_m = get_distance_meters((G.nodes[inside_node]['y'], G.nodes[inside_node]['x']),
-                                      (G.nodes[outside_node]['y'], G.nodes[outside_node]['x']))
-        G.add_edge(inside_node, outside_node, key=0, length=dist_m, highway='path')
-        G.add_edge(outside_node, inside_node, key=0, length=dist_m, highway='path')
-        print(f"Connected {gate_name}: node {inside_node} (inside) <-> node {outside_node} (outside), distance {dist_m:.2f}m")
+    from shapely.geometry import Point
+    for gate_name, search_radius in gates_to_connect:
+        gate_coords = mapping.get(gate_name)
+        if not gate_coords:
+            continue
+        gate_lat, gate_lon = gate_coords
+        
+        inside_node, outside_node = None, None
+        min_dist_in, min_dist_out = 999.0, 999.0
+        for n in G.nodes:
+            n_lat = G.nodes[n]['y']
+            n_lon = G.nodes[n]['x']
+            dist = get_distance_meters((gate_lat, gate_lon), (n_lat, n_lon))
+            if dist < search_radius:
+                p = Point(n_lon, n_lat)
+                if boundary_geom.contains(p):
+                    if dist < min_dist_in:
+                        min_dist_in = dist
+                        inside_node = n
+                else:
+                    if dist < min_dist_out:
+                        min_dist_out = dist
+                        outside_node = n
+                        
+        if inside_node is not None and outside_node is not None:
+            dist_m = get_distance_meters((G.nodes[inside_node]['y'], G.nodes[inside_node]['x']),
+                                          (G.nodes[outside_node]['y'], G.nodes[outside_node]['x']))
+            G.add_edge(inside_node, outside_node, key=0, length=dist_m, highway='path')
+            G.add_edge(outside_node, inside_node, key=0, length=dist_m, highway='path')
+            print(f"Connected {gate_name}: node {inside_node} (inside) <-> node {outside_node} (outside), distance {dist_m:.2f}m")
+            
+    graph_io.connect_dead_ends(G, max_dist=20.0)
+    graph_io.connect_disconnected_components(G, max_dist=20.0)
+    print(f"Exporting Walk network to {geojson_path} for manual customization...")
+    graph_io.save_graph_to_geojson(G, geojson_path)
 
 
 
@@ -127,31 +138,64 @@ for gate_name, search_radius in gates_to_connect:
 
 
 # Shortest path lookups
+G_routing = G.subgraph([n for n in G.nodes if G.degree(n) > 0])
 node_cache = {}
 def get_nearest_node(lat, lon):
     key = (round(lat, 6), round(lon, 6))
     if key not in node_cache:
-        node_cache[key] = ox.distance.nearest_nodes(G, lon, lat)
+        node_cache[key] = ox.distance.nearest_nodes(G_routing, lon, lat)
     return node_cache[key]
 
 path_coords_cache = {}
 def get_shortest_path_coords(start_lat, start_lon, end_lat, end_lon):
     start_node = get_nearest_node(start_lat, start_lon)
     end_node = get_nearest_node(end_lat, end_lon)
+    
     if start_node == end_node:
-        return [(start_lat, start_lon)]
+        coord = (G.nodes[start_node]['y'], G.nodes[start_node]['x'])
+        return [coord, coord]
         
     pair_key = (start_node, end_node)
     if pair_key not in path_coords_cache:
         try:
             path = nx.shortest_path(G, start_node, end_node, weight='length')
-            coords = [(G.nodes[n]['y'], G.nodes[n]['x']) for n in path]
-            coords[0] = (start_lat, start_lon)
-            coords[-1] = (end_lat, end_lon)
+            coords = []
+            for i in range(len(path) - 1):
+                u = path[i]
+                v = path[i+1]
+                u_coord = (G.nodes[u]['y'], G.nodes[u]['x'])
+                v_coord = (G.nodes[v]['y'], G.nodes[v]['x'])
+                
+                edge_data = G.get_edge_data(u, v)
+                edge_coords = []
+                if edge_data:
+                    best_key = min(edge_data.keys(), key=lambda k: edge_data[k].get('length', float('inf')))
+                    data = edge_data[best_key]
+                    if 'geometry' in data:
+                        geom_coords = [(lat, lon) for lon, lat in data['geometry'].coords]
+                        if len(geom_coords) > 1:
+                            dist_start = get_distance_meters(u_coord, geom_coords[0])
+                            dist_end = get_distance_meters(u_coord, geom_coords[-1])
+                            if dist_end < dist_start:
+                                geom_coords.reverse()
+                        edge_coords = geom_coords
+                    else:
+                        edge_coords = [u_coord, v_coord]
+                else:
+                    edge_coords = [u_coord, v_coord]
+                    
+                if not coords:
+                    coords.extend(edge_coords)
+                else:
+                    coords.extend(edge_coords[1:])
             path_coords_cache[pair_key] = coords
         except nx.NetworkXNoPath:
-            path_coords_cache[pair_key] = [(start_lat, start_lon), (end_lat, end_lon)]
-    return path_coords_cache[pair_key]
+            path_coords_cache[pair_key] = None
+            
+    res = path_coords_cache[pair_key]
+    if res is None:
+        return None
+    return list(res)
 
 def interpolate_coords(path_coords, num_steps):
     if not path_coords:
@@ -180,8 +224,7 @@ def interpolate_coords(path_coords, num_steps):
         p2 = path_coords[idx+1]
         d1 = dists[idx]
         d2 = dists[idx+1]
-        
-        seg_fraction = (target_dist - d1) / (d2 - d1)
+        seg_fraction = (target_dist - d1) / (d2 - d1) if (d2 - d1) != 0 else 0.0
         lat = p1[0] + seg_fraction * (p2[0] - p1[0])
         lon = p1[1] + seg_fraction * (p2[1] - p1[1])
         step_coords.append((lat, lon))
@@ -278,6 +321,10 @@ for agent_id in sample_agents:
         curr_loc = actual_coords[s_idx]
         if prev_loc != curr_loc:
             path_points = get_shortest_path_coords(prev_loc[0], prev_loc[1], curr_loc[0], curr_loc[1])
+            if path_points is None:
+                actual_coords[s_idx] = prev_loc
+                s_idx += 1
+                continue
             path_dist = sum(get_distance_meters(path_points[i-1], path_points[i]) for i in range(1, len(path_points)))
             duration_steps = max(1, int(math.ceil((path_dist / agent_speed) / (timestep_min * 60))))
             start_transition_step = max(0, s_idx - duration_steps)

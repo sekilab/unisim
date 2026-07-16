@@ -56,10 +56,10 @@ south = min(all_lats) - 0.002
 east = max(all_lons) + 0.002
 north = max(all_lats) + 0.002
 
-print("Loading Walk network from OSMnx...")
-G = ox.graph_from_bbox(bbox=(west, south, east, north), network_type='walk')
+import graph_io
+geojson_path = os.path.join(WORKSPACE_DIR, 'graph.geojson')
 
-# Fast distance helper
+# Fast distance helper (must be defined first for use in both branches)
 def get_distance_meters(p1, p2):
     import math
     lat1, lon1 = p1
@@ -68,61 +68,126 @@ def get_distance_meters(p1, p2):
     dx = (lon2 - lon1) * 111320.0 * math.cos(math.radians((lat1 + lat2) / 2.0))
     return math.sqrt(dx*dx + dy*dy)
 
-# Connect the KS gate (bridge the gap between inside and outside nodes near the gate)
-gate_lat, gate_lon = mapping.get('ks_gate', (28.5417095, 77.189291))
-inside_node, outside_node = None, None
-min_dist_in, min_dist_out = 999.0, 999.0
-for n in G.nodes:
-    n_lat = G.nodes[n]['y']
-    n_lon = G.nodes[n]['x']
-    dist = get_distance_meters((gate_lat, gate_lon), (n_lat, n_lon))
-    if dist < 30.0:
-        p = Point(n_lon, n_lat)
-        if boundary_geom.contains(p):
-            if dist < min_dist_in:
-                min_dist_in = dist
-                inside_node = n
-        else:
-            if dist < min_dist_out:
-                min_dist_out = dist
-                outside_node = n
-
-if inside_node is not None and outside_node is not None:
-    dist_m = get_distance_meters((G.nodes[inside_node]['y'], G.nodes[inside_node]['x']),
-                                  (G.nodes[outside_node]['y'], G.nodes[outside_node]['x']))
-    G.add_edge(inside_node, outside_node, key=0, length=dist_m, highway='path')
-    G.add_edge(outside_node, inside_node, key=0, length=dist_m, highway='path')
-    print(f"Connected ks_gate: {inside_node} <-> {outside_node}")
-
-# Connect the JS gate (js_gate)
-js_gate_lat, js_gate_lon = mapping.get('js_gate', (28.5470903, 77.1888363))
-js_inside_node, js_outside_node = None, None
-js_min_dist_in, js_min_dist_out = 999.0, 999.0
-for n in G.nodes:
-    n_lat = G.nodes[n]['y']
-    n_lon = G.nodes[n]['x']
-    dist = get_distance_meters((js_gate_lat, js_gate_lon), (n_lat, n_lon))
-    if dist < 50.0:
-        p = Point(n_lon, n_lat)
-        if boundary_geom.contains(p):
-            if dist < js_min_dist_in:
-                js_min_dist_in = dist
-                js_inside_node = n
-        else:
-            if dist < js_min_dist_out:
-                js_min_dist_out = dist
-                js_outside_node = n
-
-if js_inside_node is not None and js_outside_node is not None:
+if os.path.exists(geojson_path):
+    print(f"Loading custom waypoint graph from {geojson_path}...")
+    G = graph_io.load_graph_from_geojson(geojson_path)
+    
+    # Re-identify connected gate nodes for folium FeatureGroups visualization
+    gate_lat, gate_lon = mapping.get('ks_gate', (28.5417095, 77.189291))
+    inside_node, outside_node = None, None
+    min_dist_in, min_dist_out = 999.0, 999.0
+    for n in G.nodes:
+        n_lat = G.nodes[n]['y']
+        n_lon = G.nodes[n]['x']
+        dist = get_distance_meters((gate_lat, gate_lon), (n_lat, n_lon))
+        if dist < 30.0:
+            p = Point(n_lon, n_lat)
+            if boundary_geom.contains(p):
+                if dist < min_dist_in:
+                    min_dist_in = dist
+                    inside_node = n
+            else:
+                if dist < min_dist_out:
+                    min_dist_out = dist
+                    outside_node = n
+    if inside_node is not None and outside_node is not None:
+        dist_m = get_distance_meters((G.nodes[inside_node]['y'], G.nodes[inside_node]['x']),
+                                      (G.nodes[outside_node]['y'], G.nodes[outside_node]['x']))
+    else:
+        dist_m = 0.0
+                                      
+    js_gate_lat, js_gate_lon = mapping.get('js_gate', (28.5470903, 77.1888363))
+    js_inside_node, js_outside_node = None, None
+    js_min_dist_in, js_min_dist_out = 999.0, 999.0
     js_gate_node_id = 99999902
-    G.add_node(js_gate_node_id, y=js_gate_lat, x=js_gate_lon)
-    js_dist_in = get_distance_meters((js_gate_lat, js_gate_lon), (G.nodes[js_inside_node]['y'], G.nodes[js_inside_node]['x']))
-    js_dist_out = get_distance_meters((js_gate_lat, js_gate_lon), (G.nodes[js_outside_node]['y'], G.nodes[js_outside_node]['x']))
-    G.add_edge(js_gate_node_id, js_inside_node, key=0, length=js_dist_in, highway='path')
-    G.add_edge(js_inside_node, js_gate_node_id, key=0, length=js_dist_in, highway='path')
-    G.add_edge(js_gate_node_id, js_outside_node, key=0, length=js_dist_out, highway='path')
-    G.add_edge(js_outside_node, js_gate_node_id, key=0, length=js_dist_out, highway='path')
-    print(f"Connected js_gate: {js_inside_node} <-> {js_gate_node_id} <-> {js_outside_node}")
+    
+    for n in G.nodes:
+        if n == js_gate_node_id:
+            continue
+        n_lat = G.nodes[n]['y']
+        n_lon = G.nodes[n]['x']
+        dist = get_distance_meters((js_gate_lat, js_gate_lon), (n_lat, n_lon))
+        if dist < 50.0:
+            p = Point(n_lon, n_lat)
+            if boundary_geom.contains(p):
+                if dist < js_min_dist_in:
+                    js_min_dist_in = dist
+                    js_inside_node = n
+            else:
+                if dist < js_min_dist_out:
+                    js_min_dist_out = dist
+                    js_outside_node = n
+                    
+    if js_inside_node is not None and js_outside_node is not None:
+        js_dist_in = get_distance_meters((js_gate_lat, js_gate_lon), (G.nodes[js_inside_node]['y'], G.nodes[js_inside_node]['x']))
+        js_dist_out = get_distance_meters((js_gate_lat, js_gate_lon), (G.nodes[js_outside_node]['y'], G.nodes[js_outside_node]['x']))
+    else:
+        js_dist_in = 0.0
+        js_dist_out = 0.0
+else:
+    print("Loading Walk network from OSMnx...")
+    G = ox.graph_from_bbox(bbox=(west, south, east, north), network_type='walk')
+
+    # Connect the KS gate (bridge the gap between inside and outside nodes near the gate)
+    gate_lat, gate_lon = mapping.get('ks_gate', (28.5417095, 77.189291))
+    inside_node, outside_node = None, None
+    min_dist_in, min_dist_out = 999.0, 999.0
+    for n in G.nodes:
+        n_lat = G.nodes[n]['y']
+        n_lon = G.nodes[n]['x']
+        dist = get_distance_meters((gate_lat, gate_lon), (n_lat, n_lon))
+        if dist < 30.0:
+            p = Point(n_lon, n_lat)
+            if boundary_geom.contains(p):
+                if dist < min_dist_in:
+                    min_dist_in = dist
+                    inside_node = n
+            else:
+                if dist < min_dist_out:
+                    min_dist_out = dist
+                    outside_node = n
+
+    if inside_node is not None and outside_node is not None:
+        dist_m = get_distance_meters((G.nodes[inside_node]['y'], G.nodes[inside_node]['x']),
+                                      (G.nodes[outside_node]['y'], G.nodes[outside_node]['x']))
+        G.add_edge(inside_node, outside_node, key=0, length=dist_m, highway='path')
+        G.add_edge(outside_node, inside_node, key=0, length=dist_m, highway='path')
+        print(f"Connected ks_gate: {inside_node} <-> {outside_node}")
+
+    # Connect the JS gate (js_gate)
+    js_gate_lat, js_gate_lon = mapping.get('js_gate', (28.5470903, 77.1888363))
+    js_inside_node, js_outside_node = None, None
+    js_min_dist_in, js_min_dist_out = 999.0, 999.0
+    for n in G.nodes:
+        n_lat = G.nodes[n]['y']
+        n_lon = G.nodes[n]['x']
+        dist = get_distance_meters((js_gate_lat, js_gate_lon), (n_lat, n_lon))
+        if dist < 50.0:
+            p = Point(n_lon, n_lat)
+            if boundary_geom.contains(p):
+                if dist < js_min_dist_in:
+                    js_min_dist_in = dist
+                    js_inside_node = n
+            else:
+                if dist < js_min_dist_out:
+                    js_min_dist_out = dist
+                    js_outside_node = n
+
+    if js_inside_node is not None and js_outside_node is not None:
+        js_gate_node_id = 99999902
+        G.add_node(js_gate_node_id, y=js_gate_lat, x=js_gate_lon)
+        js_dist_in = get_distance_meters((js_gate_lat, js_gate_lon), (G.nodes[js_inside_node]['y'], G.nodes[js_inside_node]['x']))
+        js_dist_out = get_distance_meters((js_gate_lat, js_gate_lon), (G.nodes[js_outside_node]['y'], G.nodes[js_outside_node]['x']))
+        G.add_edge(js_gate_node_id, js_inside_node, key=0, length=js_dist_in, highway='path')
+        G.add_edge(js_inside_node, js_gate_node_id, key=0, length=js_dist_in, highway='path')
+        G.add_edge(js_gate_node_id, js_outside_node, key=0, length=js_dist_out, highway='path')
+        G.add_edge(js_outside_node, js_gate_node_id, key=0, length=js_dist_out, highway='path')
+        print(f"Connected js_gate: {js_inside_node} <-> {js_gate_node_id} <-> {js_outside_node}")
+        
+    graph_io.connect_dead_ends(G, max_dist=20.0)
+    graph_io.connect_disconnected_components(G, max_dist=20.0)
+    print(f"Exporting Walk network to {geojson_path} for manual customization...")
+    graph_io.save_graph_to_geojson(G, geojson_path)
 
 
 print("Building map...")

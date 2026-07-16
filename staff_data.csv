@@ -1,491 +1,491 @@
 Staff ID,Locality,Work Room,Schedule,Home Latitude,Home Longitude
-STAFF-001,STAFF-001,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
-STAFF-002,STAFF-002,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
-STAFF-003,STAFF-003,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
-STAFF-004,STAFF-004,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
-STAFF-005,STAFF-005,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
-STAFF-006,STAFF-006,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
-STAFF-007,STAFF-007,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
-STAFF-008,STAFF-008,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
-STAFF-009,STAFF-009,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
-STAFF-010,STAFF-010,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
-STAFF-011,STAFF-011,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
-STAFF-012,STAFF-012,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
-STAFF-013,STAFF-013,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
-STAFF-014,STAFF-014,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
-STAFF-015,STAFF-015,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
-STAFF-016,STAFF-016,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
-STAFF-017,STAFF-017,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
-STAFF-018,STAFF-018,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
-STAFF-019,STAFF-019,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
-STAFF-020,STAFF-020,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
+STAFF-001,STAFF-001,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
+STAFF-002,STAFF-002,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
+STAFF-003,STAFF-003,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
+STAFF-004,STAFF-004,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
+STAFF-005,STAFF-005,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
+STAFF-006,STAFF-006,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
+STAFF-007,STAFF-007,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
+STAFF-008,STAFF-008,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
+STAFF-009,STAFF-009,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
+STAFF-010,STAFF-010,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
+STAFF-011,STAFF-011,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
+STAFF-012,STAFF-012,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
+STAFF-013,STAFF-013,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
+STAFF-014,STAFF-014,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
+STAFF-015,STAFF-015,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
+STAFF-016,STAFF-016,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
+STAFF-017,STAFF-017,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
+STAFF-018,STAFF-018,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
+STAFF-019,STAFF-019,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
+STAFF-020,STAFF-020,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
 STAFF-021,STAFF-021,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
 STAFF-022,STAFF-022,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
-STAFF-023,STAFF-023,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
-STAFF-024,STAFF-024,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
-STAFF-025,STAFF-025,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
-STAFF-026,STAFF-026,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
-STAFF-027,STAFF-027,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
-STAFF-028,STAFF-028,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
-STAFF-029,STAFF-029,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
-STAFF-030,STAFF-030,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
-STAFF-031,STAFF-031,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
-STAFF-032,STAFF-032,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
-STAFF-033,STAFF-033,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
-STAFF-034,STAFF-034,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
-STAFF-035,STAFF-035,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
-STAFF-036,STAFF-036,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
-STAFF-037,STAFF-037,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
-STAFF-038,STAFF-038,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
-STAFF-039,STAFF-039,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
-STAFF-040,STAFF-040,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
-STAFF-041,STAFF-041,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
-STAFF-042,STAFF-042,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
-STAFF-043,STAFF-043,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
-STAFF-044,STAFF-044,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
-STAFF-045,STAFF-045,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
-STAFF-046,STAFF-046,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
-STAFF-047,STAFF-047,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
-STAFF-048,STAFF-048,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
-STAFF-049,STAFF-049,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
+STAFF-023,STAFF-023,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
+STAFF-024,STAFF-024,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
+STAFF-025,STAFF-025,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
+STAFF-026,STAFF-026,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
+STAFF-027,STAFF-027,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
+STAFF-028,STAFF-028,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
+STAFF-029,STAFF-029,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
+STAFF-030,STAFF-030,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
+STAFF-031,STAFF-031,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
+STAFF-032,STAFF-032,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
+STAFF-033,STAFF-033,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
+STAFF-034,STAFF-034,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
+STAFF-035,STAFF-035,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
+STAFF-036,STAFF-036,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
+STAFF-037,STAFF-037,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
+STAFF-038,STAFF-038,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
+STAFF-039,STAFF-039,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
+STAFF-040,STAFF-040,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
+STAFF-041,STAFF-041,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
+STAFF-042,STAFF-042,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
+STAFF-043,STAFF-043,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
+STAFF-044,STAFF-044,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
+STAFF-045,STAFF-045,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
+STAFF-046,STAFF-046,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
+STAFF-047,STAFF-047,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
+STAFF-048,STAFF-048,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
+STAFF-049,STAFF-049,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
 STAFF-050,STAFF-050,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
-STAFF-051,STAFF-051,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
-STAFF-052,STAFF-052,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
-STAFF-053,STAFF-053,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
-STAFF-054,STAFF-054,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
-STAFF-055,STAFF-055,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
+STAFF-051,STAFF-051,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
+STAFF-052,STAFF-052,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
+STAFF-053,STAFF-053,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
+STAFF-054,STAFF-054,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
+STAFF-055,STAFF-055,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
 STAFF-056,STAFF-056,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
-STAFF-057,STAFF-057,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
-STAFF-058,STAFF-058,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
-STAFF-059,STAFF-059,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
-STAFF-060,STAFF-060,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
-STAFF-061,STAFF-061,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
-STAFF-062,STAFF-062,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
-STAFF-063,STAFF-063,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
-STAFF-064,STAFF-064,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
-STAFF-065,STAFF-065,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
-STAFF-066,STAFF-066,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
-STAFF-067,STAFF-067,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
-STAFF-068,STAFF-068,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
-STAFF-069,STAFF-069,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
-STAFF-070,STAFF-070,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
-STAFF-071,STAFF-071,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
-STAFF-072,STAFF-072,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
+STAFF-057,STAFF-057,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
+STAFF-058,STAFF-058,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
+STAFF-059,STAFF-059,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
+STAFF-060,STAFF-060,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
+STAFF-061,STAFF-061,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
+STAFF-062,STAFF-062,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
+STAFF-063,STAFF-063,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
+STAFF-064,STAFF-064,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
+STAFF-065,STAFF-065,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
+STAFF-066,STAFF-066,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
+STAFF-067,STAFF-067,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
+STAFF-068,STAFF-068,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
+STAFF-069,STAFF-069,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
+STAFF-070,STAFF-070,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
+STAFF-071,STAFF-071,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
+STAFF-072,STAFF-072,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
 STAFF-073,STAFF-073,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
-STAFF-074,STAFF-074,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
-STAFF-075,STAFF-075,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
-STAFF-076,STAFF-076,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
-STAFF-077,STAFF-077,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
-STAFF-078,STAFF-078,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
-STAFF-079,STAFF-079,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
-STAFF-080,STAFF-080,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
-STAFF-081,STAFF-081,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
-STAFF-082,STAFF-082,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
-STAFF-083,STAFF-083,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
-STAFF-084,STAFF-084,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
-STAFF-085,STAFF-085,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
-STAFF-086,STAFF-086,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
-STAFF-087,STAFF-087,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
-STAFF-088,STAFF-088,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
-STAFF-089,STAFF-089,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
-STAFF-090,STAFF-090,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
-STAFF-091,STAFF-091,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
-STAFF-092,STAFF-092,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
-STAFF-093,STAFF-093,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
-STAFF-094,STAFF-094,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
-STAFF-095,STAFF-095,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
-STAFF-096,STAFF-096,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
-STAFF-097,STAFF-097,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
-STAFF-098,STAFF-098,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
-STAFF-099,STAFF-099,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
-STAFF-100,STAFF-100,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
-STAFF-101,STAFF-101,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
+STAFF-074,STAFF-074,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
+STAFF-075,STAFF-075,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
+STAFF-076,STAFF-076,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
+STAFF-077,STAFF-077,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
+STAFF-078,STAFF-078,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
+STAFF-079,STAFF-079,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
+STAFF-080,STAFF-080,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
+STAFF-081,STAFF-081,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
+STAFF-082,STAFF-082,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
+STAFF-083,STAFF-083,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
+STAFF-084,STAFF-084,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
+STAFF-085,STAFF-085,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
+STAFF-086,STAFF-086,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
+STAFF-087,STAFF-087,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
+STAFF-088,STAFF-088,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
+STAFF-089,STAFF-089,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
+STAFF-090,STAFF-090,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
+STAFF-091,STAFF-091,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
+STAFF-092,STAFF-092,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
+STAFF-093,STAFF-093,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
+STAFF-094,STAFF-094,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
+STAFF-095,STAFF-095,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
+STAFF-096,STAFF-096,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
+STAFF-097,STAFF-097,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
+STAFF-098,STAFF-098,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
+STAFF-099,STAFF-099,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
+STAFF-100,STAFF-100,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
+STAFF-101,STAFF-101,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
 STAFF-102,STAFF-102,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
-STAFF-103,STAFF-103,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
-STAFF-104,STAFF-104,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
-STAFF-105,STAFF-105,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
-STAFF-106,STAFF-106,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
-STAFF-107,STAFF-107,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
-STAFF-108,STAFF-108,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
-STAFF-109,STAFF-109,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
-STAFF-110,STAFF-110,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
-STAFF-111,STAFF-111,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
-STAFF-112,STAFF-112,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
-STAFF-113,STAFF-113,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
-STAFF-114,STAFF-114,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
-STAFF-115,STAFF-115,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
-STAFF-116,STAFF-116,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
-STAFF-117,STAFF-117,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
-STAFF-118,STAFF-118,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
-STAFF-119,STAFF-119,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
-STAFF-120,STAFF-120,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
-STAFF-121,STAFF-121,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
-STAFF-122,STAFF-122,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
-STAFF-123,STAFF-123,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
-STAFF-124,STAFF-124,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
-STAFF-125,STAFF-125,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
-STAFF-126,STAFF-126,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
-STAFF-127,STAFF-127,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
-STAFF-128,STAFF-128,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
-STAFF-129,STAFF-129,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
-STAFF-130,STAFF-130,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
-STAFF-131,STAFF-131,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
-STAFF-132,STAFF-132,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
-STAFF-133,STAFF-133,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
-STAFF-134,STAFF-134,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
-STAFF-135,STAFF-135,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
-STAFF-136,STAFF-136,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
-STAFF-137,STAFF-137,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
-STAFF-138,STAFF-138,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
-STAFF-139,STAFF-139,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
-STAFF-140,STAFF-140,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
-STAFF-141,STAFF-141,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
-STAFF-142,STAFF-142,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
-STAFF-143,STAFF-143,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
-STAFF-144,STAFF-144,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
-STAFF-145,STAFF-145,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
-STAFF-146,STAFF-146,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
-STAFF-147,STAFF-147,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
-STAFF-148,STAFF-148,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
-STAFF-149,STAFF-149,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
-STAFF-150,STAFF-150,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
-STAFF-151,STAFF-151,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
-STAFF-152,STAFF-152,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
-STAFF-153,STAFF-153,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
-STAFF-154,STAFF-154,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
+STAFF-103,STAFF-103,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
+STAFF-104,STAFF-104,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
+STAFF-105,STAFF-105,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
+STAFF-106,STAFF-106,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
+STAFF-107,STAFF-107,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
+STAFF-108,STAFF-108,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
+STAFF-109,STAFF-109,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
+STAFF-110,STAFF-110,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
+STAFF-111,STAFF-111,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
+STAFF-112,STAFF-112,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
+STAFF-113,STAFF-113,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
+STAFF-114,STAFF-114,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
+STAFF-115,STAFF-115,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
+STAFF-116,STAFF-116,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
+STAFF-117,STAFF-117,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
+STAFF-118,STAFF-118,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
+STAFF-119,STAFF-119,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
+STAFF-120,STAFF-120,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
+STAFF-121,STAFF-121,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
+STAFF-122,STAFF-122,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
+STAFF-123,STAFF-123,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
+STAFF-124,STAFF-124,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
+STAFF-125,STAFF-125,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
+STAFF-126,STAFF-126,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
+STAFF-127,STAFF-127,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
+STAFF-128,STAFF-128,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
+STAFF-129,STAFF-129,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
+STAFF-130,STAFF-130,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
+STAFF-131,STAFF-131,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
+STAFF-132,STAFF-132,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
+STAFF-133,STAFF-133,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
+STAFF-134,STAFF-134,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
+STAFF-135,STAFF-135,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
+STAFF-136,STAFF-136,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
+STAFF-137,STAFF-137,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
+STAFF-138,STAFF-138,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
+STAFF-139,STAFF-139,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
+STAFF-140,STAFF-140,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
+STAFF-141,STAFF-141,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
+STAFF-142,STAFF-142,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
+STAFF-143,STAFF-143,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
+STAFF-144,STAFF-144,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
+STAFF-145,STAFF-145,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
+STAFF-146,STAFF-146,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
+STAFF-147,STAFF-147,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
+STAFF-148,STAFF-148,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
+STAFF-149,STAFF-149,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
+STAFF-150,STAFF-150,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
+STAFF-151,STAFF-151,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
+STAFF-152,STAFF-152,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
+STAFF-153,STAFF-153,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
+STAFF-154,STAFF-154,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
 STAFF-155,STAFF-155,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
-STAFF-156,STAFF-156,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
-STAFF-157,STAFF-157,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
-STAFF-158,STAFF-158,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
-STAFF-159,STAFF-159,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
-STAFF-160,STAFF-160,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
-STAFF-161,STAFF-161,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
-STAFF-162,STAFF-162,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
-STAFF-163,STAFF-163,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
-STAFF-164,STAFF-164,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
-STAFF-165,STAFF-165,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
-STAFF-166,STAFF-166,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
-STAFF-167,STAFF-167,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
-STAFF-168,STAFF-168,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
-STAFF-169,STAFF-169,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
-STAFF-170,STAFF-170,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
-STAFF-171,STAFF-171,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
-STAFF-172,STAFF-172,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
-STAFF-173,STAFF-173,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
-STAFF-174,STAFF-174,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
-STAFF-175,STAFF-175,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
-STAFF-176,STAFF-176,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
-STAFF-177,STAFF-177,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
-STAFF-178,STAFF-178,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
-STAFF-179,STAFF-179,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
-STAFF-180,STAFF-180,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
-STAFF-181,STAFF-181,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
-STAFF-182,STAFF-182,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
-STAFF-183,STAFF-183,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
-STAFF-184,STAFF-184,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
-STAFF-185,STAFF-185,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
-STAFF-186,STAFF-186,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
-STAFF-187,STAFF-187,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
-STAFF-188,STAFF-188,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
-STAFF-189,STAFF-189,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
-STAFF-190,STAFF-190,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
-STAFF-191,STAFF-191,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
-STAFF-192,STAFF-192,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
-STAFF-193,STAFF-193,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
-STAFF-194,STAFF-194,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
-STAFF-195,STAFF-195,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
-STAFF-196,STAFF-196,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
-STAFF-197,STAFF-197,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
-STAFF-198,STAFF-198,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
-STAFF-199,STAFF-199,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
-STAFF-200,STAFF-200,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
-STAFF-201,STAFF-201,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
-STAFF-202,STAFF-202,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
-STAFF-203,STAFF-203,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
-STAFF-204,STAFF-204,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
-STAFF-205,STAFF-205,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
-STAFF-206,STAFF-206,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
-STAFF-207,STAFF-207,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
-STAFF-208,STAFF-208,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
-STAFF-209,STAFF-209,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
-STAFF-210,STAFF-210,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
-STAFF-211,STAFF-211,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
-STAFF-212,STAFF-212,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
-STAFF-213,STAFF-213,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
-STAFF-214,STAFF-214,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
-STAFF-215,STAFF-215,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
-STAFF-216,STAFF-216,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
-STAFF-217,STAFF-217,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
-STAFF-218,STAFF-218,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
+STAFF-156,STAFF-156,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
+STAFF-157,STAFF-157,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
+STAFF-158,STAFF-158,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
+STAFF-159,STAFF-159,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
+STAFF-160,STAFF-160,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
+STAFF-161,STAFF-161,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
+STAFF-162,STAFF-162,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
+STAFF-163,STAFF-163,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
+STAFF-164,STAFF-164,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
+STAFF-165,STAFF-165,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
+STAFF-166,STAFF-166,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
+STAFF-167,STAFF-167,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
+STAFF-168,STAFF-168,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
+STAFF-169,STAFF-169,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
+STAFF-170,STAFF-170,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
+STAFF-171,STAFF-171,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
+STAFF-172,STAFF-172,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
+STAFF-173,STAFF-173,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
+STAFF-174,STAFF-174,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
+STAFF-175,STAFF-175,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
+STAFF-176,STAFF-176,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
+STAFF-177,STAFF-177,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
+STAFF-178,STAFF-178,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
+STAFF-179,STAFF-179,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
+STAFF-180,STAFF-180,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
+STAFF-181,STAFF-181,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
+STAFF-182,STAFF-182,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
+STAFF-183,STAFF-183,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
+STAFF-184,STAFF-184,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
+STAFF-185,STAFF-185,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
+STAFF-186,STAFF-186,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
+STAFF-187,STAFF-187,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
+STAFF-188,STAFF-188,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
+STAFF-189,STAFF-189,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
+STAFF-190,STAFF-190,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
+STAFF-191,STAFF-191,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
+STAFF-192,STAFF-192,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
+STAFF-193,STAFF-193,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
+STAFF-194,STAFF-194,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
+STAFF-195,STAFF-195,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
+STAFF-196,STAFF-196,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
+STAFF-197,STAFF-197,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
+STAFF-198,STAFF-198,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
+STAFF-199,STAFF-199,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
+STAFF-200,STAFF-200,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
+STAFF-201,STAFF-201,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
+STAFF-202,STAFF-202,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
+STAFF-203,STAFF-203,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
+STAFF-204,STAFF-204,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
+STAFF-205,STAFF-205,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
+STAFF-206,STAFF-206,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
+STAFF-207,STAFF-207,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
+STAFF-208,STAFF-208,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
+STAFF-209,STAFF-209,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
+STAFF-210,STAFF-210,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
+STAFF-211,STAFF-211,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
+STAFF-212,STAFF-212,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
+STAFF-213,STAFF-213,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
+STAFF-214,STAFF-214,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
+STAFF-215,STAFF-215,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
+STAFF-216,STAFF-216,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
+STAFF-217,STAFF-217,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
+STAFF-218,STAFF-218,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
 STAFF-219,STAFF-219,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
-STAFF-220,STAFF-220,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
-STAFF-221,STAFF-221,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
-STAFF-222,STAFF-222,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
-STAFF-223,STAFF-223,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
-STAFF-224,STAFF-224,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
-STAFF-225,STAFF-225,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
-STAFF-226,STAFF-226,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
-STAFF-227,STAFF-227,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
-STAFF-228,STAFF-228,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
-STAFF-229,STAFF-229,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
-STAFF-230,STAFF-230,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
-STAFF-231,STAFF-231,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
-STAFF-232,STAFF-232,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
-STAFF-233,STAFF-233,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
-STAFF-234,STAFF-234,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
-STAFF-235,STAFF-235,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
-STAFF-236,STAFF-236,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
-STAFF-237,STAFF-237,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
-STAFF-238,STAFF-238,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
-STAFF-239,STAFF-239,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
-STAFF-240,STAFF-240,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
-STAFF-241,STAFF-241,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
-STAFF-242,STAFF-242,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
-STAFF-243,STAFF-243,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
-STAFF-244,STAFF-244,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
-STAFF-245,STAFF-245,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
-STAFF-246,STAFF-246,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
-STAFF-247,STAFF-247,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
-STAFF-248,STAFF-248,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
+STAFF-220,STAFF-220,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
+STAFF-221,STAFF-221,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
+STAFF-222,STAFF-222,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
+STAFF-223,STAFF-223,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
+STAFF-224,STAFF-224,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
+STAFF-225,STAFF-225,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
+STAFF-226,STAFF-226,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
+STAFF-227,STAFF-227,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
+STAFF-228,STAFF-228,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
+STAFF-229,STAFF-229,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
+STAFF-230,STAFF-230,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
+STAFF-231,STAFF-231,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
+STAFF-232,STAFF-232,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
+STAFF-233,STAFF-233,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
+STAFF-234,STAFF-234,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
+STAFF-235,STAFF-235,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
+STAFF-236,STAFF-236,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
+STAFF-237,STAFF-237,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
+STAFF-238,STAFF-238,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
+STAFF-239,STAFF-239,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
+STAFF-240,STAFF-240,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
+STAFF-241,STAFF-241,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
+STAFF-242,STAFF-242,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
+STAFF-243,STAFF-243,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
+STAFF-244,STAFF-244,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
+STAFF-245,STAFF-245,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
+STAFF-246,STAFF-246,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
+STAFF-247,STAFF-247,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
+STAFF-248,STAFF-248,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
 STAFF-249,STAFF-249,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
-STAFF-250,STAFF-250,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
-STAFF-251,STAFF-251,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
-STAFF-252,STAFF-252,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
-STAFF-253,STAFF-253,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
-STAFF-254,STAFF-254,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
-STAFF-255,STAFF-255,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
-STAFF-256,STAFF-256,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
-STAFF-257,STAFF-257,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
-STAFF-258,STAFF-258,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
-STAFF-259,STAFF-259,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
+STAFF-250,STAFF-250,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
+STAFF-251,STAFF-251,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
+STAFF-252,STAFF-252,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
+STAFF-253,STAFF-253,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
+STAFF-254,STAFF-254,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
+STAFF-255,STAFF-255,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
+STAFF-256,STAFF-256,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
+STAFF-257,STAFF-257,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
+STAFF-258,STAFF-258,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
+STAFF-259,STAFF-259,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
 STAFF-260,STAFF-260,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
-STAFF-261,STAFF-261,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
-STAFF-262,STAFF-262,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
-STAFF-263,STAFF-263,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
-STAFF-264,STAFF-264,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
-STAFF-265,STAFF-265,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
-STAFF-266,STAFF-266,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
-STAFF-267,STAFF-267,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
-STAFF-268,STAFF-268,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
-STAFF-269,STAFF-269,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
-STAFF-270,STAFF-270,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
-STAFF-271,STAFF-271,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
-STAFF-272,STAFF-272,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
-STAFF-273,STAFF-273,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
-STAFF-274,STAFF-274,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
-STAFF-275,STAFF-275,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
-STAFF-276,STAFF-276,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
-STAFF-277,STAFF-277,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
-STAFF-278,STAFF-278,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
-STAFF-279,STAFF-279,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
-STAFF-280,STAFF-280,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
-STAFF-281,STAFF-281,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
-STAFF-282,STAFF-282,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
-STAFF-283,STAFF-283,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
-STAFF-284,STAFF-284,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
-STAFF-285,STAFF-285,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
-STAFF-286,STAFF-286,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
-STAFF-287,STAFF-287,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
-STAFF-288,STAFF-288,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
-STAFF-289,STAFF-289,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
-STAFF-290,STAFF-290,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
-STAFF-291,STAFF-291,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
-STAFF-292,STAFF-292,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
-STAFF-293,STAFF-293,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
-STAFF-294,STAFF-294,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
-STAFF-295,STAFF-295,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
-STAFF-296,STAFF-296,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
-STAFF-297,STAFF-297,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
-STAFF-298,STAFF-298,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
-STAFF-299,STAFF-299,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
-STAFF-300,STAFF-300,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
-STAFF-301,STAFF-301,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
-STAFF-302,STAFF-302,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
-STAFF-303,STAFF-303,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
-STAFF-304,STAFF-304,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
-STAFF-305,STAFF-305,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
-STAFF-306,STAFF-306,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
+STAFF-261,STAFF-261,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
+STAFF-262,STAFF-262,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
+STAFF-263,STAFF-263,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
+STAFF-264,STAFF-264,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
+STAFF-265,STAFF-265,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
+STAFF-266,STAFF-266,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
+STAFF-267,STAFF-267,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
+STAFF-268,STAFF-268,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
+STAFF-269,STAFF-269,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
+STAFF-270,STAFF-270,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
+STAFF-271,STAFF-271,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
+STAFF-272,STAFF-272,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
+STAFF-273,STAFF-273,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
+STAFF-274,STAFF-274,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
+STAFF-275,STAFF-275,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
+STAFF-276,STAFF-276,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
+STAFF-277,STAFF-277,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
+STAFF-278,STAFF-278,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
+STAFF-279,STAFF-279,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
+STAFF-280,STAFF-280,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
+STAFF-281,STAFF-281,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
+STAFF-282,STAFF-282,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
+STAFF-283,STAFF-283,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
+STAFF-284,STAFF-284,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
+STAFF-285,STAFF-285,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
+STAFF-286,STAFF-286,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
+STAFF-287,STAFF-287,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
+STAFF-288,STAFF-288,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
+STAFF-289,STAFF-289,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
+STAFF-290,STAFF-290,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
+STAFF-291,STAFF-291,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
+STAFF-292,STAFF-292,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
+STAFF-293,STAFF-293,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
+STAFF-294,STAFF-294,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
+STAFF-295,STAFF-295,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
+STAFF-296,STAFF-296,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
+STAFF-297,STAFF-297,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
+STAFF-298,STAFF-298,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
+STAFF-299,STAFF-299,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
+STAFF-300,STAFF-300,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
+STAFF-301,STAFF-301,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
+STAFF-302,STAFF-302,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
+STAFF-303,STAFF-303,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
+STAFF-304,STAFF-304,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
+STAFF-305,STAFF-305,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
+STAFF-306,STAFF-306,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
 STAFF-307,STAFF-307,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
-STAFF-308,STAFF-308,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
-STAFF-309,STAFF-309,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
-STAFF-310,STAFF-310,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
-STAFF-311,STAFF-311,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
-STAFF-312,STAFF-312,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
-STAFF-313,STAFF-313,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
-STAFF-314,STAFF-314,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
-STAFF-315,STAFF-315,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
-STAFF-316,STAFF-316,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
-STAFF-317,STAFF-317,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
-STAFF-318,STAFF-318,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
-STAFF-319,STAFF-319,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
-STAFF-320,STAFF-320,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
-STAFF-321,STAFF-321,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
-STAFF-322,STAFF-322,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
-STAFF-323,STAFF-323,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
-STAFF-324,STAFF-324,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
-STAFF-325,STAFF-325,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
+STAFF-308,STAFF-308,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
+STAFF-309,STAFF-309,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
+STAFF-310,STAFF-310,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
+STAFF-311,STAFF-311,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
+STAFF-312,STAFF-312,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
+STAFF-313,STAFF-313,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
+STAFF-314,STAFF-314,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
+STAFF-315,STAFF-315,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
+STAFF-316,STAFF-316,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
+STAFF-317,STAFF-317,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
+STAFF-318,STAFF-318,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
+STAFF-319,STAFF-319,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
+STAFF-320,STAFF-320,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
+STAFF-321,STAFF-321,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
+STAFF-322,STAFF-322,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
+STAFF-323,STAFF-323,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
+STAFF-324,STAFF-324,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
+STAFF-325,STAFF-325,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
 STAFF-326,STAFF-326,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
-STAFF-327,STAFF-327,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
-STAFF-328,STAFF-328,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
-STAFF-329,STAFF-329,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
-STAFF-330,STAFF-330,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
-STAFF-331,STAFF-331,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
-STAFF-332,STAFF-332,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
+STAFF-327,STAFF-327,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
+STAFF-328,STAFF-328,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
+STAFF-329,STAFF-329,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
+STAFF-330,STAFF-330,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
+STAFF-331,STAFF-331,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
+STAFF-332,STAFF-332,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
 STAFF-333,STAFF-333,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
-STAFF-334,STAFF-334,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
-STAFF-335,STAFF-335,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
-STAFF-336,STAFF-336,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
-STAFF-337,STAFF-337,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
-STAFF-338,STAFF-338,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
-STAFF-339,STAFF-339,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
-STAFF-340,STAFF-340,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
-STAFF-341,STAFF-341,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
-STAFF-342,STAFF-342,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
-STAFF-343,STAFF-343,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
-STAFF-344,STAFF-344,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
-STAFF-345,STAFF-345,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
-STAFF-346,STAFF-346,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
-STAFF-347,STAFF-347,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
-STAFF-348,STAFF-348,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
-STAFF-349,STAFF-349,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
-STAFF-350,STAFF-350,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
-STAFF-351,STAFF-351,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
-STAFF-352,STAFF-352,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
-STAFF-353,STAFF-353,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
-STAFF-354,STAFF-354,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
-STAFF-355,STAFF-355,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
-STAFF-356,STAFF-356,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
-STAFF-357,STAFF-357,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
-STAFF-358,STAFF-358,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
-STAFF-359,STAFF-359,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
-STAFF-360,STAFF-360,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
-STAFF-361,STAFF-361,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
-STAFF-362,STAFF-362,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
-STAFF-363,STAFF-363,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
-STAFF-364,STAFF-364,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
-STAFF-365,STAFF-365,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
-STAFF-366,STAFF-366,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
-STAFF-367,STAFF-367,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
-STAFF-368,STAFF-368,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
-STAFF-369,STAFF-369,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
-STAFF-370,STAFF-370,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
-STAFF-371,STAFF-371,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
-STAFF-372,STAFF-372,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
-STAFF-373,STAFF-373,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
-STAFF-374,STAFF-374,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
-STAFF-375,STAFF-375,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
-STAFF-376,STAFF-376,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
-STAFF-377,STAFF-377,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
-STAFF-378,STAFF-378,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
-STAFF-379,STAFF-379,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
-STAFF-380,STAFF-380,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
-STAFF-381,STAFF-381,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
-STAFF-382,STAFF-382,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
-STAFF-383,STAFF-383,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
-STAFF-384,STAFF-384,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
-STAFF-385,STAFF-385,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
-STAFF-386,STAFF-386,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
-STAFF-387,STAFF-387,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
-STAFF-388,STAFF-388,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
-STAFF-389,STAFF-389,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
-STAFF-390,STAFF-390,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
-STAFF-391,STAFF-391,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
-STAFF-392,STAFF-392,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
-STAFF-393,STAFF-393,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
-STAFF-394,STAFF-394,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
-STAFF-395,STAFF-395,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
-STAFF-396,STAFF-396,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
-STAFF-397,STAFF-397,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
-STAFF-398,STAFF-398,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
-STAFF-399,STAFF-399,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
-STAFF-400,STAFF-400,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
-STAFF-401,STAFF-401,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
-STAFF-402,STAFF-402,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
-STAFF-403,STAFF-403,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
-STAFF-404,STAFF-404,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
-STAFF-405,STAFF-405,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
-STAFF-406,STAFF-406,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
-STAFF-407,STAFF-407,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
-STAFF-408,STAFF-408,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
-STAFF-409,STAFF-409,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
-STAFF-410,STAFF-410,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
-STAFF-411,STAFF-411,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
-STAFF-412,STAFF-412,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
-STAFF-413,STAFF-413,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
-STAFF-414,STAFF-414,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
-STAFF-415,STAFF-415,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
-STAFF-416,STAFF-416,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
-STAFF-417,STAFF-417,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
-STAFF-418,STAFF-418,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
-STAFF-419,STAFF-419,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
-STAFF-420,STAFF-420,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
-STAFF-421,STAFF-421,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
-STAFF-422,STAFF-422,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
-STAFF-423,STAFF-423,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
-STAFF-424,STAFF-424,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
-STAFF-425,STAFF-425,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
-STAFF-426,STAFF-426,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
-STAFF-427,STAFF-427,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
-STAFF-428,STAFF-428,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
-STAFF-429,STAFF-429,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
-STAFF-430,STAFF-430,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
-STAFF-431,STAFF-431,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
-STAFF-432,STAFF-432,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
+STAFF-334,STAFF-334,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
+STAFF-335,STAFF-335,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
+STAFF-336,STAFF-336,Mathematics Department,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
+STAFF-337,STAFF-337,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
+STAFF-338,STAFF-338,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
+STAFF-339,STAFF-339,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
+STAFF-340,STAFF-340,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
+STAFF-341,STAFF-341,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
+STAFF-342,STAFF-342,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
+STAFF-343,STAFF-343,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
+STAFF-344,STAFF-344,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
+STAFF-345,STAFF-345,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
+STAFF-346,STAFF-346,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
+STAFF-347,STAFF-347,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
+STAFF-348,STAFF-348,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
+STAFF-349,STAFF-349,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
+STAFF-350,STAFF-350,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
+STAFF-351,STAFF-351,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
+STAFF-352,STAFF-352,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
+STAFF-353,STAFF-353,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
+STAFF-354,STAFF-354,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
+STAFF-355,STAFF-355,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
+STAFF-356,STAFF-356,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
+STAFF-357,STAFF-357,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
+STAFF-358,STAFF-358,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
+STAFF-359,STAFF-359,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
+STAFF-360,STAFF-360,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
+STAFF-361,STAFF-361,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
+STAFF-362,STAFF-362,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
+STAFF-363,STAFF-363,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
+STAFF-364,STAFF-364,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
+STAFF-365,STAFF-365,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
+STAFF-366,STAFF-366,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
+STAFF-367,STAFF-367,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
+STAFF-368,STAFF-368,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
+STAFF-369,STAFF-369,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
+STAFF-370,STAFF-370,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
+STAFF-371,STAFF-371,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
+STAFF-372,STAFF-372,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
+STAFF-373,STAFF-373,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
+STAFF-374,STAFF-374,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
+STAFF-375,STAFF-375,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
+STAFF-376,STAFF-376,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
+STAFF-377,STAFF-377,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
+STAFF-378,STAFF-378,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
+STAFF-379,STAFF-379,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
+STAFF-380,STAFF-380,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
+STAFF-381,STAFF-381,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
+STAFF-382,STAFF-382,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
+STAFF-383,STAFF-383,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
+STAFF-384,STAFF-384,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
+STAFF-385,STAFF-385,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
+STAFF-386,STAFF-386,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
+STAFF-387,STAFF-387,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
+STAFF-388,STAFF-388,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
+STAFF-389,STAFF-389,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
+STAFF-390,STAFF-390,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
+STAFF-391,STAFF-391,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
+STAFF-392,STAFF-392,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
+STAFF-393,STAFF-393,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
+STAFF-394,STAFF-394,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
+STAFF-395,STAFF-395,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
+STAFF-396,STAFF-396,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
+STAFF-397,STAFF-397,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
+STAFF-398,STAFF-398,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
+STAFF-399,STAFF-399,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540903,77.1972803
+STAFF-400,STAFF-400,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409938,77.197243
+STAFF-401,STAFF-401,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541039,77.1953149
+STAFF-402,STAFF-402,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420092,77.1970516
+STAFF-403,STAFF-403,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417965,77.1980773
+STAFF-404,STAFF-404,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408226,77.1977043
+STAFF-405,STAFF-405,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542273,77.1968686
+STAFF-406,STAFF-406,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421296,77.1971588
+STAFF-407,STAFF-407,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419364,77.1978049
+STAFF-408,STAFF-408,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5423428,77.1957815
+STAFF-409,STAFF-409,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417726,77.1982498
+STAFF-410,STAFF-410,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407254,77.1977394
+STAFF-411,STAFF-411,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421745,77.1965918
+STAFF-412,STAFF-412,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421046,77.1973344
+STAFF-413,STAFF-413,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416713,77.1979731
+STAFF-414,STAFF-414,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418668,77.1973385
+STAFF-415,STAFF-415,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422013,77.1964181
+STAFF-416,STAFF-416,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418356,77.1975131
+STAFF-417,STAFF-417,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416945,77.1977979
+STAFF-418,STAFF-418,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420356,77.1968758
+STAFF-419,STAFF-419,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5422992,77.1966872
+STAFF-420,STAFF-420,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419617,77.1976186
+STAFF-421,STAFF-421,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.54141,77.1992178
+STAFF-422,STAFF-422,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413988,77.1974632
+STAFF-423,STAFF-423,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5401022,77.1988081
+STAFF-424,STAFF-424,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403864,77.1988925
+STAFF-425,STAFF-425,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5421834,77.1995877
+STAFF-426,STAFF-426,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.539943,77.1983956
+STAFF-427,STAFF-427,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.543657,77.1961602
+STAFF-428,STAFF-428,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5430149,77.1961166
+STAFF-429,STAFF-429,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426778,77.1959698
+STAFF-430,STAFF-430,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414932,77.1972167
+STAFF-431,STAFF-431,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415486,77.1971315
+STAFF-432,STAFF-432,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411906,77.1984355
 STAFF-433,STAFF-433,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416896,77.1967777
-STAFF-434,STAFF-434,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
-STAFF-435,STAFF-435,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
-STAFF-436,STAFF-436,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
-STAFF-437,STAFF-437,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
-STAFF-438,STAFF-438,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
-STAFF-439,STAFF-439,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
-STAFF-440,STAFF-440,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
-STAFF-441,STAFF-441,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
-STAFF-442,STAFF-442,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
-STAFF-443,STAFF-443,shiv,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
-STAFF-444,STAFF-444,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
-STAFF-445,STAFF-445,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
-STAFF-446,STAFF-446,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
-STAFF-447,STAFF-447,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
-STAFF-448,STAFF-448,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
-STAFF-449,STAFF-449,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
-STAFF-450,STAFF-450,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
-STAFF-451,STAFF-451,Central Library,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
-STAFF-452,STAFF-452,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
-STAFF-453,STAFF-453,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
-STAFF-454,STAFF-454,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
-STAFF-455,STAFF-455,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
-STAFF-456,STAFF-456,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
-STAFF-457,STAFF-457,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
-STAFF-458,STAFF-458,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
-STAFF-459,STAFF-459,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
-STAFF-460,STAFF-460,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
-STAFF-461,STAFF-461,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
-STAFF-462,STAFF-462,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
-STAFF-463,STAFF-463,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
-STAFF-464,STAFF-464,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
-STAFF-465,STAFF-465,kara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
-STAFF-466,STAFF-466,ara,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
-STAFF-467,STAFF-467,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
-STAFF-468,STAFF-468,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
-STAFF-469,STAFF-469,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
-STAFF-470,STAFF-470,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
-STAFF-471,STAFF-471,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
-STAFF-472,STAFF-472,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
-STAFF-473,STAFF-473,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
-STAFF-474,STAFF-474,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
-STAFF-475,STAFF-475,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
-STAFF-476,STAFF-476,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
-STAFF-477,STAFF-477,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
-STAFF-478,STAFF-478,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
-STAFF-479,STAFF-479,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
-STAFF-480,STAFF-480,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
-STAFF-481,STAFF-481,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
-STAFF-482,STAFF-482,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
-STAFF-483,STAFF-483,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
-STAFF-484,STAFF-484,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
-STAFF-485,STAFF-485,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
-STAFF-486,STAFF-486,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
-STAFF-487,STAFF-487,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
-STAFF-488,STAFF-488,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
-STAFF-489,STAFF-489,gir,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
-STAFF-490,STAFF-490,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
+STAFF-434,STAFF-434,Dogra Hall,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413895,77.1967418
+STAFF-435,STAFF-435,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412992,77.1970058
+STAFF-436,STAFF-436,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5409996,77.1969637
+STAFF-437,STAFF-437,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411737,77.1965369
+STAFF-438,STAFF-438,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412507,77.1970838
+STAFF-439,STAFF-439,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410455,77.1968798
+STAFF-440,STAFF-440,DMS,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416419,77.1968684
+STAFF-441,STAFF-441,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414342,77.1966569
+STAFF-442,STAFF-442,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411292,77.1966243
+STAFF-443,STAFF-443,Central Workshop,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412436,77.1979566
+STAFF-444,STAFF-444,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418575,77.1962087
+STAFF-445,STAFF-445,Block 3,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5426584,77.1955646
+STAFF-446,STAFF-446,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.542958,77.195701
+STAFF-447,STAFF-447,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5431317,77.1957359
+STAFF-448,STAFF-448,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425218,77.1954311
+STAFF-449,STAFF-449,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414818,77.1940292
+STAFF-450,STAFF-450,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416071,77.1943947
+STAFF-451,STAFF-451,"SIT, IIT Delhi",Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417298,77.1937626
+STAFF-452,STAFF-452,Block 5,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5418191,77.1940108
+STAFF-453,STAFF-453,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5420211,77.1946017
+STAFF-454,STAFF-454,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416089,77.1986232
+STAFF-455,STAFF-455,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436774,77.1957113
+STAFF-456,STAFF-456,sat,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5436287,77.195818
+STAFF-457,STAFF-457,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5429318,77.1964242
+STAFF-458,STAFF-458,jwala,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5425998,77.1962534
+STAFF-459,STAFF-459,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5415164,77.1965643
+STAFF-460,STAFF-460,Block 1,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541772,77.1966754
+STAFF-461,STAFF-461,Admin Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5400749,77.1980027
+STAFF-462,STAFF-462,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5397984,77.1987447
+STAFF-463,STAFF-463,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405748,77.1971985
+STAFF-464,STAFF-464,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5405971,77.1965034
+STAFF-465,STAFF-465,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404166,77.1976374
+STAFF-466,STAFF-466,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5404595,77.1968988
+STAFF-467,STAFF-467,kum,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5403154,77.1972854
+STAFF-468,STAFF-468,Bharti School of Telecom Technology and Management,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5402583,77.1985064
+STAFF-469,STAFF-469,LHC,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.541012,77.1990517
+STAFF-470,STAFF-470,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419195,77.194272
+STAFF-471,STAFF-471,Department of Material Science,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413073,77.1945159
+STAFF-472,STAFF-472,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5406689,77.1988643
+STAFF-473,STAFF-473,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5424448,77.1997137
+STAFF-474,STAFF-474,Synergy Building,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5419326,77.1994723
+STAFF-475,STAFF-475,nil,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5412736,77.1963086
+STAFF-476,STAFF-476,zans,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413576,77.1960593
+STAFF-477,STAFF-477,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5427064,77.1998208
+STAFF-478,STAFF-478,Block 4,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411551,77.1992087
+STAFF-479,STAFF-479,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413063,77.1974971
+STAFF-480,STAFF-480,kailash,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5417395,77.1947532
+STAFF-481,STAFF-481,udai,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5411579,77.1956265
+STAFF-482,STAFF-482,him,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.540861,77.1963973
+STAFF-483,STAFF-483,Academic Complex West,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407532,77.1961026
+STAFF-484,STAFF-484,vind,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5410115,77.1960104
+STAFF-485,STAFF-485,Block 6,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5413012,77.1952285
+STAFF-486,STAFF-486,block 2,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5407222,77.1967979
+STAFF-487,STAFF-487,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408968,77.1956918
+STAFF-488,STAFF-488,Department of Textile Technology,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5414535,77.1957924
+STAFF-489,STAFF-489,saha,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5416714,77.1993411
+STAFF-490,STAFF-490,Academic Complex East,Work Hours: 08:00-18:00 (Mon-Fri) | Lunch Break: 12:00-14:00,28.5408054,77.1986909
