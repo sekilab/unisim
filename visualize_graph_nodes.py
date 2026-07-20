@@ -7,7 +7,7 @@ from shapely.geometry import Point, shape
 
 print("Loading data...")
 WORKSPACE_DIR = "/Users/mohit/Documents/unisim"
-with open(os.path.join(WORKSPACE_DIR, 'iitd.json')) as f:
+with open(os.path.join(WORKSPACE_DIR, 'data_source', 'iitd.json')) as f:
     geojson = json.load(f)
 
 # Find boundary and map coordinates
@@ -39,13 +39,13 @@ for feat in geojson['features']:
 
 # Compute bbox bounds of all agents/classrooms to download same graph G
 import pandas as pd
-students_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'student_data.csv'))
-profs_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'professor_data.csv'))
-schedule_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'schedule.csv'))
+students_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'data_source', 'student_data.csv'))
+profs_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'data_source', 'professor_data.csv'))
+schedule_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'data_source', 'schedule.csv'))
 
 all_lats = list(students_df['Home Latitude']) + list(profs_df['Home Latitude']) + list(schedule_df['room_lat'].dropna())
 all_lons = list(students_df['Home Longitude']) + list(profs_df['Home Longitude']) + list(schedule_df['room_lon'].dropna())
-staff_data_path = os.path.join(WORKSPACE_DIR, 'staff_data.csv')
+staff_data_path = os.path.join(WORKSPACE_DIR, 'data_source', 'staff_data.csv')
 if os.path.exists(staff_data_path):
     s_df = pd.read_csv(staff_data_path)
     all_lats += list(s_df['Home Latitude'])
@@ -57,7 +57,7 @@ east = max(all_lons) + 0.002
 north = max(all_lats) + 0.002
 
 import graph_io
-geojson_path = os.path.join(WORKSPACE_DIR, 'graph.geojson')
+geojson_path = os.path.join(WORKSPACE_DIR, 'data_source', 'graph.geojson')
 
 # Fast distance helper (must be defined first for use in both branches)
 def get_distance_meters(p1, p2):
@@ -298,6 +298,6 @@ fg_ks_gate.add_to(m)
 fg_js_gate.add_to(m)
 folium.LayerControl().add_to(m)
 
-map_path = os.path.join(WORKSPACE_DIR, 'graph_nodes_map.html')
+map_path = os.path.join(WORKSPACE_DIR, 'analysis_output', 'graph_nodes_map.html')
 m.save(map_path)
 print(f"Map successfully saved to {map_path}")

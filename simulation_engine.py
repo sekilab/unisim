@@ -31,12 +31,12 @@ ARTIFACTS_DIR = "/Users/mohit/.gemini/antigravity-ide/brain/bf91313d-4439-4159-8
 
 # 1. Load data
 print("Loading data...")
-with open(os.path.join(WORKSPACE_DIR, 'iitd.json')) as f:
+with open(os.path.join(WORKSPACE_DIR, 'data_source', 'iitd.json')) as f:
     geojson = json.load(f)
 
-students_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'student_data.csv'))
-profs_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'professor_data.csv'))
-schedule_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'schedule.csv'))
+students_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'data_source', 'student_data.csv'))
+profs_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'data_source', 'professor_data.csv'))
+schedule_df = pd.read_csv(os.path.join(WORKSPACE_DIR, 'data_source', 'schedule.csv'))
 
 # Create mapping of building coordinates from GeoJSON
 mapping = {}
@@ -69,7 +69,7 @@ if boundary_geom is None:
 
 # 2. Get OpenStreetMap walk network
 import graph_io
-geojson_path = os.path.join(WORKSPACE_DIR, 'graph.geojson')
+geojson_path = os.path.join(WORKSPACE_DIR, 'data_source', 'graph.geojson')
 if os.path.exists(geojson_path):
     print(f"Loading custom waypoint graph from {geojson_path}...")
     G = graph_io.load_graph_from_geojson(geojson_path)
@@ -77,7 +77,7 @@ else:
     print("Loading Walk network from OSMnx...")
     all_lats = list(students_df['Home Latitude']) + list(profs_df['Home Latitude']) + list(schedule_df['room_lat'].dropna())
     all_lons = list(students_df['Home Longitude']) + list(profs_df['Home Longitude']) + list(schedule_df['room_lon'].dropna())
-    staff_data_path = os.path.join(WORKSPACE_DIR, 'staff_data.csv')
+    staff_data_path = os.path.join(WORKSPACE_DIR, 'data_source', 'staff_data.csv')
     if os.path.exists(staff_data_path):
         s_df = pd.read_csv(staff_data_path)
         all_lats += list(s_df['Home Latitude'])
@@ -248,7 +248,7 @@ for _, row in profs_df.iterrows():
     agent_home[row['Professor ID']] = (row['Home Latitude'], row['Home Longitude'])
 
 # Load and map non-teaching staff home coordinates
-staff_data_path = os.path.join(WORKSPACE_DIR, 'staff_data.csv')
+staff_data_path = os.path.join(WORKSPACE_DIR, 'data_source', 'staff_data.csv')
 if os.path.exists(staff_data_path):
     staff_df = pd.read_csv(staff_data_path)
     for _, row in staff_df.iterrows():
@@ -326,7 +326,7 @@ steps_per_day = 1440 // timestep_min
 step_distance_limit = walking_speed_mps * (timestep_min * 60)
 
 # Open file for writing trajectories
-trajectory_file_path = os.path.join(WORKSPACE_DIR, 'trajectory.csv')
+trajectory_file_path = os.path.join(WORKSPACE_DIR, 'trajectories', 'trajectory.csv')
 
 # Sample a subset of agents (e.g., 10% of the total population)
 sample_fraction = SAMPLING  # Set to 0.1 for 10%, 0.5 for 50%, etc.
@@ -620,7 +620,7 @@ for agent_id in sample_agents:
 #     plt.grid(True, linestyle='--', alpha=0.5)
 #     plt.tight_layout()
     
-#     dist_plot_path = os.path.join(WORKSPACE_DIR, f'arrival_departure_{day_name}.png')
+#     dist_plot_path = os.path.join(WORKSPACE_DIR, 'analysis_output', f'arrival_departure_{day_name}.png')
 #     plt.savefig(dist_plot_path, dpi=300)
 #     plt.close()
 #     print(f"Arrival & departure distribution plot for {day_name} saved to {dist_plot_path}")
@@ -723,7 +723,7 @@ for agent_id in sample_agents:
 #         ).add_to(m)
 
 # folium.LayerControl().add_to(m)
-# map_html_path = os.path.join(WORKSPACE_DIR, 'sample_trajectories_map.html')
+# map_html_path = os.path.join(WORKSPACE_DIR, 'analysis_output', 'sample_trajectories_map.html')
 # m.save(map_html_path)
 # m.save(os.path.join(ARTIFACTS_DIR, 'sample_trajectories_map.html'))
 # print(f"Sample trajectories interactive map saved to {map_html_path}")

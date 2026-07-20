@@ -13,11 +13,11 @@ from collections import defaultdict
 
 # Setup paths
 WORKSPACE_DIR = "/Users/mohit/Documents/unisim"
-STUDENT_DATA_PATH = os.path.join(WORKSPACE_DIR, "student_data.csv")
-PROF_DATA_PATH = os.path.join(WORKSPACE_DIR, "professor_data.csv")
-STAFF_DATA_PATH = os.path.join(WORKSPACE_DIR, "staff_data.csv")
-SCHEDULE_PATH = os.path.join(WORKSPACE_DIR, "schedule.csv")
-OUTPUT_PLOT_PATH = os.path.join(WORKSPACE_DIR, "building_occupancy_analysis.png")
+STUDENT_DATA_PATH = os.path.join(WORKSPACE_DIR, "data_source", "student_data.csv")
+PROF_DATA_PATH = os.path.join(WORKSPACE_DIR, "data_source", "professor_data.csv")
+STAFF_DATA_PATH = os.path.join(WORKSPACE_DIR, "data_source", "staff_data.csv")
+SCHEDULE_PATH = os.path.join(WORKSPACE_DIR, "data_source", "schedule.csv")
+OUTPUT_PLOT_PATH = os.path.join(WORKSPACE_DIR, "analysis_output", "building_occupancy_analysis.png")
 
 def load_agents():
     print("Loading agent home location details...")
@@ -214,7 +214,7 @@ def main():
     # 2. Plot & Save Each Weekday Distinctively in ONE single plot per day
     for day in days:
         day_name = days_names[day]
-        day_plot_path = os.path.join(WORKSPACE_DIR, f"building_occupancy_{day_name}.png")
+        day_plot_path = os.path.join(WORKSPACE_DIR, "analysis_output", f"building_occupancy_{day_name}.png")
         
         plt.figure(figsize=(12, 6))
         for cat in categories:

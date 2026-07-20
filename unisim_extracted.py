@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 
 
-sm=pd.read_csv('Seat Matrix btech.csv')
-df=pd.read_csv('offered courses.csv')
+sm=pd.read_csv('data_source/Seat Matrix btech.csv')
+df=pd.read_csv('data_source/offered courses.csv')
 
-phd_sm=pd.read_csv('student matrix phd.csv')
+phd_sm=pd.read_csv('data_source/student matrix phd.csv')
 
 
 df = df[['Course Code','Slot Name','Lecture Time','Room','Vacancy']]
@@ -19,7 +19,7 @@ sm=sm[['Branch','Seats Per Year','Description']]
 sm.head()
 
 import json
-with open('btech_curriculum.json', 'r', encoding='utf-8') as f:
+with open('data_source/btech_curriculum.json', 'r', encoding='utf-8') as f:
     courses = json.load(f)
 
 import pandas as pd
@@ -78,7 +78,7 @@ for k, v in courses.items():
         curriculum_data[k] = v
 
 # Load postgraduate curriculum data and populate curriculum_data
-with open('pg_curriculum.json', 'r', encoding='utf-8') as f:
+with open('data_source/pg_curriculum.json', 'r', encoding='utf-8') as f:
     pg_data = json.load(f)
 
 for code, details in pg_data.items():
@@ -554,7 +554,7 @@ if __name__ == "__main__":
 
 
     # Load iitd.json to map hostels and residential zones to coordinates
-    with open('iitd.json') as f:
+    with open('data_source/iitd.json') as f:
         geojson = json.load(f)
 
     # Build coordinates mapping and sub-points list from GeoJSON features
@@ -652,7 +652,7 @@ if __name__ == "__main__":
     student_df = pd.DataFrame(student_data_list)
 
     # Export the DataFrame to a CSV file inside the unisim folder
-    student_df.to_csv('student_data.csv', index=False)
+    student_df.to_csv('data_source/student_data.csv', index=False)
     print("Student data list saved to student_data.csv successfully!")
 
     # Display the first few rows to verify
@@ -765,7 +765,7 @@ if __name__ == "__main__":
             all_professors.append(prof)
 
     prof_df = pd.DataFrame([p.to_dict() for p in all_professors])
-    prof_df.to_csv("professor_data.csv", index=False)
+    prof_df.to_csv("data_source/professor_data.csv", index=False)
     print(f"Generated {len(prof_df)} professor records with coordinates saved to professor_data.csv")
 
     # ==========================================
@@ -855,14 +855,14 @@ if __name__ == "__main__":
         all_staff.append(staff_member)
 
     staff_df = pd.DataFrame([s.to_dict() for s in all_staff])
-    staff_df.to_csv("staff_data.csv", index=False)
+    staff_df.to_csv("data_source/staff_data.csv", index=False)
     print(f"Generated {len(staff_df)} non-teaching staff records with coordinates saved to staff_data.csv")
 
     # ==========================================
     # 6. Schedule Generation (Task 3)
     # ==========================================
     # Load offered courses for schedule details
-    courses_df = pd.read_csv('offered courses.csv')
+    courses_df = pd.read_csv('data_source/offered courses.csv')
     course_dict = {}
     for _, row in courses_df.iterrows():
         code = str(row['Course Code']).strip()
@@ -1217,5 +1217,5 @@ if __name__ == "__main__":
 
 
     schedule_df = pd.DataFrame(schedule_rows)
-    schedule_df.to_csv('schedule.csv', index=False)
+    schedule_df.to_csv('data_source/schedule.csv', index=False)
     print(f"Schedule table with {len(schedule_df)} entries saved to schedule.csv successfully!")
