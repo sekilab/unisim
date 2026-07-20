@@ -1,0 +1,142 @@
+{
+  "generate_heatmap_animation.py": {
+    "mtime": 1783918439.2694812,
+    "ast_hash": "8812787853ae7a728e013efc1fbd3563",
+    "semantic_hash": ""
+  },
+  "graph_io.py": {
+    "mtime": 1783917761.1948037,
+    "ast_hash": "bf37db441d4a736c17d08e341a564dba",
+    "semantic_hash": ""
+  },
+  "iitd.json": {
+    "mtime": 1784180467.6075673,
+    "ast_hash": "551c0e69b2e7f1196b731f5fc6d39930",
+    "semantic_hash": ""
+  },
+  "pg_curriculum.json": {
+    "mtime": 1782978714.201583,
+    "ast_hash": "be8d63d9bfe84c8b5d4d05eaf0aaa910",
+    "semantic_hash": ""
+  },
+  "sim_engine_2t_0.2s_5m.py": {
+    "mtime": 1783997731.549338,
+    "ast_hash": "e25ba4bb6ec5ce1a8bf3ba3e61b5607f",
+    "semantic_hash": ""
+  },
+  "simulation_engine.py": {
+    "mtime": 1784187487.5419846,
+    "ast_hash": "7a8a9b0c2b3c6dc87d9a92d4521e2af1",
+    "semantic_hash": ""
+  },
+  "simulation_engine_1min_0.2_sampling.py": {
+    "mtime": 1783996436.1366782,
+    "ast_hash": "05aaae7729f98a118fd774265bb3a78e",
+    "semantic_hash": ""
+  },
+  "unisim_extracted.py": {
+    "mtime": 1784180467.61133,
+    "ast_hash": "426d241ced99dca8a1ee09e35e2b921b",
+    "semantic_hash": ""
+  },
+  "visualize_graph_nodes.py": {
+    "mtime": 1783654646.341699,
+    "ast_hash": "49ce31d19678c524a55babb1ecff3242",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1784167194.9912434,
+    "ast_hash": "f1e53ecc9194573d3c28fc116c743a2e",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1784167194.9913583,
+    "ast_hash": "0bc020d491fca99550c1ea3de0a5f862",
+    "semantic_hash": ""
+  },
+  "campus_motion_heatmap.html": {
+    "mtime": 1783918474.1555753,
+    "ast_hash": "10e76380af0cbc625cd835d1e39a0742",
+    "semantic_hash": ""
+  },
+  "documentation.md": {
+    "mtime": 1782982161.1662443,
+    "ast_hash": "16403e1619748f9409986b54c52d9f22",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1784167191.3275273,
+    "ast_hash": "495bd9053147d5342c8caeb3cf7be429",
+    "semantic_hash": ""
+  },
+  "CoS 2024__PG Programme Rules.pdf": {
+    "mtime": 1782365134.7819653,
+    "ast_hash": "665ca5347b4273bacb7cc5e4071cd6eb",
+    "semantic_hash": ""
+  },
+  "documentation.pdf": {
+    "mtime": 1784168138.2144415,
+    "ast_hash": "b48f95b39f368a63877dba6238dfe6e2",
+    "semantic_hash": ""
+  },
+  "analyze_building_occupancy.py": {
+    "mtime": 1784187219.4781752,
+    "ast_hash": "920d84f54ddde76bb76ef0a8d19a4182",
+    "semantic_hash": ""
+  },
+  "building_occupancy_analysis.png": {
+    "mtime": 1784187229.337875,
+    "ast_hash": "229c1bdcf174f741123db563f9e15081",
+    "semantic_hash": ""
+  },
+  "building_occupancy_Friday.png": {
+    "mtime": 1784187230.0708368,
+    "ast_hash": "a014fc12744eb478c80ffce0c29173df",
+    "semantic_hash": ""
+  },
+  "building_occupancy_Monday.png": {
+    "mtime": 1784187229.4859936,
+    "ast_hash": "d956c88519efa46988c8c46f591b85f4",
+    "semantic_hash": ""
+  },
+  "building_occupancy_Thursday.png": {
+    "mtime": 1784187229.9255126,
+    "ast_hash": "7dd9fed2086b91f08dd2079df899ed72",
+    "semantic_hash": ""
+  },
+  "building_occupancy_Tuesday.png": {
+    "mtime": 1784187229.6320062,
+    "ast_hash": "c2deb2ecb7649892ef1bbecdfc1ed546",
+    "semantic_hash": ""
+  },
+  "building_occupancy_Wednesday.png": {
+    "mtime": 1784187229.7771661,
+    "ast_hash": "6fbd06e8d270e6c0ca850ca77a35f2c5",
+    "semantic_hash": ""
+  },
+  "arrival_departure_Friday.png": {
+    "mtime": 1784187485.592367,
+    "ast_hash": "6e7fb00f0580de625b439ca25457d1f1",
+    "semantic_hash": ""
+  },
+  "arrival_departure_Monday.png": {
+    "mtime": 1784187485.0207155,
+    "ast_hash": "b8f0c4bf168894db28c3768178aecf44",
+    "semantic_hash": ""
+  },
+  "arrival_departure_Thursday.png": {
+    "mtime": 1784187485.4511013,
+    "ast_hash": "b8af737237c73900f8002e84fc44e985",
+    "semantic_hash": ""
+  },
+  "arrival_departure_Tuesday.png": {
+    "mtime": 1784187485.1627865,
+    "ast_hash": "f657db876e25f37ff82b86cdfdd04e5a",
+    "semantic_hash": ""
+  },
+  "arrival_departure_Wednesday.png": {
+    "mtime": 1784187485.3081067,
+    "ast_hash": "3f2c5185d7ea2d9c5343602e286b15ae",
+    "semantic_hash": ""
+  }
+}

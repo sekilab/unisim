@@ -5,10 +5,12 @@ __pycache__/
 .ipynb_checkpoints/
 
 # # Data outputs
-# trajectory.csv
-# schedule.csv
-# student_data.csv
-# professor_data.csv
+trajectory*.csv
+schedule.csv
+student_data.csv
+professor_data.csv
+trajectories/*.csv
+data_source/schedule*.csv
 
 # # Visualization outputs
 # *.html

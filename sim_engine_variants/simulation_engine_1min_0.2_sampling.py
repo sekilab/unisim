@@ -14,7 +14,7 @@ from shapely.geometry import shape
 # Set seed for reproducibility
 random.seed(42)
 np.random.seed(42)
-SAMPLING = 1
+SAMPLING = 0.2
 # Fast distance helper
 def get_distance_meters(p1, p2):
     lat1, lon1 = p1
@@ -304,26 +304,14 @@ days_map = {
     'F': '2026-07-10'
 }
 
-# Pre-generate time and speed offsets per agent for consistency
-random.seed(42)
-agent_speed_dict = {}
-agent_time_offset_dict = {}
-for agent_id in agent_home:
-    agent_speed_dict[agent_id] = random.uniform(1.0, 1.4)
-    agent_time_offset_dict[agent_id] = random.randint(-120, 120)  # offset in seconds (±2 mins)
-
+# Helper for random walking speed (ranges from 1.2 to 1.4 m/s)
 def get_agent_speed(agent_id=None):
-    if agent_id is not None:
-        return agent_speed_dict.get(agent_id, 1.2)
     return random.uniform(1.0, 1.4)
 
-def get_agent_time_offset(agent_id):
-    return agent_time_offset_dict.get(agent_id, 0)
 
 walking_speed_mps = 1.2
 timestep_min = 1
-steps_per_day = 1440 // timestep_min
-step_distance_limit = walking_speed_mps * (timestep_min * 60)
+step_distance_limit = walking_speed_mps * (timestep_min * 60) # 360 meters per 5 mins
 
 # Open file for writing trajectories
 trajectory_file_path = os.path.join(WORKSPACE_DIR, 'trajectory.csv')
@@ -350,18 +338,18 @@ with open(trajectory_file_path, 'w') as f_out:
         for day_code, date_str in days_map.items():
             day_schedule = agent_schedules.get(day_code, [])
             
-            # Construct hourly schedule plan (steps_per_day steps)
+            # Construct hourly schedule plan (1440 steps)
             # Default target is home
-            target_coords = [(home_lat, home_lon)] * steps_per_day
-            target_activities = ["Home"] * steps_per_day
+            target_coords = [(home_lat, home_lon)] * 1440
+            target_activities = ["Home"] * 1440
             
             # Overlay scheduled classes/work
             for activity in day_schedule:
                 start_step = activity['start_min'] // timestep_min
                 end_step = activity['end_min'] // timestep_min
                 # Make sure bounds are clean
-                start_step = max(0, min(steps_per_day - 1, start_step))
-                end_step = max(0, min(steps_per_day - 1, end_step))
+                start_step = max(0, min(1439, start_step))
+                end_step = max(0, min(1439, end_step))
                 
                 # Determine activity name from schedule data
                 act_name = activity['activity']
@@ -371,115 +359,68 @@ with open(trajectory_file_path, 'w') as f_out:
                     target_coords[step] = (act_lat, act_lon)
                     target_activities[step] = act_name
             
-            # Apply block-based transition routing for realistic early departures
-            actual_coords = [(0.0, 0.0)] * steps_per_day
-            actual_activities = [""] * steps_per_day
+            # Apply transition smoothing (routing)
+            actual_coords = list(target_coords)
+            actual_activities = list(target_activities)
             
-            # Extract desired schedule blocks
-            desired_blocks = []
-            current_act = target_activities[0]
-            current_loc = target_coords[0]
-            start_step = 0
-            for step in range(1, steps_per_day):
-                if target_activities[step] != current_act or target_coords[step] != current_loc:
-                    desired_blocks.append({
-                        'name': current_act,
-                        'loc': current_loc,
-                        'start': start_step,
-                        'end': step - 1
-                    })
-                    current_act = target_activities[step]
-                    current_loc = target_coords[step]
-                    start_step = step
-            desired_blocks.append({
-                'name': current_act,
-                'loc': current_loc,
-                'start': start_step,
-                'end': steps_per_day - 1
-            })
-            
-            last_arrival_step = 0
-            
-            for i in range(len(desired_blocks)):
-                block = desired_blocks[i]
-                if i == 0:
-                    pass
-                else:
-                    prev_block = desired_blocks[i-1]
+            # Identify transition intervals
+            step = 1
+            while step < 1440:
+                prev_loc = actual_coords[step-1]
+                curr_loc = target_coords[step]
+                
+                # If target changes, we need a transition routing
+                if prev_loc != curr_loc:
                     # Calculate shortest path distance
-                    if prev_block['loc'] == block['loc']:
-                        duration_steps = 0
-                        interpolated = []
-                    else:
-                        path_points = get_shortest_path_coords(prev_block['loc'][0], prev_block['loc'][1], block['loc'][0], block['loc'][1])
-                        if path_points is None:
-                            duration_steps = 1
-                            interpolated = [block['loc']]
-                        else:
-                            path_dist = sum(get_distance_meters(path_points[k-1], path_points[k]) for k in range(1, len(path_points)))
-                            duration_sec = path_dist / agent_speed
-                            duration_steps = max(1, int(math.ceil(duration_sec / (timestep_min * 60))))
-                            interpolated = interpolate_coords(path_points, duration_steps)
-                        
-                    target_arrival = block['start']
-                    # Back-propagate commute duration to find departure time
-                    commute_start = target_arrival - duration_steps
+                    path_points = get_shortest_path_coords(prev_loc[0], prev_loc[1], curr_loc[0], curr_loc[1])
+                    if path_points is None:
+                        actual_coords[step] = prev_loc
+                        actual_activities[step] = actual_activities[step-1]
+                        step += 1
+                        continue
+                    path_dist = sum(get_distance_meters(path_points[i-1], path_points[i]) for i in range(1, len(path_points)))
                     
-                    # If leaving from Class to Home or Work, can only leave when 10 minutes are remaining for class to end
-                    if prev_block['name'] == 'Class' and block['name'] in ['Home', 'Work']:
-                        earliest_departure = (prev_block['end'] + 1) - 10
-                        if commute_start < earliest_departure:
-                            commute_start = earliest_departure
-
-                    # Prevent teleportation/time-travel: cannot depart before arriving at previous location!
-                    if commute_start < last_arrival_step:
-                        commute_start = last_arrival_step
-                        
-                    actual_arrival = commute_start + duration_steps
+                    # Estimate steps needed for transition (walking speed = agent_speed)
+                    duration_sec = path_dist / agent_speed
+                    duration_steps = int(math.ceil(duration_sec / (timestep_min * 60)))
+                    duration_steps = max(1, duration_steps)
                     
-                    # Stay at previous location until commute starts
-                    for t in range(last_arrival_step, commute_start):
-                        if t < steps_per_day:
-                            actual_coords[t] = prev_block['loc']
-                            actual_activities[t] = prev_block['name']
-                            
-                    # Commute to new location
-                    for idx, t in enumerate(range(commute_start, actual_arrival)):
-                        if t < steps_per_day:
-                            actual_coords[t] = interpolated[idx] if idx < len(interpolated) else block['loc']
-                            actual_activities[t] = "Commuting"
-                            
-                    last_arrival_step = actual_arrival
-
-            # Stay at final location for the rest of the day
-            final_block = desired_blocks[-1]
-            for t in range(last_arrival_step, steps_per_day):
-                actual_coords[t] = final_block['loc']
-                actual_activities[t] = final_block['name']
+                    # We start walking at step and arrive at step + duration_steps
+                    start_transition_step = step
+                    end_transition_step = min(1440, step + duration_steps)
+                    
+                    transition_len = end_transition_step - start_transition_step
+                    interpolated = interpolate_coords(path_points, transition_len)
+                    
+                    for t_idx, t_step in enumerate(range(start_transition_step, end_transition_step)):
+                        actual_coords[t_step] = interpolated[t_idx]
+                        actual_activities[t_step] = "Commuting"
+                        
+                    # Fill the remaining steps of the day with destination coordinates
+                    # until the next transition changes them
+                    for t_step in range(end_transition_step, 1440):
+                        actual_coords[t_step] = curr_loc
+                        
+                    # Skip checked steps
+                    step = end_transition_step
+                else:
+                    step += 1
             
-            # Write trajectory to CSV (only write when moving or transitioning states to save space)
+            # Write trajectory to CSV
             import datetime
             base_date = datetime.datetime.strptime(date_str, "%Y-%m-%d")
-            time_offset = get_agent_time_offset(agent_id)
+            # No random offset for timestamp
+            offset_sec = 0
             
-            for step in range(steps_per_day):
-                # Write if:
-                # 1. First or last step of the day (starting/ending baseline)
-                # 2. Coordinates or activity changed from previous step (start of movement, arrival, or activity change)
-                # 3. Coordinates or activity will change in the next step (last step before departure or activity change)
-                is_first_last = (step == 0 or step == steps_per_day - 1)
-                changed_from_prev = (step > 0 and (actual_coords[step] != actual_coords[step-1] or actual_activities[step] != actual_activities[step-1]))
-                will_change_next = (step < steps_per_day - 1 and (actual_coords[step] != actual_coords[step+1] or actual_activities[step] != actual_activities[step+1]))
-                
-                if is_first_last or changed_from_prev or will_change_next:
-                    total_sec = step * timestep_min * 60 + time_offset
-                    # Ensure the time does not go negative
-                    total_sec = max(0, total_sec)
-                    dt = base_date + datetime.timedelta(seconds=total_sec)
-                    timestamp_str = dt.strftime("%Y-%m-%d %H:%M:%S")
-                    lat, lon = actual_coords[step]
-                    act = actual_activities[step]
-                    f_out.write(f"{agent_id},{timestamp_str},{lat:.6f},{lon:.6f},{act}\n")
+            for step in range(1440):
+                total_sec = step * timestep_min * 60 + offset_sec
+                # Ensure the time does not go negative
+                total_sec = max(0, total_sec)
+                dt = base_date + datetime.timedelta(seconds=total_sec)
+                timestamp_str = dt.strftime("%Y-%m-%d %H:%M:%S")
+                lat, lon = actual_coords[step]
+                act = actual_activities[step]
+                f_out.write(f"{agent_id},{timestamp_str},{lat:.6f},{lon:.6f},{act}\n")
 
 print(f"Trajectory generation complete! Saved to {trajectory_file_path}")
 
@@ -501,30 +442,28 @@ print(f"Using a {sample_fraction*100}% sample ({len(sample_agents)} agents) for 
 
 # Occupancy grid: 5 days (Mon-Fri) x 24 hours
 occupancy_counts = {day: [0]*24 for day in days_map.keys()}
-arrival_times = {day: [] for day in days_map.keys()}
-departure_times = {day: [] for day in days_map.keys()}
+arrival_times = []
+departure_times = []
 
 for agent_id in sample_agents:
     home_lat, home_lon = agent_home[agent_id]
     agent_schedules = schedule_dict.get(agent_id, {})
     is_off_campus = off_campus_homes[agent_id]
     agent_speed = get_agent_speed(agent_id)
-    time_offset = get_agent_time_offset(agent_id)
-    time_offset_hours = time_offset / 3600.0
     
     for day_code in days_map.keys():
         day_schedule = agent_schedules.get(day_code, [])
-        target_coords = [(home_lat, home_lon)] * steps_per_day
+        target_coords = [(home_lat, home_lon)] * 1440
         for activity in day_schedule:
-            start_step = max(0, min(steps_per_day - 1, activity['start_min'] // timestep_min))
-            end_step = max(0, min(steps_per_day - 1, activity['end_min'] // timestep_min))
+            start_step = max(0, min(1439, activity['start_min'] // timestep_min))
+            end_step = max(0, min(1439, activity['end_min'] // timestep_min))
             act_lat, act_lon = get_snapped_coord(activity['lat'], activity['lon'])
             for step in range(start_step, end_step):
                 target_coords[step] = (act_lat, act_lon)
                 
         actual_coords = list(target_coords)
         step = 1
-        while step < steps_per_day:
+        while step < 1440:
             prev_loc = actual_coords[step-1]
             curr_loc = target_coords[step]
             if prev_loc != curr_loc:
@@ -537,93 +476,78 @@ for agent_id in sample_agents:
                 duration_steps = max(1, int(math.ceil((path_dist / agent_speed) / (timestep_min * 60))))
                 
                 start_transition_step = step
-                end_transition_step = min(steps_per_day, step + duration_steps)
+                end_transition_step = min(1440, step + duration_steps)
                 
                 transition_len = end_transition_step - start_transition_step
                 interpolated = interpolate_coords(path_points, transition_len)
                 for t_idx, t_step in enumerate(range(start_transition_step, end_transition_step)):
                     actual_coords[t_step] = interpolated[t_idx]
                     
-                for t_step in range(end_transition_step, steps_per_day):
+                for t_step in range(end_transition_step, 1440):
                     actual_coords[t_step] = curr_loc
                     
                 step = end_transition_step
             else:
                 step += 1
             
-        on_campus_profile = [False] * steps_per_day
-        for step in range(steps_per_day):
+        on_campus_profile = [False] * 1440
+        for step in range(1440):
             lat, lon = actual_coords[step]
             if not is_off_campus:
                 on_campus_profile[step] = True
             else:
                 on_campus_profile[step] = (abs(lat - home_lat) > 0.0001 or abs(lon - home_lon) > 0.0001)
         
-        steps_per_hour = 60 // timestep_min
         for hour in range(24):
-            steps_in_hour = on_campus_profile[hour*steps_per_hour : (hour+1)*steps_per_hour]
+            steps_in_hour = on_campus_profile[hour*60 : (hour+1)*60]
             if any(steps_in_hour):
                 occupancy_counts[day_code][hour] += 1
                 
-        is_student = str(agent_id)[0].isdigit()
-        if is_student or is_off_campus:
-            away_profile = [False] * steps_per_day
-            for step in range(steps_per_day):
-                lat, lon = actual_coords[step]
-                away_profile[step] = (abs(lat - home_lat) > 0.0001 or abs(lon - home_lon) > 0.0001)
-                
-            if any(away_profile):
-                first_step = away_profile.index(True)
-                last_step = len(away_profile) - 1 - away_profile[::-1].index(True)
-                
-                arrival_times[day_code].append((first_step * timestep_min) / 60.0 + time_offset_hours)
-                departure_times[day_code].append((last_step * timestep_min) / 60.0 + time_offset_hours)
+        if is_off_campus and any(on_campus_profile):
+            first_step = on_campus_profile.index(True)
+            last_step = len(on_campus_profile) - 1 - on_campus_profile[::-1].index(True)
+            
+            arrival_times.append((first_step * timestep_min) / 60.0)
+            departure_times.append((last_step * timestep_min) / 60.0)
 
 # Scale counts back up to represent total population
-# scaling_factor = 1.0 / sample_fraction
-# for day in occupancy_counts:
-#     occupancy_counts[day] = [int(count * scaling_factor) for count in occupancy_counts[day]]
+scaling_factor = 1.0 / sample_fraction
+for day in occupancy_counts:
+    occupancy_counts[day] = [int(count * scaling_factor) for count in occupancy_counts[day]]
 
-# # Plot 1: Campus Occupancy Curve
-# plt.figure(figsize=(10, 6))
-# days_names = {'M': 'Monday', 'T': 'Tuesday', 'W': 'Wednesday', 'Th': 'Thursday', 'F': 'Friday'}
-# for day_code, counts in occupancy_counts.items():
-#     plt.plot(range(24), counts, label=days_names[day_code], linewidth=2.5)
-# plt.title('Hourly Campus Occupancy Curve (IIT Delhi)', fontsize=14, fontweight='bold')
-# plt.xlabel('Hour of Day (24h)', fontsize=12)
-# plt.ylabel('Number of Agents on Campus', fontsize=12)
-# plt.xticks(range(24))
-# plt.grid(True, linestyle='--', alpha=0.6)
-# plt.legend(fontsize=10)
-# plt.tight_layout()
+# Plot 1: Campus Occupancy Curve
+plt.figure(figsize=(10, 6))
+days_names = {'M': 'Monday', 'T': 'Tuesday', 'W': 'Wednesday', 'Th': 'Thursday', 'F': 'Friday'}
+for day_code, counts in occupancy_counts.items():
+    plt.plot(range(24), counts, label=days_names[day_code], linewidth=2.5)
+plt.title('Hourly Campus Occupancy Curve (IIT Delhi)', fontsize=14, fontweight='bold')
+plt.xlabel('Hour of Day (24h)', fontsize=12)
+plt.ylabel('Number of Agents on Campus', fontsize=12)
+plt.xticks(range(24))
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend(fontsize=10)
+plt.tight_layout()
 # plt.show()
 
-# # Plot 2: Arrival & Departure Time Distributions for each of the 5 days
-# for day_code, day_name in days_names.items():
-#     plt.figure(figsize=(12, 5))
-#     plt.subplot(1, 2, 1)
-#     weights_arr = np.ones_like(arrival_times[day_code]) * (1.0 / sample_fraction)
-#     plt.hist(arrival_times[day_code], bins=24, range=(0, 24), weights=weights_arr, color='skyblue', edgecolor='black', alpha=0.8)
-#     plt.title(f'Agent Arrival Time Distribution - {day_name}', fontsize=12, fontweight='bold')
-#     plt.xlabel('Hour of Entry', fontsize=10)
-#     plt.ylabel('Number of Agents', fontsize=10)
-#     plt.xticks(range(0, 25, 2))
-#     plt.grid(True, linestyle='--', alpha=0.5)
+# Plot 2: Arrival & Departure Time Distributions
+plt.figure(figsize=(12, 5))
+plt.subplot(1, 2, 1)
+plt.hist(arrival_times, bins=24, range=(0, 24), color='skyblue', edgecolor='black', alpha=0.8)
+plt.title('Agent Arrival Time Distribution', fontsize=12, fontweight='bold')
+plt.xlabel('Hour of Entry', fontsize=10)
+plt.ylabel('Frequency (Sample Count)', fontsize=10)
+plt.xticks(range(0, 25, 2))
+plt.grid(True, linestyle='--', alpha=0.5)
 
-#     plt.subplot(1, 2, 2)
-#     weights_dep = np.ones_like(departure_times[day_code]) * (1.0 / sample_fraction)
-#     plt.hist(departure_times[day_code], bins=24, range=(0, 24), weights=weights_dep, color='salmon', edgecolor='black', alpha=0.8)
-#     plt.title(f'Agent Departure Time Distribution - {day_name}', fontsize=12, fontweight='bold')
-#     plt.xlabel('Hour of Exit', fontsize=10)
-#     plt.ylabel('Number of Agents', fontsize=10)
-#     plt.xticks(range(0, 25, 2))
-#     plt.grid(True, linestyle='--', alpha=0.5)
-#     plt.tight_layout()
-    
-#     dist_plot_path = os.path.join(WORKSPACE_DIR, f'arrival_departure_{day_name}.png')
-#     plt.savefig(dist_plot_path, dpi=300)
-#     plt.close()
-#     print(f"Arrival & departure distribution plot for {day_name} saved to {dist_plot_path}")
+plt.subplot(1, 2, 2)
+plt.hist(departure_times, bins=24, range=(0, 24), color='salmon', edgecolor='black', alpha=0.8)
+plt.title('Agent Departure Time Distribution', fontsize=12, fontweight='bold')
+plt.xlabel('Hour of Exit', fontsize=10)
+plt.ylabel('Frequency (Sample Count)', fontsize=10)
+plt.xticks(range(0, 25, 2))
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.tight_layout()
+# plt.show()
 
 # # 7. Interactive Map Visualization (Folium)
 # print("Generating folium interactive map with sample trajectories...")

@@ -56,7 +56,7 @@ Because OpenStreetMap (OSM) data is inherently imperfect, the simulation employs
 
 ### Step 5: Trajectory Generation (`simulation_engine.py`)
 The engine translates the abstract schedules into physical 1-minute spatial trajectories.
-*   **Entropy Injection**: Each agent is assigned a unique, constant walking speed drawn from a uniform distribution $U(1.0, 1.4)$ m/s. A global time offset $U(-120, 120)$ seconds (± 2 minutes) is generated per agent. Class start and end minutes are shifted by a random integer $U(-5, 5)$ minutes.
+*   **Entropy Injection**:For realism Each agent is assigned a unique, constant walking speed drawn from a uniform distribution $U(1.0, 1.4)$ m/s. A global time offset $U(-120, 120)$ seconds (± 2 minutes) is generated per agent. Class start and end minutes are shifted by a random integer $U(-5, 5)$ minutes.
 *   **Routing**: Computes the exact `NetworkX` Dijkstra shortest path using actual geospatial edge coordinates (`[lon, lat]`).
 *   **Back-propagation**: Commute duration $T = D / v$ is calculated. To guarantee on-time arrival, the agent's departure time is back-propagated ($Commute\_Start = Target\_Arrival\_Time - T_{duration}$).
 *   **Early Dismissal Rule**: If a back-propagated departure time forces an agent to leave an ongoing class early, the engine restricts them to leaving *at most* 10 minutes prior to the scheduled end of that class.
