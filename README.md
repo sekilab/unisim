@@ -9,10 +9,19 @@ The `analyze_building_occupancy.py` acts as the primary analytical tool for the 
 The outputs empirically validate the expected sharp morning exoduses from hostels leading into peak occupancy periods in the academic zones during core lecture hours (09:30 - 12:30 and 14:00 - 17:00), paired with corresponding spikes in arrival/departure metrics.
 
 ### Building Occupancy Analysis
-![Building Occupancy Analysis](./building_occupancy_analysis.png)
+![Building Occupancy Analysis - Overall](./building_occupancy_analysis.png)
+![Building Occupancy Analysis - Monday](./building_occupancy_Monday.png)
+![Building Occupancy Analysis - Tuesday](./building_occupancy_Tuesday.png)
+![Building Occupancy Analysis - Wednesday](./building_occupancy_Wednesday.png)
+![Building Occupancy Analysis - Thursday](./building_occupancy_Thursday.png)
+![Building Occupancy Analysis - Friday](./building_occupancy_Friday.png)
 
-### Arrival & Departure Distributions (Monday)
-![Arrival and Departure Trends](./arrival_departure_Monday.png)
+### Arrival & Departure Distributions
+![Arrival and Departure Trends - Monday](./arrival_departure_Monday.png)
+![Arrival and Departure Trends - Tuesday](./arrival_departure_Tuesday.png)
+![Arrival and Departure Trends - Wednesday](./arrival_departure_Wednesday.png)
+![Arrival and Departure Trends - Thursday](./arrival_departure_Thursday.png)
+![Arrival and Departure Trends - Friday](./arrival_departure_Friday.png)
 
 ---
 
