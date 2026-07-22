@@ -6,8 +6,11 @@ The IIT Delhi Campus Mobility Simulation (UniSim) is a microscopic, agent-based 
 ## Visualizations & Results
 
 ### Campus Geography & Network
-![IITD Map](./IITD_MAP.png)
-![Network Graph](./network_graph.png)
+![IITD Map](./IITD_MAP.png)<br>
+*Figure 1: The geographic boundaries and spatial layout of the IIT Delhi campus.*
+
+![Network Graph](./network_graph.png)<br>
+*Figure 2: The pedestrian walk network graph showing spatial nodes and bridged edges used for agent routing.*
 
 The `analyze_building_occupancy.py` acts as the primary analytical tool for the simulation. It categorizes rooms (LHC, Combined Blocks, Management Buildings, Hostels) and evaluates population count within specific building archetypes at exact 30-minute intervals (from 06:00 to 24:00). 
 
