@@ -6,7 +6,7 @@ import folium
 from shapely.geometry import Point, shape
 
 print("Loading data...")
-WORKSPACE_DIR = "/Users/mohit/Documents/unisim"
+WORKSPACE_DIR = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(WORKSPACE_DIR, 'data_source', 'iitd.json')) as f:
     geojson = json.load(f)
 

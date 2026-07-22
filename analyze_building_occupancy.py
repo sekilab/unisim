@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 
 # Setup paths
-WORKSPACE_DIR = "/Users/mohit/Documents/unisim"
+WORKSPACE_DIR = os.path.dirname(os.path.abspath(__file__))
 STUDENT_DATA_PATH = os.path.join(WORKSPACE_DIR, "data_source", "student_data.csv")
 PROF_DATA_PATH = os.path.join(WORKSPACE_DIR, "data_source", "professor_data.csv")
 STAFF_DATA_PATH = os.path.join(WORKSPACE_DIR, "data_source", "staff_data.csv")

@@ -26,8 +26,8 @@ def get_distance_meters(p1, p2):
 print("Starting simulation engine...")
 
 # Directory paths
-WORKSPACE_DIR = "/Users/mohit/Documents/unisim"
-ARTIFACTS_DIR = "/Users/mohit/.gemini/antigravity-ide/brain/bf91313d-4439-4159-84c3-6e663cbf1db5"
+WORKSPACE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARTIFACTS_DIR = os.path.join(WORKSPACE_DIR, "output")
 
 # 1. Load data
 print("Loading data...")
