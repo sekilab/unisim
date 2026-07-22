@@ -4,6 +4,11 @@
 The IIT Delhi Campus Mobility Simulation (UniSim) is a microscopic, agent-based framework designed to model the high-resolution spatial and temporal mobility patterns of students, faculty, and staff. Generating data at a **1-minute timestep** across a simulated 5-day academic week, it outputs highly detailed trajectories representing pedestrian flow. IIT Delhi was chosen because it represents a densely populated, complex microcosm integrating academic, administrative, and residential zones—making it an ideal candidate for testing pedestrian flow modeling.
 
 ## Visualizations & Results
+
+### Campus Geography & Network
+![IITD Map](./IITD_MAP.png)
+![Network Graph](./network_graph.png)
+
 The `analyze_building_occupancy.py` acts as the primary analytical tool for the simulation. It categorizes rooms (LHC, Combined Blocks, Management Buildings, Hostels) and evaluates population count within specific building archetypes at exact 30-minute intervals (from 06:00 to 24:00). 
 
 The outputs empirically validate the expected sharp morning exoduses from hostels leading into peak occupancy periods in the academic zones during core lecture hours (09:30 - 12:30 and 14:00 - 17:00), paired with corresponding spikes in arrival/departure metrics.
