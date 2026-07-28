@@ -89,7 +89,7 @@ The schedule generation engine assigns courses, dynamically resolves electives, 
 Because OpenStreetMap (OSM) data is inherently imperfect, the simulation employs sophisticated graph bridging:
 *   **Network Extraction**: The primary undirected pedestrian graph is downloaded via `OSMnx`.
 *   **Graph Repair**: `graph_io.py` identifies disconnected graph components and dead-end nodes, automatically creating bridged edges if they lie within a 20m spatial radius.
-*   **Gate Bridging**: The engine explicitly detects nodes near specific campus gates. `ks_gate` (Katwaria Sarai gate) nodes inside and outside the boundary are bridged if within a **30m** radius. `js_gate` (Jia Sarai) is bridged similarly using a **50m** search radius.
+*   **Gate Bridging**: The current implementation does not explicitly bridge distinct campus gates like Katwaria Sarai (`ks_gate`) or Jia Sarai (`js_gate`). Instead, it relies on the generic 20m radius bridging algorithm to seamlessly connect external enclaves if their spatial nodes are physically close enough to the campus boundary.
 
 ### Step 5: Trajectory Generation (`simulation_engine.py`)
 The engine translates the abstract schedules into physical 1-minute spatial trajectories.
