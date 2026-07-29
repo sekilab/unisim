@@ -1,4 +1,4 @@
-# IIT Delhi Campus Mobility Simulation: Knowledge Transfer Document
+# IIT Delhi Campus Mobility Simulation
 
 ## Introduction: what is the simulation and why IIT Delhi
 The IIT Delhi Campus Mobility Simulation (UniSim) is a microscopic, agent-based framework designed to model the high-resolution spatial and temporal mobility patterns of students, faculty, and staff. Generating data at a **1-minute timestep** across a simulated 5-day academic week, it outputs highly detailed trajectories representing pedestrian flow. IIT Delhi was chosen because it represents a densely populated, complex microcosm integrating academic, administrative, and residential zones—making it an ideal candidate for testing pedestrian flow modeling.
